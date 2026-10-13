@@ -1,0 +1,266 @@
+{
+  "COURSE_CATEGORY": "Service Delivery",
+  "COMPANY_ID": "1",
+  "COURSE_TITLE": "Customer Service Excellence & SERVICOM",
+  "COURSE_OBJECTIVE": "Build a citizen- and customer-focused service culture in line with SERVICOM principles.",
+  "COURSE_DESCRIPTION": "Explores service standards, the SERVICOM charter, handling complaints, communicating with stakeholders and continuously improving service delivery.",
+  "USE_AS_APPRAISAL": true,
+  "START_DATE": "2026-10-12",
+  "END_DATE": "2027-01-10",
+  "CREATOR": "1",
+  "PERFORMANCE_CYCLE_ID": 12,
+  "HAS_LINE_MANAGER": false,
+  "QUIZ_STRATEGY": "both",
+  "HAS_GENERAL_QUIZ": true,
+  "general_quiz": {
+    "QUIZ_TYPE": "manual",
+    "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+    "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+    "QUIZ_DESCRIPTION": "Final assessment for Customer Service Excellence & SERVICOM.",
+    "ATTEMPTS_ALLOWED": 1,
+    "DURATION": 20,
+    "TOTAL_QUIZ_SCORE": 90,
+    "questions": [
+      {
+        "QUIZ_QUESTION": "What does SERVICOM stand for?",
+        "QUIZ_ANSWER": "Service Compact with All Nigerians",
+        "QUIZ_OPTIONS": [
+          "Service Committee of Ministers",
+          "Service Commission of Management",
+          "Servants Communication Network",
+          "Service Compact with All Nigerians"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "A service charter tells customers...",
+        "QUIZ_ANSWER": "What services to expect, the standards, and how to complain",
+        "QUIZ_OPTIONS": [
+          "Staff home addresses",
+          "What services to expect, the standards, and how to complain",
+          "Only the agency's history",
+          "The internal salary structure"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "Which value is central to good public service delivery?",
+        "QUIZ_ANSWER": "Timeliness and fairness",
+        "QUIZ_OPTIONS": [
+          "Delay to show importance",
+          "Timeliness and fairness",
+          "Secrecy",
+          "Favouritism"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "What is the first step when handling a complaint?",
+        "QUIZ_ANSWER": "Listen actively and acknowledge the concern",
+        "QUIZ_OPTIONS": [
+          "Argue the point",
+          "Listen actively and acknowledge the concern",
+          "Transfer the customer immediately",
+          "Ignore the complaint"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "When you can't resolve an issue yourself, you should...",
+        "QUIZ_ANSWER": "Escalate it, tell the customer the next steps, and follow up",
+        "QUIZ_OPTIONS": [
+          "End the conversation",
+          "Escalate it, tell the customer the next steps, and follow up",
+          "Promise something you can't deliver",
+          "Tell the customer it's not your job"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "Why should complaints be recorded?",
+        "QUIZ_ANSWER": "To track resolution and identify recurring problems",
+        "QUIZ_OPTIONS": [
+          "To track resolution and identify recurring problems",
+          "Only for legal cases",
+          "To blame staff",
+          "They should not be recorded"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "Which is a useful service metric?",
+        "QUIZ_ANSWER": "Average time taken to resolve a request",
+        "QUIZ_OPTIONS": [
+          "Number of meetings held",
+          "Office paint colour",
+          "Average time taken to resolve a request",
+          "Number of staff birthdays"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "Customer feedback should be used to...",
+        "QUIZ_ANSWER": "Identify and fix root causes of poor service",
+        "QUIZ_OPTIONS": [
+          "Nothing",
+          "Identify and fix root causes of poor service",
+          "Fill a report that nobody reads",
+          "Punish customers who complain"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "Continuous improvement means...",
+        "QUIZ_ANSWER": "Regularly reviewing and improving how services are delivered",
+        "QUIZ_OPTIONS": [
+          "Improving only after an audit",
+          "Regularly reviewing and improving how services are delivered",
+          "Changing nothing once a process works",
+          "Hiring more staff every year"
+        ]
+      }
+    ]
+  },
+  "COURSE_PREVIEW_IMAGE": "https://placehold.co/800x450/1E293B/FFFFFF/png?font=montserrat&text=Customer%20Service%20Excellence%20%26%20SERVICOM",
+  "course_lessons": [
+    {
+      "TITLE": "Understanding SERVICOM & Service Charters",
+      "DESCRIPTION": "SERVICOM (Service Compact with All Nigerians) commits government agencies to deliver services that are timely, fair, honest, effective and transparent. This lesson explains service charters, published service standards, and the role of SERVICOM units in agencies.",
+      "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+      "HAS_QUIZ": true,
+      "QUIZ_TYPE": "manual",
+      "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+      "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+      "QUIZ_DESCRIPTION": "Check your understanding of \"Understanding SERVICOM & Service Charters\".",
+      "ATTEMPTS_ALLOWED": 2,
+      "DURATION": 10,
+      "TOTAL_QUIZ_SCORE": 30,
+      "lesson_quiz": {
+        "questions": [
+          {
+            "QUIZ_QUESTION": "What does SERVICOM stand for?",
+            "QUIZ_ANSWER": "Service Compact with All Nigerians",
+            "QUIZ_OPTIONS": [
+              "Service Committee of Ministers",
+              "Service Commission of Management",
+              "Servants Communication Network",
+              "Service Compact with All Nigerians"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "A service charter tells customers...",
+            "QUIZ_ANSWER": "What services to expect, the standards, and how to complain",
+            "QUIZ_OPTIONS": [
+              "Staff home addresses",
+              "What services to expect, the standards, and how to complain",
+              "Only the agency's history",
+              "The internal salary structure"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "Which value is central to good public service delivery?",
+            "QUIZ_ANSWER": "Timeliness and fairness",
+            "QUIZ_OPTIONS": [
+              "Delay to show importance",
+              "Timeliness and fairness",
+              "Secrecy",
+              "Favouritism"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "TITLE": "Handling Complaints & Difficult Customers",
+      "DESCRIPTION": "Complaints are free feedback. This lesson covers active listening, empathy, staying calm, taking ownership and following through to resolution and record keeping.",
+      "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+      "HAS_QUIZ": true,
+      "QUIZ_TYPE": "manual",
+      "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+      "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+      "QUIZ_DESCRIPTION": "Check your understanding of \"Handling Complaints & Difficult Customers\".",
+      "ATTEMPTS_ALLOWED": 2,
+      "DURATION": 10,
+      "TOTAL_QUIZ_SCORE": 30,
+      "lesson_quiz": {
+        "questions": [
+          {
+            "QUIZ_QUESTION": "What is the first step when handling a complaint?",
+            "QUIZ_ANSWER": "Listen actively and acknowledge the concern",
+            "QUIZ_OPTIONS": [
+              "Argue the point",
+              "Listen actively and acknowledge the concern",
+              "Transfer the customer immediately",
+              "Ignore the complaint"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "When you can't resolve an issue yourself, you should...",
+            "QUIZ_ANSWER": "Escalate it, tell the customer the next steps, and follow up",
+            "QUIZ_OPTIONS": [
+              "End the conversation",
+              "Escalate it, tell the customer the next steps, and follow up",
+              "Promise something you can't deliver",
+              "Tell the customer it's not your job"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "Why should complaints be recorded?",
+            "QUIZ_ANSWER": "To track resolution and identify recurring problems",
+            "QUIZ_OPTIONS": [
+              "To track resolution and identify recurring problems",
+              "Only for legal cases",
+              "To blame staff",
+              "They should not be recorded"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "TITLE": "Continuous Service Improvement",
+      "DESCRIPTION": "Excellent organisations measure service, ask customers for feedback and fix root causes. This lesson introduces simple service metrics and improvement cycles.",
+      "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+      "HAS_QUIZ": true,
+      "QUIZ_TYPE": "manual",
+      "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+      "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+      "QUIZ_DESCRIPTION": "Check your understanding of \"Continuous Service Improvement\".",
+      "ATTEMPTS_ALLOWED": 2,
+      "DURATION": 10,
+      "TOTAL_QUIZ_SCORE": 30,
+      "lesson_quiz": {
+        "questions": [
+          {
+            "QUIZ_QUESTION": "Which is a useful service metric?",
+            "QUIZ_ANSWER": "Average time taken to resolve a request",
+            "QUIZ_OPTIONS": [
+              "Number of meetings held",
+              "Office paint colour",
+              "Average time taken to resolve a request",
+              "Number of staff birthdays"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "Customer feedback should be used to...",
+            "QUIZ_ANSWER": "Identify and fix root causes of poor service",
+            "QUIZ_OPTIONS": [
+              "Nothing",
+              "Identify and fix root causes of poor service",
+              "Fill a report that nobody reads",
+              "Punish customers who complain"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "Continuous improvement means...",
+            "QUIZ_ANSWER": "Regularly reviewing and improving how services are delivered",
+            "QUIZ_OPTIONS": [
+              "Improving only after an audit",
+              "Regularly reviewing and improving how services are delivered",
+              "Changing nothing once a process works",
+              "Hiring more staff every year"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "course_recipients": {
+    "recipient_type": "directorate",
+    "STAFF_IDS": [
+      "14"
+    ]
+  }
+}

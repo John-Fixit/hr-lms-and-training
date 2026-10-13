@@ -1,0 +1,226 @@
+{
+  "COURSE_CATEGORY": "Procurement & Finance",
+  "COMPANY_ID": "1",
+  "COURSE_TITLE": "Public Procurement Fundamentals",
+  "COURSE_OBJECTIVE": "Enable officers involved in buying goods, works and services to follow the Public Procurement Act 2007 and achieve value for money with transparency.",
+  "COURSE_DESCRIPTION": "Covers the legal framework for public procurement, procurement methods, approval thresholds, the role of the Bureau of Public Procurement, and contract management and record keeping.",
+  "USE_AS_APPRAISAL": true,
+  "START_DATE": "2026-10-12",
+  "END_DATE": "2027-01-10",
+  "CREATOR": "1",
+  "PERFORMANCE_CYCLE_ID": 12,
+  "HAS_LINE_MANAGER": false,
+  "QUIZ_STRATEGY": "both",
+  "HAS_GENERAL_QUIZ": true,
+  "general_quiz": {
+    "QUIZ_TYPE": "manual",
+    "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+    "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+    "QUIZ_DESCRIPTION": "End-of-course assessment on public procurement.",
+    "ATTEMPTS_ALLOWED": 1,
+    "DURATION": 20,
+    "TOTAL_QUIZ_SCORE": 50,
+    "questions": [
+      {
+        "QUIZ_QUESTION": "What does BPP stand for?",
+        "QUIZ_ANSWER": "Bureau of Public Procurement",
+        "QUIZ_OPTIONS": [
+          "Budget and Procurement Panel",
+          "Bureau of Price Policy",
+          "Bureau of Public Procurement",
+          "Board of Public Planning"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "Which method promotes the widest competition among bidders?",
+        "QUIZ_ANSWER": "Open competitive bidding",
+        "QUIZ_OPTIONS": [
+          "Emergency purchase",
+          "Direct procurement",
+          "Single sourcing",
+          "Open competitive bidding"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "Which document gives approval to proceed with an award above certain thresholds?",
+        "QUIZ_ANSWER": "Certificate of No Objection",
+        "QUIZ_OPTIONS": [
+          "Staff ID card",
+          "Certificate of No Objection",
+          "Leave approval",
+          "Letter of Introduction"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "An evaluator with a personal interest in a bidder should...",
+        "QUIZ_ANSWER": "Declare it and step aside",
+        "QUIZ_OPTIONS": [
+          "Declare it and step aside",
+          "Share bid details with the bidder",
+          "Keep it private",
+          "Score that bidder higher"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "The main goal of public procurement is...",
+        "QUIZ_ANSWER": "Achieving value for money for government",
+        "QUIZ_OPTIONS": [
+          "Reducing documentation",
+          "Spending the full budget quickly",
+          "Achieving value for money for government",
+          "Rewarding loyal vendors"
+        ]
+      }
+    ]
+  },
+  "COURSE_PREVIEW_IMAGE": "https://placehold.co/800x450/1E293B/FFFFFF/png?font=montserrat&text=Public%20Procurement%20Fundamentals",
+  "course_lessons": [
+    {
+      "TITLE": "Principles & Legal Framework of Public Procurement",
+      "DESCRIPTION": "Public procurement at the federal level is governed by the Public Procurement Act 2007, which established the Bureau of Public Procurement (BPP). This lesson introduces the core principles of value for money, competition, transparency, accountability and fairness.",
+      "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+      "HAS_QUIZ": true,
+      "QUIZ_TYPE": "manual",
+      "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+      "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+      "QUIZ_DESCRIPTION": "Check your understanding of \"Principles & Legal Framework of Public Procurement\".",
+      "ATTEMPTS_ALLOWED": 2,
+      "DURATION": 10,
+      "TOTAL_QUIZ_SCORE": 30,
+      "lesson_quiz": {
+        "questions": [
+          {
+            "QUIZ_QUESTION": "Which law governs public procurement at the federal level in Nigeria?",
+            "QUIZ_ANSWER": "Public Procurement Act 2007",
+            "QUIZ_OPTIONS": [
+              "Fiscal Responsibility Act 2007",
+              "Public Procurement Act 2007",
+              "Pension Reform Act 2014",
+              "Freedom of Information Act 2011"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "Which body regulates and monitors federal public procurement?",
+            "QUIZ_ANSWER": "Bureau of Public Procurement",
+            "QUIZ_OPTIONS": [
+              "Nigerian Customs Service",
+              "National Assembly Service Commission",
+              "Corporate Affairs Commission",
+              "Bureau of Public Procurement"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "Which of these is a core principle of public procurement?",
+            "QUIZ_ANSWER": "Value for money",
+            "QUIZ_OPTIONS": [
+              "Avoiding competition",
+              "Preference for familiar vendors",
+              "Value for money",
+              "Speed over documentation"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "TITLE": "Procurement Methods & Approvals",
+      "DESCRIPTION": "Open competitive bidding is the default method for public procurement. Other methods, such as selective tendering, request for quotations and direct procurement, are allowed only in justified circumstances. This lesson explains when each method applies and how approval thresholds and the Certificate of No Objection work.",
+      "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+      "HAS_QUIZ": true,
+      "QUIZ_TYPE": "manual",
+      "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+      "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+      "QUIZ_DESCRIPTION": "Check your understanding of \"Procurement Methods & Approvals\".",
+      "ATTEMPTS_ALLOWED": 2,
+      "DURATION": 10,
+      "TOTAL_QUIZ_SCORE": 30,
+      "lesson_quiz": {
+        "questions": [
+          {
+            "QUIZ_QUESTION": "What is the default procurement method for large public contracts?",
+            "QUIZ_ANSWER": "Open competitive bidding",
+            "QUIZ_OPTIONS": [
+              "Lottery",
+              "Direct award to a known vendor",
+              "Verbal agreement",
+              "Open competitive bidding"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "Direct procurement may be used...",
+            "QUIZ_ANSWER": "Only in justified and documented exceptional circumstances",
+            "QUIZ_OPTIONS": [
+              "When the vendor is a friend",
+              "Whenever it is faster",
+              "For every contract below any amount",
+              "Only in justified and documented exceptional circumstances"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "Splitting a contract into smaller parts to avoid approval thresholds is...",
+            "QUIZ_ANSWER": "Prohibited",
+            "QUIZ_OPTIONS": [
+              "Allowed at year end",
+              "Required for large contracts",
+              "Encouraged",
+              "Prohibited"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "TITLE": "Contract Management & Record Keeping",
+      "DESCRIPTION": "Procurement does not end at contract award. This lesson covers monitoring delivery, handling contract variations, certifying completion, and keeping a complete procurement file as an audit trail.",
+      "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+      "HAS_QUIZ": true,
+      "QUIZ_TYPE": "manual",
+      "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+      "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+      "QUIZ_DESCRIPTION": "Check your understanding of \"Contract Management & Record Keeping\".",
+      "ATTEMPTS_ALLOWED": 2,
+      "DURATION": 10,
+      "TOTAL_QUIZ_SCORE": 30,
+      "lesson_quiz": {
+        "questions": [
+          {
+            "QUIZ_QUESTION": "Why must complete procurement records be kept?",
+            "QUIZ_ANSWER": "To provide an audit trail and ensure accountability",
+            "QUIZ_OPTIONS": [
+              "Only for the vendor's benefit",
+              "To provide an audit trail and ensure accountability",
+              "To fill storage space",
+              "They are not necessary after payment"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "A contract variation should be...",
+            "QUIZ_ANSWER": "Justified, documented and approved by the appropriate authority",
+            "QUIZ_OPTIONS": [
+              "Hidden from auditors",
+              "Justified, documented and approved by the appropriate authority",
+              "Applied without any approval",
+              "Agreed verbally with the vendor"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "Before payment is made for works, what should be confirmed?",
+            "QUIZ_ANSWER": "That the works were delivered and certified as meeting specifications",
+            "QUIZ_OPTIONS": [
+              "That the works were delivered and certified as meeting specifications",
+              "Nothing, payment comes first",
+              "That the vendor has asked twice",
+              "That the budget year is ending"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "course_recipients": {
+    "recipient_type": "directorate",
+    "STAFF_IDS": [
+      "14"
+    ]
+  }
+}

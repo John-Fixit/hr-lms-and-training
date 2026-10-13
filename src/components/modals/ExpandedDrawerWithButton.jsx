@@ -37,7 +37,7 @@ const ExpandedDrawerWithButton = ({
           body: `${withBg ? "bg-[#F7F7F7]" : ""}    `,
           header: "font-helvetica bg-[#F7F7F7] hidden",
         }}
-        // headerStyle={headerStyle}
+        headerStyle={headerStyle}
       >
         <div className="h-full mx-3">{children}</div>
       </Drawer>

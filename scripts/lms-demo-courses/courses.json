@@ -1,0 +1,617 @@
+[
+  {
+    "title": "Public Service Rules & Code of Conduct",
+    "category": "Governance & Compliance",
+    "start_date": "2026-10-12",
+    "end_date": "2027-01-10",
+    "objective": "Equip officers with a working knowledge of the Public Service Rules, the Code of Conduct for public officers, and the standards of behaviour expected in government service.",
+    "description": "A practical introduction to the rules that govern appointment, conduct, discipline and accountability in the public service, with real-world scenarios on gifts, conflict of interest and asset declaration.",
+    "lessons": [
+      {
+        "title": "Introduction to the Public Service Rules",
+        "description": "The Public Service Rules (PSR) set out the conditions of service for federal public officers: appointment, confirmation, promotion, leave, discipline and retirement. This lesson walks through how the PSR is structured, how it relates to circulars issued by the Office of the Head of the Civil Service of the Federation, and where officers can find the provisions that apply to them.",
+        "questions": [
+          {
+            "question": "Which document primarily regulates the conditions of service of federal public servants?",
+            "options": ["The Public Service Rules", "The Companies and Allied Matters Act", "The Electoral Act", "The Labour Act only"],
+            "answer": "The Public Service Rules"
+          },
+          {
+            "question": "Which body is responsible for receiving and verifying asset declarations by public officers?",
+            "options": ["Code of Conduct Bureau", "Independent National Electoral Commission", "National Bureau of Statistics", "Central Bank of Nigeria"],
+            "answer": "Code of Conduct Bureau"
+          },
+          {
+            "question": "When are public officers expected to declare their assets?",
+            "options": ["On assumption of office, periodically while in office, and at the end of tenure", "Only when they are promoted", "Only when requested by a journalist", "Never, it is optional"],
+            "answer": "On assumption of office, periodically while in office, and at the end of tenure"
+          }
+        ]
+      },
+      {
+        "title": "Conflict of Interest, Gifts & Hospitality",
+        "description": "A conflict of interest arises when an officer's private interests could improperly influence the performance of official duties. This lesson covers how to recognise conflicts, how to declare them, and how to handle gifts and hospitality from contractors, vendors and members of the public.",
+        "questions": [
+          {
+            "question": "A contractor offers you an expensive gift while their bid is under evaluation. What should you do?",
+            "options": ["Decline the gift and report the offer through the appropriate channel", "Accept it quietly since it is a personal gift", "Accept it and share it with colleagues", "Accept it after the contract is awarded"],
+            "answer": "Decline the gift and report the offer through the appropriate channel"
+          },
+          {
+            "question": "A conflict of interest exists when...",
+            "options": ["Personal interests could improperly influence official decisions", "Two departments disagree on a budget", "A staff member requests annual leave", "A meeting runs over time"],
+            "answer": "Personal interests could improperly influence official decisions"
+          },
+          {
+            "question": "You discover a relative owns a company bidding for a contract you are evaluating. What is the correct action?",
+            "options": ["Declare the interest and recuse yourself from the evaluation", "Continue but score the company fairly", "Tell the relative to lower their price", "Say nothing unless asked"],
+            "answer": "Declare the interest and recuse yourself from the evaluation"
+          }
+        ]
+      },
+      {
+        "title": "Discipline, Misconduct & Fair Hearing",
+        "description": "This lesson explains the difference between general and serious misconduct, the disciplinary process (query, response, panel review and sanction), and the principle of fair hearing that protects every officer.",
+        "questions": [
+          {
+            "question": "Which of the following is generally treated as serious misconduct?",
+            "options": ["Falsification of official records", "Arriving five minutes early", "Taking approved annual leave", "Attending a training programme"],
+            "answer": "Falsification of official records"
+          },
+          {
+            "question": "Before a disciplinary sanction is applied, the officer should be...",
+            "options": ["Issued a query and given an opportunity to respond", "Dismissed immediately", "Transferred without explanation", "Placed on salary deduction first"],
+            "answer": "Issued a query and given an opportunity to respond"
+          },
+          {
+            "question": "The principle that every officer must be heard before being sanctioned is called...",
+            "options": ["Fair hearing", "Seniority", "Delegation", "Probation"],
+            "answer": "Fair hearing"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Public Procurement Fundamentals",
+    "category": "Procurement & Finance",
+    "start_date": "2026-10-12",
+    "end_date": "2027-01-10",
+    "objective": "Enable officers involved in buying goods, works and services to follow the Public Procurement Act 2007 and achieve value for money with transparency.",
+    "description": "Covers the legal framework for public procurement, procurement methods, approval thresholds, the role of the Bureau of Public Procurement, and contract management and record keeping.",
+    "quiz_strategy": "both",
+    "lessons": [
+      {
+        "title": "Principles & Legal Framework of Public Procurement",
+        "description": "Public procurement at the federal level is governed by the Public Procurement Act 2007, which established the Bureau of Public Procurement (BPP). This lesson introduces the core principles of value for money, competition, transparency, accountability and fairness.",
+        "questions": [
+          {
+            "question": "Which law governs public procurement at the federal level in Nigeria?",
+            "options": ["Public Procurement Act 2007", "Fiscal Responsibility Act 2007", "Freedom of Information Act 2011", "Pension Reform Act 2014"],
+            "answer": "Public Procurement Act 2007"
+          },
+          {
+            "question": "Which body regulates and monitors federal public procurement?",
+            "options": ["Bureau of Public Procurement", "Nigerian Customs Service", "National Assembly Service Commission", "Corporate Affairs Commission"],
+            "answer": "Bureau of Public Procurement"
+          },
+          {
+            "question": "Which of these is a core principle of public procurement?",
+            "options": ["Value for money", "Speed over documentation", "Preference for familiar vendors", "Avoiding competition"],
+            "answer": "Value for money"
+          }
+        ]
+      },
+      {
+        "title": "Procurement Methods & Approvals",
+        "description": "Open competitive bidding is the default method for public procurement. Other methods, such as selective tendering, request for quotations and direct procurement, are allowed only in justified circumstances. This lesson explains when each method applies and how approval thresholds and the Certificate of No Objection work.",
+        "questions": [
+          {
+            "question": "What is the default procurement method for large public contracts?",
+            "options": ["Open competitive bidding", "Direct award to a known vendor", "Verbal agreement", "Lottery"],
+            "answer": "Open competitive bidding"
+          },
+          {
+            "question": "Direct procurement may be used...",
+            "options": ["Only in justified and documented exceptional circumstances", "Whenever it is faster", "When the vendor is a friend", "For every contract below any amount"],
+            "answer": "Only in justified and documented exceptional circumstances"
+          },
+          {
+            "question": "Splitting a contract into smaller parts to avoid approval thresholds is...",
+            "options": ["Prohibited", "Encouraged", "Allowed at year end", "Required for large contracts"],
+            "answer": "Prohibited"
+          }
+        ]
+      },
+      {
+        "title": "Contract Management & Record Keeping",
+        "description": "Procurement does not end at contract award. This lesson covers monitoring delivery, handling contract variations, certifying completion, and keeping a complete procurement file as an audit trail.",
+        "questions": [
+          {
+            "question": "Why must complete procurement records be kept?",
+            "options": ["To provide an audit trail and ensure accountability", "To fill storage space", "Only for the vendor's benefit", "They are not necessary after payment"],
+            "answer": "To provide an audit trail and ensure accountability"
+          },
+          {
+            "question": "A contract variation should be...",
+            "options": ["Justified, documented and approved by the appropriate authority", "Agreed verbally with the vendor", "Applied without any approval", "Hidden from auditors"],
+            "answer": "Justified, documented and approved by the appropriate authority"
+          },
+          {
+            "question": "Before payment is made for works, what should be confirmed?",
+            "options": ["That the works were delivered and certified as meeting specifications", "That the vendor has asked twice", "That the budget year is ending", "Nothing, payment comes first"],
+            "answer": "That the works were delivered and certified as meeting specifications"
+          }
+        ]
+      }
+    ],
+    "general_quiz": {
+      "description": "End-of-course assessment on public procurement.",
+      "questions": [
+        {
+          "question": "What does BPP stand for?",
+          "options": ["Bureau of Public Procurement", "Board of Public Planning", "Bureau of Price Policy", "Budget and Procurement Panel"],
+          "answer": "Bureau of Public Procurement"
+        },
+        {
+          "question": "Which method promotes the widest competition among bidders?",
+          "options": ["Open competitive bidding", "Direct procurement", "Single sourcing", "Emergency purchase"],
+          "answer": "Open competitive bidding"
+        },
+        {
+          "question": "Which document gives approval to proceed with an award above certain thresholds?",
+          "options": ["Certificate of No Objection", "Letter of Introduction", "Staff ID card", "Leave approval"],
+          "answer": "Certificate of No Objection"
+        },
+        {
+          "question": "An evaluator with a personal interest in a bidder should...",
+          "options": ["Declare it and step aside", "Score that bidder higher", "Keep it private", "Share bid details with the bidder"],
+          "answer": "Declare it and step aside"
+        },
+        {
+          "question": "The main goal of public procurement is...",
+          "options": ["Achieving value for money for government", "Spending the full budget quickly", "Rewarding loyal vendors", "Reducing documentation"],
+          "answer": "Achieving value for money for government"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Data Protection & Cybersecurity Awareness",
+    "category": "ICT & Security",
+    "start_date": "2026-10-12",
+    "end_date": "2027-01-10",
+    "objective": "Help every staff member protect personal data and official information, and recognise and report common cyber threats.",
+    "description": "An awareness course on the Nigeria Data Protection Act 2023, safe handling of personal and official data, phishing and social engineering, passwords and incident reporting.",
+    "lessons": [
+      {
+        "title": "Personal Data & the Nigeria Data Protection Act",
+        "description": "The Nigeria Data Protection Act 2023 sets out how personal data must be collected, processed, stored and shared, and established the Nigeria Data Protection Commission (NDPC). This lesson explains what counts as personal data and the principles of lawful, fair and secure processing.",
+        "questions": [
+          {
+            "question": "What is Nigeria's primary data protection law?",
+            "options": ["Nigeria Data Protection Act 2023", "Cybercrimes Act 2015 only", "Evidence Act 2011", "Copyright Act"],
+            "answer": "Nigeria Data Protection Act 2023"
+          },
+          {
+            "question": "Which body regulates data protection in Nigeria?",
+            "options": ["Nigeria Data Protection Commission", "Nigerian Communications Commission", "National Orientation Agency", "Federal Inland Revenue Service"],
+            "answer": "Nigeria Data Protection Commission"
+          },
+          {
+            "question": "Which of these is personal data?",
+            "options": ["A staff member's phone number and home address", "The weather forecast", "A published government press release", "The name of a public holiday"],
+            "answer": "A staff member's phone number and home address"
+          }
+        ]
+      },
+      {
+        "title": "Phishing & Social Engineering",
+        "description": "Most cyber incidents start with a human being tricked. This lesson shows how to spot phishing emails, fake calls and suspicious links, and what to do when you receive one.",
+        "questions": [
+          {
+            "question": "You get an email from 'IT Support' asking you to confirm your password through a link. What should you do?",
+            "options": ["Don't click, and report it to the IT/security team", "Click the link and confirm quickly", "Forward it to all colleagues", "Reply with your password"],
+            "answer": "Don't click, and report it to the IT/security team"
+          },
+          {
+            "question": "Which is a common sign of a phishing email?",
+            "options": ["Urgent tone and a sender address that doesn't match the organisation", "Correct spelling of your name", "An email sent during work hours", "A message from your known supervisor's verified address"],
+            "answer": "Urgent tone and a sender address that doesn't match the organisation"
+          },
+          {
+            "question": "What is the best practice for passwords?",
+            "options": ["Use a long, unique passphrase for each account and enable multi-factor authentication", "Use the same password everywhere", "Write it on a sticky note on your monitor", "Share it with a trusted colleague"],
+            "answer": "Use a long, unique passphrase for each account and enable multi-factor authentication"
+          }
+        ]
+      },
+      {
+        "title": "Handling Official Information & Reporting Incidents",
+        "description": "Good security habits protect the organisation every day: locking your screen, using approved channels to share documents, classifying information correctly and reporting incidents quickly.",
+        "questions": [
+          {
+            "question": "You need to step away from your computer. What should you do?",
+            "options": ["Lock your screen", "Leave it open for a colleague", "Turn off the monitor only", "Nothing, it's fine for a few minutes"],
+            "answer": "Lock your screen"
+          },
+          {
+            "question": "How should official documents be shared?",
+            "options": ["Through approved official channels and systems", "Through personal email accounts", "On public social media groups", "On unencrypted USB drives left on desks"],
+            "answer": "Through approved official channels and systems"
+          },
+          {
+            "question": "You suspect a data breach. What is the right first step?",
+            "options": ["Report it immediately to the designated officer or IT security", "Wait to see if it happens again", "Delete the evidence", "Post about it online"],
+            "answer": "Report it immediately to the designated officer or IT security"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Effective Official Communication & Memo Writing",
+    "category": "Soft Skills",
+    "start_date": "2026-10-12",
+    "end_date": "2027-01-10",
+    "objective": "Improve the clarity, tone and structure of official memos, letters, minutes, emails and presentations.",
+    "description": "A hands-on course on writing for government and corporate audiences: structuring memos, recording minutes, email etiquette and presenting information persuasively.",
+    "lessons": [
+      {
+        "title": "Principles of Official Writing",
+        "description": "Official writing should be clear, concise, correct and courteous. This lesson covers knowing your audience, putting the key message first, choosing a formal but readable tone, and avoiding unnecessary jargon.",
+        "questions": [
+          {
+            "question": "What is the most important quality of official writing?",
+            "options": ["Clarity and conciseness", "Length", "Use of complex vocabulary", "Decorative fonts"],
+            "answer": "Clarity and conciseness"
+          },
+          {
+            "question": "Where should the main message of a memo appear?",
+            "options": ["Early, near the beginning", "Hidden in the last paragraph", "Only in the attachment", "It should not be stated directly"],
+            "answer": "Early, near the beginning"
+          },
+          {
+            "question": "What tone is appropriate for official correspondence?",
+            "options": ["Formal and courteous", "Casual slang", "Aggressive", "Sarcastic"],
+            "answer": "Formal and courteous"
+          }
+        ]
+      },
+      {
+        "title": "Writing Memos & Minutes",
+        "description": "This lesson breaks down the parts of a memo (reference, date, subject, body and action required) and shows how to write minutes that capture decisions, action points, owners and deadlines.",
+        "questions": [
+          {
+            "question": "A memo's subject line should...",
+            "options": ["State the purpose briefly and specifically", "Be left blank", "Contain the full memo", "Only say 'Important'"],
+            "answer": "State the purpose briefly and specifically"
+          },
+          {
+            "question": "Good meeting minutes should record...",
+            "options": ["Decisions, action points, owners and deadlines", "Every word spoken", "Only the attendance list", "Personal opinions of the secretary"],
+            "answer": "Decisions, action points, owners and deadlines"
+          },
+          {
+            "question": "Why do official memos carry reference numbers?",
+            "options": ["To make tracking and filing easier", "For decoration", "To make them longer", "They are not needed"],
+            "answer": "To make tracking and filing easier"
+          }
+        ]
+      },
+      {
+        "title": "Email Etiquette & Presentations",
+        "description": "Email and slide presentations are now the main ways we communicate at work. This lesson covers subject lines, reply-all discipline, attachments, proofreading and designing slides that support, rather than replace, the speaker.",
+        "questions": [
+          {
+            "question": "When should you use 'Reply All'?",
+            "options": ["Only when every recipient needs your response", "Always", "Never", "Only on Fridays"],
+            "answer": "Only when every recipient needs your response"
+          },
+          {
+            "question": "A good presentation slide has...",
+            "options": ["A few key points and supporting visuals", "Full paragraphs of text", "As many colours as possible", "No title"],
+            "answer": "A few key points and supporting visuals"
+          },
+          {
+            "question": "What should you always do before sending an important email?",
+            "options": ["Proofread it and check the recipients and attachments", "Add more recipients", "Send it twice", "Remove the subject line"],
+            "answer": "Proofread it and check the recipients and attachments"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Leadership & People Management for Supervisors",
+    "category": "Leadership",
+    "start_date": "2026-10-12",
+    "end_date": "2027-01-10",
+    "objective": "Prepare new and current supervisors to lead teams, delegate effectively, motivate staff and handle conflict professionally.",
+    "description": "Practical leadership skills for unit heads and team leads in government agencies and corporate organisations: the supervisor's role, delegation, motivation, feedback and conflict resolution.",
+    "lessons": [
+      {
+        "title": "The Role of a Supervisor",
+        "description": "Supervisors connect organisational goals to daily work. This lesson covers planning and assigning work, setting expectations, monitoring performance and serving as a role model for integrity and discipline.",
+        "questions": [
+          {
+            "question": "What is a supervisor's primary responsibility?",
+            "options": ["Guiding the team to achieve organisational goals", "Doing all the work personally", "Avoiding contact with staff", "Approving only their own leave"],
+            "answer": "Guiding the team to achieve organisational goals"
+          },
+          {
+            "question": "Clear expectations help staff to...",
+            "options": ["Understand what success looks like in their role", "Avoid responsibility", "Work without direction", "Ignore deadlines"],
+            "answer": "Understand what success looks like in their role"
+          },
+          {
+            "question": "A supervisor who leads by example...",
+            "options": ["Demonstrates the behaviour they expect from the team", "Sets rules that apply only to others", "Arrives late regularly", "Avoids difficult tasks"],
+            "answer": "Demonstrates the behaviour they expect from the team"
+          }
+        ]
+      },
+      {
+        "title": "Delegation & Motivation",
+        "description": "Delegation develops staff and frees the supervisor to focus on priorities. This lesson covers what to delegate, how to brief, how to follow up without micromanaging, and what motivates people at work.",
+        "questions": [
+          {
+            "question": "Effective delegation includes...",
+            "options": ["Clear instructions, authority to act and agreed check-ins", "Assigning tasks without explanation", "Taking the task back at the first mistake", "Delegating only unpleasant tasks"],
+            "answer": "Clear instructions, authority to act and agreed check-ins"
+          },
+          {
+            "question": "Which is a strong non-financial motivator?",
+            "options": ["Recognition and opportunities for growth", "Public criticism", "Unclear goals", "Constant reassignment"],
+            "answer": "Recognition and opportunities for growth"
+          },
+          {
+            "question": "Micromanagement usually leads to...",
+            "options": ["Lower morale and reduced initiative", "Higher trust", "Faster decision-making by staff", "Better delegation"],
+            "answer": "Lower morale and reduced initiative"
+          }
+        ]
+      },
+      {
+        "title": "Feedback & Conflict Resolution",
+        "description": "Timely, specific feedback improves performance. This lesson introduces a simple feedback model (situation, behaviour, impact) and steps to resolve team conflicts fairly and early.",
+        "questions": [
+          {
+            "question": "Good feedback is...",
+            "options": ["Specific, timely and focused on behaviour", "Vague and delayed", "Personal and emotional", "Given only during annual appraisal"],
+            "answer": "Specific, timely and focused on behaviour"
+          },
+          {
+            "question": "When two team members are in conflict, the supervisor should first...",
+            "options": ["Listen to both sides privately and identify the issue", "Ignore it until it goes away", "Take sides publicly", "Report both for discipline immediately"],
+            "answer": "Listen to both sides privately and identify the issue"
+          },
+          {
+            "question": "In the Situation-Behaviour-Impact model, 'Impact' describes...",
+            "options": ["The effect the behaviour had on work or people", "The staff member's personality", "The supervisor's mood", "The time of day"],
+            "answer": "The effect the behaviour had on work or people"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Performance Management & Appraisal",
+    "category": "HR & Performance",
+    "start_date": "2026-10-12",
+    "end_date": "2027-01-10",
+    "objective": "Help staff and supervisors set SMART objectives, track performance throughout the year and conduct fair, evidence-based appraisals.",
+    "description": "Covers the full performance cycle: goal setting, continuous feedback, documentation, the appraisal interview and development planning, aligned with annual performance evaluation practice in the public service.",
+    "lessons": [
+      {
+        "title": "Setting SMART Objectives",
+        "description": "Objectives should be Specific, Measurable, Achievable, Relevant and Time-bound. This lesson shows how to turn departmental targets into individual SMART objectives agreed at the start of the performance cycle.",
+        "questions": [
+          {
+            "question": "What does the 'M' in SMART stand for?",
+            "options": ["Measurable", "Mandatory", "Manageable", "Monthly"],
+            "answer": "Measurable"
+          },
+          {
+            "question": "Which objective is SMART?",
+            "options": ["Process 95% of leave requests within 3 working days by 31 December", "Work harder this year", "Improve things", "Be more efficient sometimes"],
+            "answer": "Process 95% of leave requests within 3 working days by 31 December"
+          },
+          {
+            "question": "When should individual objectives be agreed?",
+            "options": ["At the start of the performance cycle", "On the day of the appraisal", "After the year ends", "Never, they are optional"],
+            "answer": "At the start of the performance cycle"
+          }
+        ]
+      },
+      {
+        "title": "Continuous Feedback & Documentation",
+        "description": "Appraisal should never be a surprise. This lesson covers regular check-ins, mid-year reviews and keeping evidence of achievements and challenges throughout the year.",
+        "questions": [
+          {
+            "question": "Why hold regular performance check-ins?",
+            "options": ["To track progress and address issues early", "To replace the annual appraisal entirely", "To find faults only", "They have no value"],
+            "answer": "To track progress and address issues early"
+          },
+          {
+            "question": "What should be documented during the year?",
+            "options": ["Achievements, challenges and supporting evidence", "Only mistakes", "Only attendance", "Nothing until the appraisal"],
+            "answer": "Achievements, challenges and supporting evidence"
+          },
+          {
+            "question": "A mid-year review is used to...",
+            "options": ["Review progress and adjust objectives if needed", "Issue final ratings", "Approve promotions automatically", "Close the performance cycle"],
+            "answer": "Review progress and adjust objectives if needed"
+          }
+        ]
+      },
+      {
+        "title": "The Appraisal Interview & Development Plans",
+        "description": "This lesson explains how to prepare for and conduct a fair appraisal interview, avoid common rating biases, and agree a development plan for the next cycle.",
+        "questions": [
+          {
+            "question": "Ratings in an appraisal should be based on...",
+            "options": ["Evidence of performance against agreed objectives", "Personal friendship", "The most recent week only", "Seniority alone"],
+            "answer": "Evidence of performance against agreed objectives"
+          },
+          {
+            "question": "Rating someone highly on everything because they excel in one area is called...",
+            "options": ["The halo effect", "Calibration", "Benchmarking", "Delegation"],
+            "answer": "The halo effect"
+          },
+          {
+            "question": "A development plan should include...",
+            "options": ["Specific training or experiences to close skill gaps", "Only a list of weaknesses", "Salary details", "Nothing for high performers"],
+            "answer": "Specific training or experiences to close skill gaps"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Customer Service Excellence & SERVICOM",
+    "category": "Service Delivery",
+    "start_date": "2026-10-12",
+    "end_date": "2027-01-10",
+    "objective": "Build a citizen- and customer-focused service culture in line with SERVICOM principles.",
+    "description": "Explores service standards, the SERVICOM charter, handling complaints, communicating with stakeholders and continuously improving service delivery.",
+    "lessons": [
+      {
+        "title": "Understanding SERVICOM & Service Charters",
+        "description": "SERVICOM (Service Compact with All Nigerians) commits government agencies to deliver services that are timely, fair, honest, effective and transparent. This lesson explains service charters, published service standards, and the role of SERVICOM units in agencies.",
+        "questions": [
+          {
+            "question": "What does SERVICOM stand for?",
+            "options": ["Service Compact with All Nigerians", "Service Committee of Ministers", "Servants Communication Network", "Service Commission of Management"],
+            "answer": "Service Compact with All Nigerians"
+          },
+          {
+            "question": "A service charter tells customers...",
+            "options": ["What services to expect, the standards, and how to complain", "The internal salary structure", "Staff home addresses", "Only the agency's history"],
+            "answer": "What services to expect, the standards, and how to complain"
+          },
+          {
+            "question": "Which value is central to good public service delivery?",
+            "options": ["Timeliness and fairness", "Delay to show importance", "Favouritism", "Secrecy"],
+            "answer": "Timeliness and fairness"
+          }
+        ]
+      },
+      {
+        "title": "Handling Complaints & Difficult Customers",
+        "description": "Complaints are free feedback. This lesson covers active listening, empathy, staying calm, taking ownership and following through to resolution and record keeping.",
+        "questions": [
+          {
+            "question": "What is the first step when handling a complaint?",
+            "options": ["Listen actively and acknowledge the concern", "Argue the point", "Transfer the customer immediately", "Ignore the complaint"],
+            "answer": "Listen actively and acknowledge the concern"
+          },
+          {
+            "question": "When you can't resolve an issue yourself, you should...",
+            "options": ["Escalate it, tell the customer the next steps, and follow up", "Tell the customer it's not your job", "End the conversation", "Promise something you can't deliver"],
+            "answer": "Escalate it, tell the customer the next steps, and follow up"
+          },
+          {
+            "question": "Why should complaints be recorded?",
+            "options": ["To track resolution and identify recurring problems", "To blame staff", "They should not be recorded", "Only for legal cases"],
+            "answer": "To track resolution and identify recurring problems"
+          }
+        ]
+      },
+      {
+        "title": "Continuous Service Improvement",
+        "description": "Excellent organisations measure service, ask customers for feedback and fix root causes. This lesson introduces simple service metrics and improvement cycles.",
+        "questions": [
+          {
+            "question": "Which is a useful service metric?",
+            "options": ["Average time taken to resolve a request", "Number of staff birthdays", "Office paint colour", "Number of meetings held"],
+            "answer": "Average time taken to resolve a request"
+          },
+          {
+            "question": "Customer feedback should be used to...",
+            "options": ["Identify and fix root causes of poor service", "Punish customers who complain", "Fill a report that nobody reads", "Nothing"],
+            "answer": "Identify and fix root causes of poor service"
+          },
+          {
+            "question": "Continuous improvement means...",
+            "options": ["Regularly reviewing and improving how services are delivered", "Changing nothing once a process works", "Improving only after an audit", "Hiring more staff every year"],
+            "answer": "Regularly reviewing and improving how services are delivered"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Financial Regulations & Budget Discipline",
+    "category": "Procurement & Finance",
+    "start_date": "2026-10-12",
+    "end_date": "2027-01-10",
+    "objective": "Ensure officers who handle funds understand the Financial Regulations, budget implementation and the controls that protect public money.",
+    "description": "Covers the budget cycle, the Treasury Single Account, authorisation and payment controls, retirement of advances, and internal and external audit.",
+    "lessons": [
+      {
+        "title": "The Budget Cycle & Budget Discipline",
+        "description": "The public budget moves through preparation, approval, implementation, and monitoring and evaluation. This lesson explains why spending must stay within appropriated amounts and approved budget lines.",
+        "questions": [
+          {
+            "question": "Which is the correct order of the budget cycle?",
+            "options": ["Preparation, approval, implementation, monitoring and evaluation", "Implementation, approval, preparation, audit", "Audit, spending, preparation, approval", "Approval, audit, preparation, spending"],
+            "answer": "Preparation, approval, implementation, monitoring and evaluation"
+          },
+          {
+            "question": "Spending money on an item not in the approved budget without authorisation is...",
+            "options": ["A breach of budget discipline", "Acceptable if the item is useful", "Encouraged at year end", "Required by law"],
+            "answer": "A breach of budget discipline"
+          },
+          {
+            "question": "Why is budget monitoring important?",
+            "options": ["To compare actual spending with plans and correct deviations", "To delay payments", "To increase the budget automatically", "It is not important"],
+            "answer": "To compare actual spending with plans and correct deviations"
+          }
+        ]
+      },
+      {
+        "title": "Treasury Single Account & Payment Controls",
+        "description": "The Treasury Single Account (TSA) consolidates federal government revenues into one account at the Central Bank of Nigeria, improving visibility and control. This lesson also covers segregation of duties and approval levels for payments.",
+        "questions": [
+          {
+            "question": "What is the main purpose of the Treasury Single Account?",
+            "options": ["To consolidate government revenues into a single account at the Central Bank for better control", "To allow each agency to open many commercial accounts", "To pay staff in cash", "To replace the budget"],
+            "answer": "To consolidate government revenues into a single account at the Central Bank for better control"
+          },
+          {
+            "question": "Segregation of duties means...",
+            "options": ["No single officer controls all stages of a transaction", "One officer approves, pays and records everything", "Finance staff work in separate buildings", "Duties are shared randomly"],
+            "answer": "No single officer controls all stages of a transaction"
+          },
+          {
+            "question": "Before a payment is made, it should be...",
+            "options": ["Properly authorised, supported by documents and within budget", "Requested urgently by phone", "Approved only by the payee", "Made first and documented later"],
+            "answer": "Properly authorised, supported by documents and within budget"
+          }
+        ]
+      },
+      {
+        "title": "Advances, Retirement & Audit",
+        "description": "Cash advances must be retired promptly with receipts. This lesson covers retirement timelines, consequences of unretired advances, and how internal and external audit strengthen accountability.",
+        "questions": [
+          {
+            "question": "What does 'retiring an advance' mean?",
+            "options": ["Accounting for how the advance was spent, with receipts, and refunding any balance", "Keeping the balance as a bonus", "Asking for another advance", "Retiring from service"],
+            "answer": "Accounting for how the advance was spent, with receipts, and refunding any balance"
+          },
+          {
+            "question": "What is the role of internal audit?",
+            "options": ["To independently review controls and compliance within the organisation", "To approve all payments", "To prepare the budget", "To recruit staff"],
+            "answer": "To independently review controls and compliance within the organisation"
+          },
+          {
+            "question": "Unretired advances can result in...",
+            "options": ["Recovery from salary and possible disciplinary action", "Automatic promotion", "A larger next advance", "No consequence"],
+            "answer": "Recovery from salary and possible disciplinary action"
+          }
+        ]
+      }
+    ]
+  }
+]

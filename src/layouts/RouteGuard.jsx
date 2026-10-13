@@ -9,13 +9,13 @@ function RouteGuard({ element }) {
   const { userData } = useCurrentUser();
 
   if (!userData?.data?.CAN_ONBOARD && location.pathname.includes("/onboard")) {
-    return <Navigate to="/engage/home" />;
+    return <Navigate to="/lms/dashboard" />;
   }
   // if (
   //   !userData?.data?.IS_VARIATION &&
   //   location.pathname.includes("/variation")
   // ) {
-  //   return <Navigate to="/engage/home" />;
+  //   return <Navigate to="/lms/dashboard" />;
   // }
 
   if (
@@ -24,18 +24,18 @@ function RouteGuard({ element }) {
     (location.pathname.includes("/hr") ||
       location.pathname.includes("/administrator"))
   ) {
-    return <Navigate to="/engage/home" />;
+    return <Navigate to="/lms/dashboard" />;
   }
 
   if (!userData?.data?.IS_HR && location.pathname.includes("/hr")) {
-    return <Navigate to="/engage/home" />;
+    return <Navigate to="/lms/dashboard" />;
   }
 
   if (
     !userData?.data?.IS_ADMINISTRATOR &&
     location.pathname.includes("/admin")
   ) {
-    return <Navigate to="/engage/home" />;
+    return <Navigate to="/lms/dashboard" />;
   }
 
   return <Fragment>{element}</Fragment>;

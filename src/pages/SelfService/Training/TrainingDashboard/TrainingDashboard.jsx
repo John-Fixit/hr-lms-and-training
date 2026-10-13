@@ -1,156 +1,177 @@
 /* eslint-disable no-unused-vars */
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect, useCallback } from "react";
 import PageHeader from "../../../../components/payroll_components/PageHeader";
 import Separator from "../../../../components/payroll_components/Separator";
-import TopCards from "./TopCards";
-import ExpandedDrawerWithButton from "../../../../components/modals/ExpandedDrawerWithButton";
-import FormDrawer from "../../../../components/payroll_components/FormDrawer";
-
-// import PendingTrainingTable from "../PendingTraining/PendingTrainingTable";
-import NewTrainingForm from "./NewTrainingForm";
-// import { trainingData } from "./trainingData.js"
-import ApprasealForm from "../../../../components/self_services/aper/ApprasealForm.jsx";
-import TrainingTable2 from "./components/TrainingTable2.jsx";
-import { MoreHorizontal } from "lucide-react";
 // import FormBuilder from "../../../HR/Performance/Setup/FormBuilder.jsx";
 
-import Drawer from "../../../../components/Request&FormComponent/Drawer";
-import Note from "../../../../components/Request&FormComponent/Note.jsx";
-import ApprovalForm from "../../../../components/Request&FormComponent/ApprovalForm.jsx";
-import TrainingDetails from "./components/TrainingDetails.jsx";
+import useCurrentUser from "../../../../hooks/useCurrentUser.jsx";
+import {
+  useGetCoordinatorTrainingStaff,
+  useGetMyTraining,
+  useSeenTrainingNotification,
+} from "../../../../API/training.js";
+import { MdOutlinePending } from "react-icons/md";
+import { AiOutlineFileDone } from "react-icons/ai";
+import { Drawer } from "antd";
+import TrainingTable from "../../../../components/core/training/TrainingTable.jsx";
+import {
+  TrainingReviewDrawer,
+  ViewStaffDrawer,
+} from "../../../../components/core/training/index.js";
+import TrainingCategoryNotificationTemplate from "../../../../components/core/templates/TrainingCategoryNotificationTemplate.jsx";
+import RequestCard from "../../../Approval/RequestCard.jsx";
+import { errorToast } from "../../../../utils/toastMsgPop.js";
+import { NewTrainingDrawer } from "../../../../components/core/training/create-new-training/NewTraining.jsx";
+import BookFlightDrawer from "../../../../components/core/templates/BookFlightDrawer.jsx";
 
-
-
-export default function TrainingDashboard() {
-    const [open, setOpen] = useState(false)
-    const [selected, setSelected] = useState(  {
-      name: "Open",
-      progress: 14,
-      total: 4,
-      stroke: 'stroke-amber-500',
-      bg: 'bg-amber-500',
-    },)
-
-
-// drawer data
-const [sideBarNeeded, setSideBarNeeded] = useState(true);
-const [selectedTab, setSelectedTab] = useState(0);
-const [isOpen, setIsOpen] = useState(false);
-const [drawerHeader, setDrawerHeader] = useState({})
-const [whatTodo, setWhatTodo] = useState("");
-const [submitButtonNeeded, setSubmitButtonNeeded] = useState(true)
-
-const [tabs, setTabs] = useState([
-  { title: "Training", sub: "Training" },
+const statusData = [
   {
-    title: "Approvals",
-    sub: "Add Approval",
+    id: "awaiting",
+    label: "Awaiting",
+    icon: MdOutlinePending,
+    b_color: "bg-amber-100",
+    t_color: "text-amber-600",
   },
-  { title: "Comments", sub: "Add Comments" },
-]);
-// drawer data
+  {
+    id: "completed",
+    label: "Completed",
+    icon: AiOutlineFileDone,
+    b_color: "bg-green-100",
+    t_color: "text-green-600",
+  },
+  {
+    id: "regional",
+    label: "RM/Directorate",
+    icon: MdOutlinePending,
+    b_color: "bg-amber-100",
+    t_color: "text-amber-600",
+  },
+];
+export default function TrainingDashboard() {
+  // drawer data
+  const [selectedTab, setSelectedTab] = useState("awaiting");
+  const [reviewDrawerOpen, setReviewDrawerOpen] = useState(false);
+  const [selectedTrainingForReview, setSelectedTrainingForReview] =
+    useState(null);
+  const { userData } = useCurrentUser();
 
+  const { mutateAsync: seenTrainingNotification } =
+    useSeenTrainingNotification();
 
+  const handleSeenTrainingNotification = useCallback(
+    async (training_id) => {
+      await seenTrainingNotification({
+        staff_id: userData?.data?.STAFF_ID,
+        training_id: training_id,
+      });
+    },
+    [seenTrainingNotification, userData?.data?.STAFF_ID],
+  );
 
+  // useEffect(() => {
+  //   handleSeenTrainingNotification();
+  // }, [handleSeenTrainingNotification]);
 
+  const { data: pendingTrainingList, isPending: pendingTrainingLoading } =
+    useGetMyTraining({
+      staff_id: userData?.data?.STAFF_ID, //2003
+      status: "awaiting",
+    });
+  const { data: completedTrainingList, isPending: completedTrainingLoading } =
+    useGetMyTraining({
+      staff_id: userData?.data?.STAFF_ID,
+      status: "completed",
+    });
+  const { data: regionalTrainingList, isPending: regionalTrainingLoading } =
+    useGetMyTraining({
+      staff_id: userData?.data?.STAFF_ID,
+      status: "regional",
+    });
 
+  const detailsNo = (value) => {
+    if (value == "awaiting") {
+      return pendingTrainingList;
+    } else if (value == "completed") {
+      return completedTrainingList;
+    } else if (value == "regional") {
+      return regionalTrainingList;
+    }
+  };
 
-// drawer func
-// const addNew = () => {
-//   setTabs([
-//     { title: "Form" },
-//     {
-//       title: "Attachments",
-//     },
-//     { title: "Notes" },
-//     {
-//       title: "Approval",
-//     },
-//   ]);
-//   setWhatTodo("add");
-//   setSideBarNeeded(true);
-//   setIsOpen(true);
-//   setSubmitButtonNeeded(true);
-// };
+  const trainingList = detailsNo(selectedTab);
 
+  const tableData = Array.isArray(trainingList) ? trainingList : [];
 
+  const selectTab = (value) => {
+    setSelectedTab(value);
+  };
 
-const view = () => {
+  const [selectedTrainingForStaff, setSelectedTrainingForStaff] =
+    useState(null);
+  const [staffDrawerOpen, setStaffDrawerOpen] = useState(false);
+  const [templateDrawerOpen, setTemplateDrawerOpen] = useState(false);
+  const [selectedTrainingForTemplate, setSelectedTrainingForTemplate] =
+    useState(null);
+  const { mutateAsync: fetchCoordinatorTrainingStaff } =
+    useGetCoordinatorTrainingStaff();
 
-  setWhatTodo("view");
-  setSideBarNeeded(true);
-  setTabs([
-    { title: "Training" },
-    { title: "Approvals" },
-    { title: "Comments" },
-  ]);
-  setIsOpen(true);
-  setSubmitButtonNeeded(false);
+  const [bookFlightOpen, setBookFlightOpen] = useState({ state: false });
 
-};
-// drawer func
-
-
-
-
-
-
-
-
-
-
-    const handleOpen=()=>{
-        setOpen(true)
+  const handleViewStaff = async (row) => {
+    if (selectedTab === "regional") {
+      try {
+        const list = await fetchCoordinatorTrainingStaff({
+          staff_id: userData?.data?.STAFF_ID,
+          training_id: row.TRAINING_ID,
+        });
+        setSelectedTrainingForStaff({ ...row, ...list });
+        setStaffDrawerOpen(true);
+      } catch (err) {
+        const msg =
+          err?.response?.data?.message ||
+          err?.message ||
+          "Failed to load staff";
+        errorToast(msg);
+      }
+    } else {
+      setSelectedTrainingForStaff(row);
+      setStaffDrawerOpen(true);
     }
 
-    const handleClose=()=>{
-        setOpen(false)
-    }
+    // setSelectedTrainingForStaff(row);
+    // // setStaffListForDrawer([]);
+    // // setIsReviewView(false);
+    // setStaffDrawerOpen(true);
+    // try {
+    //   const list = await fetchTrainingParticipants({
+    //     training_id: row.TRAINING_ID,
+    //   });
+    //   setStaffListForDrawer(Array.isArray(list) ? list : []);
+    // } catch (err) {
+    //   const msg =
+    //     err?.response?.data?.message ||
+    //     err?.message ||
+    //     "Failed to load staff";
+    //   errorToast(msg);
+    //   setStaffListForDrawer([]);
+    // }
+  };
 
+  const handleCloseStaffDrawer = useCallback(() => {
+    setStaffDrawerOpen(false);
+    setSelectedTrainingForStaff(null);
+  }, []);
 
+  const [isOpen, setIsOpen] = useState(false);
 
+  const handleViewNominationTemplate = useCallback((row) => {
+    setSelectedTrainingForTemplate(row);
+    setTemplateDrawerOpen(true);
+  }, []);
 
-    const handleSeleted = (item)=>{
-      // console.log(item)
-      setSelected(item)
-    }
-
-
-
-
-
-    // const rowData1 = useMemo(()=>{
-    //   if(selected==='open'){
-    //     return trainingData?.filter(item=>(item?.category)==='Pending')
-    //   }
-    //   else if(selected === "in progress"){
-    //     return trainingData?.filter(item=>(item?.category)==='Cancelled')
-
-    //   }
-    //   else if(selected === "closed"){
-    //     return trainingData?.filter(item=>(item?.category)==='Completed')
-    //   }else{
-    //     return trainingData?.filter(item=>(item?.category)==='Pending')
-    //   }
-    // }, [selected])
-
-
-    // const rowData = useMemo(()=>{
-    //   if(selected==='pending_training'){
-    //     return trainingData?.filter(item=>(item?.category)==='Pending')
-    //   }
-    //   else if(selected === "cancelled_training"){
-    //     return trainingData?.filter(item=>(item?.category)==='Cancelled')
-
-    //   }
-    //   else if(selected === "completed_training"){
-    //     return trainingData?.filter(item=>(item?.category)==='Completed')
-    //   }else{
-    //     return trainingData?.filter(item=>(item?.category)==='Pending')
-    //   }
-    // }, [selected])
-
-
+  const handleBookFlightNow = (row) => {
+    setBookFlightOpen({ state: true, training: row });
+  }
 
   return (
     <>
@@ -158,138 +179,94 @@ const view = () => {
         <PageHeader
           header_text={"Training"}
           breadCrumb_data={[{ name: "Self Service" }, { name: "Training" }]}
-          buttonProp={[{ button_text: "New Training", fn: handleOpen }]}
+        // btnAvailable={true}
+        // buttonProp={[
+        //   { button_text: "Add New Training", fn: handleAddNewTraining },
+        // ]}
         />
-        <div className="mt-5">
-          {/* <hr /> */}
+        <div className="mt-5">{/* <hr /> */}</div>
+
+        <Separator separator_text={"OVERVIEW"} />
+        <RequestCard
+          requestHistory={statusData}
+          selectTab={selectTab}
+          requestStatus={selectedTab}
+          requestNo={detailsNo}
+          loading={{
+            awaiting: pendingTrainingLoading,
+            completed: completedTrainingLoading,
+            regional: regionalTrainingLoading,
+          }}
+        />
+
+        <div className="my-8">
+          <TrainingTable
+            tableData={tableData}
+            selectedTab={selectedTab}
+            pageName="self-service"
+            onReview={(row) => {
+              setSelectedTrainingForReview(row);
+              setReviewDrawerOpen(true);
+            }}
+            onViewStaff={(row) => handleViewStaff(row)}
+            onViewNominationTemplate={handleViewNominationTemplate}
+            handleBookFlightNow={handleBookFlightNow}
+          />
         </div>
-        <>
-          <Separator separator_text={"OVERVIEW"} />
-          <TopCards setSelected={handleSeleted}/>
-        </>
-        
-              {/* <Tabs
-                  aria-label="Options"
-                  selectedKey={selected}
-                  onSelectionChange={setSelected}
-                  className="mt-4 flex justify-en"
-                  variant="bordered"
-                  color="secondary"
-                  classNames={{
-                  base: "rounded",
-                  tabList: "outline-none border-[1px] shadow-none"
-                  }}
-                  radius="sm"
-                >
-                <Tab key="pending_training" title="Pending Training">
-                  <PendingTrainingTable rows={trainingData?.filter(item=>(item?.category)==='Pending')}/>
-                </Tab>
-                <Tab key="cencelled_training" title="Cancelled Taining">
-                  <PendingTrainingTable rows={trainingData?.filter(item=>(item?.category)==='Cancelled')}/>
-                </Tab>
-                <Tab key="completed_training" title="Completed Training">
-                  <PendingTrainingTable rows={trainingData?.filter(item=>(item?.category)==='Completed')}/>
-                </Tab>
-                
-                </Tabs> */}
 
-          <div className='bg-white rounded-lg border mt-8'>
-              {/* <GeneralTabs step={setstepper} tabElements={tabElements}/> */}
-              <div className="w-full bg-white flex flex-col border-b-4 p-3 rounded-t-md relative overflow-">
-                  <div className="flex gap-5">
-                      <span className="font-semibold">{selected?.name}</span>
-                      <MoreHorizontal className="text-gray-400"/> 
-                      <span className="text-gray-300 font-semibold">{selected?.total}</span>
+        {/* <NewTrainingDrawer isOpen={isOpen} setIsOpen={handleCloseDrawer} /> */}
 
-                  </div>
-                      <div className={`w-32 h-1 absolute -bottom-1 left-[0.2px] ${selected?.bg}`}></div>
-              </div>
-              <div className='space-y-5 '>
-                  <TrainingTable2  view={view} />
-                </div>
+        <TrainingReviewDrawer
+          open={reviewDrawerOpen}
+          onClose={() => {
+            setReviewDrawerOpen(false);
+            setSelectedTrainingForReview(null);
+          }}
+          training={selectedTrainingForReview}
+          onSuccess={() => {
+            // Optional: refetch is handled by API hook invalidation
+          }}
+        />
 
-              
-          </div>
+        <ViewStaffDrawer
+          open={staffDrawerOpen}
+          onClose={handleCloseStaffDrawer}
+          trainingId={selectedTrainingForStaff?.TRAINING_ID}
+          trainingTitle={selectedTrainingForStaff?.TRAINING_TITLE}
+          trainingStatus={selectedTab}
+          staffTraining={selectedTrainingForStaff}
+          viewFrom="self-service"
+        />
 
+        <BookFlightDrawer
+          open={bookFlightOpen.state}
+          onClose={() => setBookFlightOpen({ state: false })}
+          training={bookFlightOpen?.training}
+        />
 
-
-
-
-
-
-
-
-
-
-
-
-
-          {/* <PendingTrainingTable rows={rowData}/> */}
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <div className="pt-40">
-              <ApprasealForm />
-          </div>
-
-
-
+        <Drawer
+          title="Training Notification"
+          open={templateDrawerOpen}
+          onClose={() => {
+            setTemplateDrawerOpen(false);
+            setSelectedTrainingForTemplate(null);
+          }}
+          width={850}
+          className="font-helvetica"
+          classNames={{
+            body: "bg-slate-100",
+          }}
+        >
+          <TrainingCategoryNotificationTemplate
+            training={selectedTrainingForTemplate}
+          />
+        </Drawer>
       </main>
-
-
-      <Drawer
-        sideBarNeeded={sideBarNeeded}
-        selectedTab={selectedTab}
-        setSelectedTab={setSelectedTab}
-        tabs={tabs}
-        isOpen={isOpen}
-        header={drawerHeader}
-        setIsOpen={setIsOpen}
-      >
-         {whatTodo == "view" && (
-          <div>
-            {tabs[selectedTab].title.toLowerCase() == "training".toLowerCase() && (
-              <div className="flex flex-col gap-2">
-                <h1 className="mb-5 font-helvetica">Training Details</h1>
-                <TrainingDetails/>
-              </div>
-            )}
-            {tabs[selectedTab].title.toLowerCase() == "Comments".toLowerCase() && (
-              <Note
-                setInformation={()=>{}}
-                setSelectedTab={setSelectedTab}
-              />
-            )}
-            {tabs[selectedTab].title.toLowerCase() ==
-              "Approvals".toLowerCase() && (
-              <ApprovalForm
-                setInformation={()=>{}}
-                setSelectedTab={setSelectedTab}
-              />
-            )}
-          </div>
-        )}
-      </Drawer>
-
-
-
-
-
-      <ExpandedDrawerWithButton isOpen={open} onClose={handleClose}>
-        <FormDrawer tabs={[{title: "New Training", }]}>
-          <NewTrainingForm />
-        </FormDrawer>
-      </ExpandedDrawerWithButton>
     </>
   );
 }
+
+//Dashboard
+//Courses
+//DTA
+//Travelings

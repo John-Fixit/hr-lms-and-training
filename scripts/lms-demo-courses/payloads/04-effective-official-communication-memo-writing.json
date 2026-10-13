@@ -1,0 +1,266 @@
+{
+  "COURSE_CATEGORY": "Soft Skills",
+  "COMPANY_ID": "1",
+  "COURSE_TITLE": "Effective Official Communication & Memo Writing",
+  "COURSE_OBJECTIVE": "Improve the clarity, tone and structure of official memos, letters, minutes, emails and presentations.",
+  "COURSE_DESCRIPTION": "A hands-on course on writing for government and corporate audiences: structuring memos, recording minutes, email etiquette and presenting information persuasively.",
+  "USE_AS_APPRAISAL": true,
+  "START_DATE": "2026-10-12",
+  "END_DATE": "2027-01-10",
+  "CREATOR": "1",
+  "PERFORMANCE_CYCLE_ID": 12,
+  "HAS_LINE_MANAGER": false,
+  "QUIZ_STRATEGY": "both",
+  "HAS_GENERAL_QUIZ": true,
+  "general_quiz": {
+    "QUIZ_TYPE": "manual",
+    "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+    "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+    "QUIZ_DESCRIPTION": "Final assessment for Effective Official Communication & Memo Writing.",
+    "ATTEMPTS_ALLOWED": 1,
+    "DURATION": 20,
+    "TOTAL_QUIZ_SCORE": 90,
+    "questions": [
+      {
+        "QUIZ_QUESTION": "What is the most important quality of official writing?",
+        "QUIZ_ANSWER": "Clarity and conciseness",
+        "QUIZ_OPTIONS": [
+          "Length",
+          "Clarity and conciseness",
+          "Decorative fonts",
+          "Use of complex vocabulary"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "Where should the main message of a memo appear?",
+        "QUIZ_ANSWER": "Early, near the beginning",
+        "QUIZ_OPTIONS": [
+          "Early, near the beginning",
+          "Only in the attachment",
+          "Hidden in the last paragraph",
+          "It should not be stated directly"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "What tone is appropriate for official correspondence?",
+        "QUIZ_ANSWER": "Formal and courteous",
+        "QUIZ_OPTIONS": [
+          "Sarcastic",
+          "Aggressive",
+          "Casual slang",
+          "Formal and courteous"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "A memo's subject line should...",
+        "QUIZ_ANSWER": "State the purpose briefly and specifically",
+        "QUIZ_OPTIONS": [
+          "State the purpose briefly and specifically",
+          "Be left blank",
+          "Contain the full memo",
+          "Only say 'Important'"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "Good meeting minutes should record...",
+        "QUIZ_ANSWER": "Decisions, action points, owners and deadlines",
+        "QUIZ_OPTIONS": [
+          "Decisions, action points, owners and deadlines",
+          "Every word spoken",
+          "Personal opinions of the secretary",
+          "Only the attendance list"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "Why do official memos carry reference numbers?",
+        "QUIZ_ANSWER": "To make tracking and filing easier",
+        "QUIZ_OPTIONS": [
+          "For decoration",
+          "To make them longer",
+          "They are not needed",
+          "To make tracking and filing easier"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "When should you use 'Reply All'?",
+        "QUIZ_ANSWER": "Only when every recipient needs your response",
+        "QUIZ_OPTIONS": [
+          "Never",
+          "Only on Fridays",
+          "Only when every recipient needs your response",
+          "Always"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "A good presentation slide has...",
+        "QUIZ_ANSWER": "A few key points and supporting visuals",
+        "QUIZ_OPTIONS": [
+          "Full paragraphs of text",
+          "A few key points and supporting visuals",
+          "As many colours as possible",
+          "No title"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "What should you always do before sending an important email?",
+        "QUIZ_ANSWER": "Proofread it and check the recipients and attachments",
+        "QUIZ_OPTIONS": [
+          "Send it twice",
+          "Proofread it and check the recipients and attachments",
+          "Add more recipients",
+          "Remove the subject line"
+        ]
+      }
+    ]
+  },
+  "COURSE_PREVIEW_IMAGE": "https://placehold.co/800x450/1E293B/FFFFFF/png?font=montserrat&text=Effective%20Official%20Communication%20%26%20Memo%20Writing",
+  "course_lessons": [
+    {
+      "TITLE": "Principles of Official Writing",
+      "DESCRIPTION": "Official writing should be clear, concise, correct and courteous. This lesson covers knowing your audience, putting the key message first, choosing a formal but readable tone, and avoiding unnecessary jargon.",
+      "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+      "HAS_QUIZ": true,
+      "QUIZ_TYPE": "manual",
+      "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+      "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+      "QUIZ_DESCRIPTION": "Check your understanding of \"Principles of Official Writing\".",
+      "ATTEMPTS_ALLOWED": 2,
+      "DURATION": 10,
+      "TOTAL_QUIZ_SCORE": 30,
+      "lesson_quiz": {
+        "questions": [
+          {
+            "QUIZ_QUESTION": "What is the most important quality of official writing?",
+            "QUIZ_ANSWER": "Clarity and conciseness",
+            "QUIZ_OPTIONS": [
+              "Length",
+              "Clarity and conciseness",
+              "Decorative fonts",
+              "Use of complex vocabulary"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "Where should the main message of a memo appear?",
+            "QUIZ_ANSWER": "Early, near the beginning",
+            "QUIZ_OPTIONS": [
+              "Early, near the beginning",
+              "Only in the attachment",
+              "Hidden in the last paragraph",
+              "It should not be stated directly"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "What tone is appropriate for official correspondence?",
+            "QUIZ_ANSWER": "Formal and courteous",
+            "QUIZ_OPTIONS": [
+              "Sarcastic",
+              "Aggressive",
+              "Casual slang",
+              "Formal and courteous"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "TITLE": "Writing Memos & Minutes",
+      "DESCRIPTION": "This lesson breaks down the parts of a memo (reference, date, subject, body and action required) and shows how to write minutes that capture decisions, action points, owners and deadlines.",
+      "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+      "HAS_QUIZ": true,
+      "QUIZ_TYPE": "manual",
+      "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+      "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+      "QUIZ_DESCRIPTION": "Check your understanding of \"Writing Memos & Minutes\".",
+      "ATTEMPTS_ALLOWED": 2,
+      "DURATION": 10,
+      "TOTAL_QUIZ_SCORE": 30,
+      "lesson_quiz": {
+        "questions": [
+          {
+            "QUIZ_QUESTION": "A memo's subject line should...",
+            "QUIZ_ANSWER": "State the purpose briefly and specifically",
+            "QUIZ_OPTIONS": [
+              "State the purpose briefly and specifically",
+              "Be left blank",
+              "Contain the full memo",
+              "Only say 'Important'"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "Good meeting minutes should record...",
+            "QUIZ_ANSWER": "Decisions, action points, owners and deadlines",
+            "QUIZ_OPTIONS": [
+              "Decisions, action points, owners and deadlines",
+              "Every word spoken",
+              "Personal opinions of the secretary",
+              "Only the attendance list"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "Why do official memos carry reference numbers?",
+            "QUIZ_ANSWER": "To make tracking and filing easier",
+            "QUIZ_OPTIONS": [
+              "For decoration",
+              "To make them longer",
+              "They are not needed",
+              "To make tracking and filing easier"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "TITLE": "Email Etiquette & Presentations",
+      "DESCRIPTION": "Email and slide presentations are now the main ways we communicate at work. This lesson covers subject lines, reply-all discipline, attachments, proofreading and designing slides that support, rather than replace, the speaker.",
+      "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+      "HAS_QUIZ": true,
+      "QUIZ_TYPE": "manual",
+      "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+      "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+      "QUIZ_DESCRIPTION": "Check your understanding of \"Email Etiquette & Presentations\".",
+      "ATTEMPTS_ALLOWED": 2,
+      "DURATION": 10,
+      "TOTAL_QUIZ_SCORE": 30,
+      "lesson_quiz": {
+        "questions": [
+          {
+            "QUIZ_QUESTION": "When should you use 'Reply All'?",
+            "QUIZ_ANSWER": "Only when every recipient needs your response",
+            "QUIZ_OPTIONS": [
+              "Never",
+              "Only on Fridays",
+              "Only when every recipient needs your response",
+              "Always"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "A good presentation slide has...",
+            "QUIZ_ANSWER": "A few key points and supporting visuals",
+            "QUIZ_OPTIONS": [
+              "Full paragraphs of text",
+              "A few key points and supporting visuals",
+              "As many colours as possible",
+              "No title"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "What should you always do before sending an important email?",
+            "QUIZ_ANSWER": "Proofread it and check the recipients and attachments",
+            "QUIZ_OPTIONS": [
+              "Send it twice",
+              "Proofread it and check the recipients and attachments",
+              "Add more recipients",
+              "Remove the subject line"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "course_recipients": {
+    "recipient_type": "directorate",
+    "STAFF_IDS": [
+      "14"
+    ]
+  }
+}

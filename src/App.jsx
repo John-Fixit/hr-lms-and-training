@@ -9,7 +9,6 @@ import {
 } from "react-router-dom";
 import useCurrentUser from "./hooks/useCurrentUser";
 import RootLayout from "./layouts/RootLayout";
-import Home from "./pages/home/Home";
 import Profile from "./pages/Profile";
 import Leave from "./pages/Leave/Leave";
 import Login from "./pages/login/Login";
@@ -85,6 +84,12 @@ import PerformanceCycle from "./pages/Performance_v2/cycle";
 import AdminDashboard from "./pages/LMS/AdminDashboard";
 import StaffDashboard from "./pages/LMS/StaffDashboard";
 import LMSLayoutOutlet from "./layouts/lms/LMSLayoutOutlet";
+import MyTrainingRequest from "./pages/SelfService/Training/TrainingDashboard/MyTrainingRequest";
+import HrCourseTraining from "./pages/HR/Training/HrCourseTraining";
+import TrainingDTA from "./pages/HR/Training/TrainingDTA";
+import TrainingTravelingFee from "./pages/HR/Training/TrainingTravelingFee";
+import TrainingReport from "./pages/HR/Training/TrainingReport/TrainingReport";
+import TrainingTemplates from "./pages/HR/Training/TrainingTemplates";
 // import AdsPopup440 from "./pages/home/rightBar/components/AdsPopup440";
 
 const App = () => {
@@ -143,8 +148,11 @@ const App = () => {
         <Route path="/" element={<RouteGuard element={<RootLayout />} />}>
           {/* MESSAGING APPS */}
           {/* DEFAULT APPS */}
-          <Route path="" element={<Navigate to="/engage/home" />} />
-          <Route path="/engage/home" element={<Home />} />
+          <Route path="" element={<Navigate to="/lms/dashboard" replace />} />
+          <Route
+            path="/engage/home/*"
+            element={<Navigate to="/lms/dashboard" replace />}
+          />
           {/* PERFORMANCE APPS */}
           <Route
             path="performance/dashboard"
@@ -219,6 +227,24 @@ const App = () => {
               element={<TrainingStatus />}
             />
           </Route>
+
+          <Route path="people/training" element={<Outlet />}>
+            <Route path="my_training" element={<TrainingDashboard />} />
+            <Route path="request" element={<MyTrainingRequest />} />
+            <Route
+              path="people/self/pending_training"
+              element={<PendingTraining />}
+            />
+            <Route path="people/self/training_fees" element={<TrainingFee />} />
+            <Route
+              path="people/self/approved_training"
+              element={<ApprovedTraining />}
+            />
+            <Route
+              path="people/self/training_status"
+              element={<TrainingStatus />}
+            />
+          </Route>
           {/* PEOPLE APP */}
           {/* SELF SERVICE APPS */}
 
@@ -262,6 +288,27 @@ const App = () => {
 
           <Route path="/people/hr/exit" element={<StaffExit />} />
           <Route path="/people/hr/training" element={<HrTraining />} />
+          <Route
+            path="/people/hr/training/dashboard"
+            element={<HrTraining />}
+          />
+          <Route
+            path="/people/hr/training/course"
+            element={<HrCourseTraining />}
+          />
+          <Route path="/people/hr/training/dta" element={<TrainingDTA />} />
+          <Route
+            path="/people/hr/training/traveling_fee"
+            element={<TrainingTravelingFee />}
+          />
+          <Route
+            path="/people/hr/training/report"
+            element={<TrainingReport />}
+          />
+          <Route
+            path="/people/hr/training/templates"
+            element={<TrainingTemplates />}
+          />
           <Route path="/people/hr/promotions" element={<HRPromotions />} />
           <Route path="/people/hr/transfer" element={<Deployment />} />
           <Route path="/people/hr/leave" element={<LeaveRequest />} />

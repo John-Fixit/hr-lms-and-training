@@ -4,6 +4,10 @@ import { FiEye, FiSearch } from "react-icons/fi";
 import { Download } from "lucide-react";
 import StaffBreakdownDrawer from "./StaffBreakdownDrawer";
 import { exportExcel } from "../../../../../utils/exportReportAsExcel";
+import {
+  getPaginationRange,
+  PAGE_ELLIPSIS,
+} from "../../../../../utils/pagination";
 
 function StatusBadge({ status }) {
   const map = {
@@ -205,6 +209,7 @@ const RecipientTable = ({ students = [], courseId }) => {
             No students found.
           </div>
         ) : (
+          
           <table className="w-full border-collapse">
             <thead>
               <tr className="mt-3">
@@ -322,39 +327,49 @@ const RecipientTable = ({ students = [], courseId }) => {
       </div>
 
       {/* Pagination */}
-      <div className="flex justify-between items-center px-6 py-3.5 border-t border-slate-100 bg-slate-50/60">
-        <span className="text-xs text-slate-400">
+      <div className="flex flex-wrap justify-between items-center gap-3 px-6 py-3.5 border-t border-slate-100 bg-slate-50/60">
+        <span className="text-xs text-slate-400 whitespace-nowrap">
           {filtered.length > 0
             ? `Showing ${(safePage - 1) * PAGE_SIZE + 1}–${Math.min(safePage * PAGE_SIZE, filtered.length)} of ${filtered.length} students`
             : ""}
         </span>
-        <div className="flex gap-1.5 items-center">
+        <div className="flex flex-wrap gap-1.5 items-center">
           <button
             disabled={safePage <= 1}
-            onClick={() => setPage((p) => p - 1)}
-            className="text-[11px] font-bold px-3 py-1.5 rounded-lg border border-slate-200 bg-white cursor-pointer disabled:opacity-30"
+            onClick={() => setPage(safePage - 1)}
+            className="text-[11px] font-bold px-3 py-1.5 rounded-lg border border-slate-200 bg-white cursor-pointer whitespace-nowrap disabled:opacity-30"
             style={{ fontFamily: "Sora,sans-serif" }}
           >
             ← Prev
           </button>
-          {Array.from({ length: totalPages }, (_, i) => i + 1).map((n) => (
-            <button
-              key={n}
-              onClick={() => setPage(n)}
-              className={`w-7 h-7 rounded-lg text-[11px] font-bold cursor-pointer ${
-                n === safePage
-                  ? "bg-[#1abc9c] text-white border-none"
-                  : "border border-slate-200 bg-white text-slate-400"
-              }`}
-              style={{ fontFamily: "Sora,sans-serif" }}
-            >
-              {n}
-            </button>
-          ))}
+          {getPaginationRange(safePage, totalPages).map((item, i) =>
+            item === PAGE_ELLIPSIS ? (
+              <span
+                key={`ellipsis-${i}`}
+                className="w-7 h-7 flex items-center justify-center text-[11px] font-bold text-slate-400"
+              >
+                {PAGE_ELLIPSIS}
+              </span>
+            ) : (
+              <button
+                key={item}
+                onClick={() => setPage(item)}
+                aria-current={item === safePage ? "page" : undefined}
+                className={`min-w-7 h-7 px-1.5 rounded-lg text-[11px] font-bold cursor-pointer ${
+                  item === safePage
+                    ? "bg-[#1abc9c] text-white border-none"
+                    : "border border-slate-200 bg-white text-slate-400"
+                }`}
+                style={{ fontFamily: "Sora,sans-serif" }}
+              >
+                {item}
+              </button>
+            ),
+          )}
           <button
             disabled={safePage >= totalPages}
-            onClick={() => setPage((p) => p + 1)}
-            className="text-[11px] font-bold px-3 py-1.5 rounded-lg border border-slate-200 bg-white cursor-pointer disabled:opacity-30"
+            onClick={() => setPage(safePage + 1)}
+            className="text-[11px] font-bold px-3 py-1.5 rounded-lg border border-slate-200 bg-white cursor-pointer whitespace-nowrap disabled:opacity-30"
             style={{ fontFamily: "Sora,sans-serif" }}
           >
             Next →

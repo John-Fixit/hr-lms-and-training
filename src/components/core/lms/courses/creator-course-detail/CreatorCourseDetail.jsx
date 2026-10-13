@@ -186,8 +186,6 @@ export default function CreatorCourseDetail() {
     );
   }
 
-  console.log("courseDetailData", courseDetailData);
-
   return (
     <div
       className="bg-[#f4f6fb] min-h-screen"

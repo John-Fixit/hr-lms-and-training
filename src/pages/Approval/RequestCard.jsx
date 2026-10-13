@@ -9,6 +9,7 @@ const RequestCard = ({
   externalAction,
   action,
   loading,
+  allowNull,
 }) => {
   return (
     <div className="grid grid-cols-1 bottom-0 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 my-4">
@@ -41,7 +42,8 @@ const RequestCard = ({
             {loading?.[request?.id] ? (
               <StarLoader size={20} />
             ) : (
-              (requestNo && requestNo(request?.id)?.length) || 0
+              (requestNo && requestNo(request?.id)?.length) ||
+              (allowNull ? "" : 0)
             )}
           </span>
         </div>

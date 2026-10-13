@@ -48,6 +48,8 @@ const StaffCoursesTable = () => {
   const { mutateAsync: mutateCourseDetail, isPending: isLoadingCourseDetail } =
     useMutateCourseDetail(userData?.data?.STAFF_ID);
 
+    console.log(get_courses, "get_courses");
+
   const allCourses = useMemo(() => get_courses || [], [get_courses]);
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -96,6 +98,8 @@ const StaffCoursesTable = () => {
     const endIndex = startIndex + rowsPerPage;
     return filteredCourses?.slice(startIndex, endIndex);
   }, [filteredCourses, safePage, rowsPerPage]);
+
+  console.log(paginatedCourses, "paginatedCourses");
 
   const handleExport = () => {
     exportExcel({
@@ -247,14 +251,15 @@ const StaffCoursesTable = () => {
                   Course Name
                 </th>
                 <th className="text-center py-2 px-4 font-semibold tracking-wide font-outfit">
-                  Recipients
-                </th>
-                <th className="text-center py-2 px-4 font-semibold tracking-wide font-outfit">
                   Category
                 </th>
                 <th className="text-center py-2 px-4 font-semibold tracking-wide font-outfit">
                   Period
                 </th>
+
+                {/* <th className="text-center py-2 px-4 font-semibold tracking-wide font-outfit">
+                  Lessons
+                </th> */}
                 <th className="text-center py-2 px-4 font-semibold tracking-wide font-outfit">
                   Ends At
                 </th>
@@ -294,12 +299,7 @@ const StaffCoursesTable = () => {
                         </span>
                       </button>
                     </td>
-                    <td className="text-center py-4 px-4 text-[#6c829e] font-medium text-[14px] font-outfit">
-                      {course?.TOTAL_RECIPIENTS ??
-                        course?.selling ??
-                        course?.course_recipients?.length ??
-                        "—"}
-                    </td>
+                    
                     <td className="text-center py-4 px-4 text-[#6c829e] font-medium text-[14px] font-outfit">
                       {course.COURSE_CATEGORY}
                     </td>
@@ -308,6 +308,12 @@ const StaffCoursesTable = () => {
                         {getCompoundPeriod(course.START_DATE, course.END_DATE)}
                       </span>
                     </td>
+                    {/* <td className="text-center py-4 px-4 text-[#6c829e] font-medium text-[14px] font-outfit">
+                      {course?.TOTAL_LESSONS ?
+                        `${course?.TOTAL_LESSONS} lessons` :
+                        "No lesson" ??
+                        "—"}
+                    </td> */}
                     <td className="text-center py-4 px-4">
                       <span
                         className={clsx(
@@ -322,7 +328,9 @@ const StaffCoursesTable = () => {
                     </td>
                     <td className="text-center py-4 px-2 md:px-6">
                       <div className="flex items-center justify-center gap-2">
-                        {getAvailabilityStatus(course) !== "ended" && (
+                        {
+                        getAvailabilityStatus(course) === "upcoming" && 
+                        (
                           <button
                             onClick={() => handleEditCourse(course)}
                             disabled={

@@ -1,0 +1,266 @@
+{
+  "COURSE_CATEGORY": "ICT & Security",
+  "COMPANY_ID": "1",
+  "COURSE_TITLE": "Data Protection & Cybersecurity Awareness",
+  "COURSE_OBJECTIVE": "Help every staff member protect personal data and official information, and recognise and report common cyber threats.",
+  "COURSE_DESCRIPTION": "An awareness course on the Nigeria Data Protection Act 2023, safe handling of personal and official data, phishing and social engineering, passwords and incident reporting.",
+  "USE_AS_APPRAISAL": true,
+  "START_DATE": "2026-10-12",
+  "END_DATE": "2027-01-10",
+  "CREATOR": "1",
+  "PERFORMANCE_CYCLE_ID": 12,
+  "HAS_LINE_MANAGER": false,
+  "QUIZ_STRATEGY": "both",
+  "HAS_GENERAL_QUIZ": true,
+  "general_quiz": {
+    "QUIZ_TYPE": "manual",
+    "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+    "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+    "QUIZ_DESCRIPTION": "Final assessment for Data Protection & Cybersecurity Awareness.",
+    "ATTEMPTS_ALLOWED": 1,
+    "DURATION": 20,
+    "TOTAL_QUIZ_SCORE": 90,
+    "questions": [
+      {
+        "QUIZ_QUESTION": "What is Nigeria's primary data protection law?",
+        "QUIZ_ANSWER": "Nigeria Data Protection Act 2023",
+        "QUIZ_OPTIONS": [
+          "Nigeria Data Protection Act 2023",
+          "Evidence Act 2011",
+          "Cybercrimes Act 2015 only",
+          "Copyright Act"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "Which body regulates data protection in Nigeria?",
+        "QUIZ_ANSWER": "Nigeria Data Protection Commission",
+        "QUIZ_OPTIONS": [
+          "Nigeria Data Protection Commission",
+          "Federal Inland Revenue Service",
+          "National Orientation Agency",
+          "Nigerian Communications Commission"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "Which of these is personal data?",
+        "QUIZ_ANSWER": "A staff member's phone number and home address",
+        "QUIZ_OPTIONS": [
+          "The weather forecast",
+          "A published government press release",
+          "The name of a public holiday",
+          "A staff member's phone number and home address"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "You get an email from 'IT Support' asking you to confirm your password through a link. What should you do?",
+        "QUIZ_ANSWER": "Don't click, and report it to the IT/security team",
+        "QUIZ_OPTIONS": [
+          "Click the link and confirm quickly",
+          "Reply with your password",
+          "Forward it to all colleagues",
+          "Don't click, and report it to the IT/security team"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "Which is a common sign of a phishing email?",
+        "QUIZ_ANSWER": "Urgent tone and a sender address that doesn't match the organisation",
+        "QUIZ_OPTIONS": [
+          "Correct spelling of your name",
+          "An email sent during work hours",
+          "A message from your known supervisor's verified address",
+          "Urgent tone and a sender address that doesn't match the organisation"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "What is the best practice for passwords?",
+        "QUIZ_ANSWER": "Use a long, unique passphrase for each account and enable multi-factor authentication",
+        "QUIZ_OPTIONS": [
+          "Use a long, unique passphrase for each account and enable multi-factor authentication",
+          "Write it on a sticky note on your monitor",
+          "Use the same password everywhere",
+          "Share it with a trusted colleague"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "You need to step away from your computer. What should you do?",
+        "QUIZ_ANSWER": "Lock your screen",
+        "QUIZ_OPTIONS": [
+          "Nothing, it's fine for a few minutes",
+          "Lock your screen",
+          "Leave it open for a colleague",
+          "Turn off the monitor only"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "How should official documents be shared?",
+        "QUIZ_ANSWER": "Through approved official channels and systems",
+        "QUIZ_OPTIONS": [
+          "Through personal email accounts",
+          "On unencrypted USB drives left on desks",
+          "Through approved official channels and systems",
+          "On public social media groups"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "You suspect a data breach. What is the right first step?",
+        "QUIZ_ANSWER": "Report it immediately to the designated officer or IT security",
+        "QUIZ_OPTIONS": [
+          "Delete the evidence",
+          "Post about it online",
+          "Report it immediately to the designated officer or IT security",
+          "Wait to see if it happens again"
+        ]
+      }
+    ]
+  },
+  "COURSE_PREVIEW_IMAGE": "https://placehold.co/800x450/1E293B/FFFFFF/png?font=montserrat&text=Data%20Protection%20%26%20Cybersecurity%20Awareness",
+  "course_lessons": [
+    {
+      "TITLE": "Personal Data & the Nigeria Data Protection Act",
+      "DESCRIPTION": "The Nigeria Data Protection Act 2023 sets out how personal data must be collected, processed, stored and shared, and established the Nigeria Data Protection Commission (NDPC). This lesson explains what counts as personal data and the principles of lawful, fair and secure processing.",
+      "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+      "HAS_QUIZ": true,
+      "QUIZ_TYPE": "manual",
+      "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+      "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+      "QUIZ_DESCRIPTION": "Check your understanding of \"Personal Data & the Nigeria Data Protection Act\".",
+      "ATTEMPTS_ALLOWED": 2,
+      "DURATION": 10,
+      "TOTAL_QUIZ_SCORE": 30,
+      "lesson_quiz": {
+        "questions": [
+          {
+            "QUIZ_QUESTION": "What is Nigeria's primary data protection law?",
+            "QUIZ_ANSWER": "Nigeria Data Protection Act 2023",
+            "QUIZ_OPTIONS": [
+              "Nigeria Data Protection Act 2023",
+              "Evidence Act 2011",
+              "Cybercrimes Act 2015 only",
+              "Copyright Act"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "Which body regulates data protection in Nigeria?",
+            "QUIZ_ANSWER": "Nigeria Data Protection Commission",
+            "QUIZ_OPTIONS": [
+              "Nigeria Data Protection Commission",
+              "Federal Inland Revenue Service",
+              "National Orientation Agency",
+              "Nigerian Communications Commission"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "Which of these is personal data?",
+            "QUIZ_ANSWER": "A staff member's phone number and home address",
+            "QUIZ_OPTIONS": [
+              "The weather forecast",
+              "A published government press release",
+              "The name of a public holiday",
+              "A staff member's phone number and home address"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "TITLE": "Phishing & Social Engineering",
+      "DESCRIPTION": "Most cyber incidents start with a human being tricked. This lesson shows how to spot phishing emails, fake calls and suspicious links, and what to do when you receive one.",
+      "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+      "HAS_QUIZ": true,
+      "QUIZ_TYPE": "manual",
+      "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+      "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+      "QUIZ_DESCRIPTION": "Check your understanding of \"Phishing & Social Engineering\".",
+      "ATTEMPTS_ALLOWED": 2,
+      "DURATION": 10,
+      "TOTAL_QUIZ_SCORE": 30,
+      "lesson_quiz": {
+        "questions": [
+          {
+            "QUIZ_QUESTION": "You get an email from 'IT Support' asking you to confirm your password through a link. What should you do?",
+            "QUIZ_ANSWER": "Don't click, and report it to the IT/security team",
+            "QUIZ_OPTIONS": [
+              "Click the link and confirm quickly",
+              "Reply with your password",
+              "Forward it to all colleagues",
+              "Don't click, and report it to the IT/security team"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "Which is a common sign of a phishing email?",
+            "QUIZ_ANSWER": "Urgent tone and a sender address that doesn't match the organisation",
+            "QUIZ_OPTIONS": [
+              "Correct spelling of your name",
+              "An email sent during work hours",
+              "A message from your known supervisor's verified address",
+              "Urgent tone and a sender address that doesn't match the organisation"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "What is the best practice for passwords?",
+            "QUIZ_ANSWER": "Use a long, unique passphrase for each account and enable multi-factor authentication",
+            "QUIZ_OPTIONS": [
+              "Use a long, unique passphrase for each account and enable multi-factor authentication",
+              "Write it on a sticky note on your monitor",
+              "Use the same password everywhere",
+              "Share it with a trusted colleague"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "TITLE": "Handling Official Information & Reporting Incidents",
+      "DESCRIPTION": "Good security habits protect the organisation every day: locking your screen, using approved channels to share documents, classifying information correctly and reporting incidents quickly.",
+      "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+      "HAS_QUIZ": true,
+      "QUIZ_TYPE": "manual",
+      "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+      "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+      "QUIZ_DESCRIPTION": "Check your understanding of \"Handling Official Information & Reporting Incidents\".",
+      "ATTEMPTS_ALLOWED": 2,
+      "DURATION": 10,
+      "TOTAL_QUIZ_SCORE": 30,
+      "lesson_quiz": {
+        "questions": [
+          {
+            "QUIZ_QUESTION": "You need to step away from your computer. What should you do?",
+            "QUIZ_ANSWER": "Lock your screen",
+            "QUIZ_OPTIONS": [
+              "Nothing, it's fine for a few minutes",
+              "Lock your screen",
+              "Leave it open for a colleague",
+              "Turn off the monitor only"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "How should official documents be shared?",
+            "QUIZ_ANSWER": "Through approved official channels and systems",
+            "QUIZ_OPTIONS": [
+              "Through personal email accounts",
+              "On unencrypted USB drives left on desks",
+              "Through approved official channels and systems",
+              "On public social media groups"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "You suspect a data breach. What is the right first step?",
+            "QUIZ_ANSWER": "Report it immediately to the designated officer or IT security",
+            "QUIZ_OPTIONS": [
+              "Delete the evidence",
+              "Post about it online",
+              "Report it immediately to the designated officer or IT security",
+              "Wait to see if it happens again"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "course_recipients": {
+    "recipient_type": "directorate",
+    "STAFF_IDS": [
+      "14"
+    ]
+  }
+}

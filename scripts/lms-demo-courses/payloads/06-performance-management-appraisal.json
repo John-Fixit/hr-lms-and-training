@@ -1,0 +1,266 @@
+{
+  "COURSE_CATEGORY": "HR & Performance",
+  "COMPANY_ID": "1",
+  "COURSE_TITLE": "Performance Management & Appraisal",
+  "COURSE_OBJECTIVE": "Help staff and supervisors set SMART objectives, track performance throughout the year and conduct fair, evidence-based appraisals.",
+  "COURSE_DESCRIPTION": "Covers the full performance cycle: goal setting, continuous feedback, documentation, the appraisal interview and development planning, aligned with annual performance evaluation practice in the public service.",
+  "USE_AS_APPRAISAL": true,
+  "START_DATE": "2026-10-12",
+  "END_DATE": "2027-01-10",
+  "CREATOR": "1",
+  "PERFORMANCE_CYCLE_ID": 12,
+  "HAS_LINE_MANAGER": false,
+  "QUIZ_STRATEGY": "both",
+  "HAS_GENERAL_QUIZ": true,
+  "general_quiz": {
+    "QUIZ_TYPE": "manual",
+    "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+    "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+    "QUIZ_DESCRIPTION": "Final assessment for Performance Management & Appraisal.",
+    "ATTEMPTS_ALLOWED": 1,
+    "DURATION": 20,
+    "TOTAL_QUIZ_SCORE": 90,
+    "questions": [
+      {
+        "QUIZ_QUESTION": "What does the 'M' in SMART stand for?",
+        "QUIZ_ANSWER": "Measurable",
+        "QUIZ_OPTIONS": [
+          "Measurable",
+          "Monthly",
+          "Manageable",
+          "Mandatory"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "Which objective is SMART?",
+        "QUIZ_ANSWER": "Process 95% of leave requests within 3 working days by 31 December",
+        "QUIZ_OPTIONS": [
+          "Be more efficient sometimes",
+          "Process 95% of leave requests within 3 working days by 31 December",
+          "Work harder this year",
+          "Improve things"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "When should individual objectives be agreed?",
+        "QUIZ_ANSWER": "At the start of the performance cycle",
+        "QUIZ_OPTIONS": [
+          "On the day of the appraisal",
+          "After the year ends",
+          "Never, they are optional",
+          "At the start of the performance cycle"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "Why hold regular performance check-ins?",
+        "QUIZ_ANSWER": "To track progress and address issues early",
+        "QUIZ_OPTIONS": [
+          "To replace the annual appraisal entirely",
+          "To find faults only",
+          "They have no value",
+          "To track progress and address issues early"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "What should be documented during the year?",
+        "QUIZ_ANSWER": "Achievements, challenges and supporting evidence",
+        "QUIZ_OPTIONS": [
+          "Achievements, challenges and supporting evidence",
+          "Only mistakes",
+          "Nothing until the appraisal",
+          "Only attendance"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "A mid-year review is used to...",
+        "QUIZ_ANSWER": "Review progress and adjust objectives if needed",
+        "QUIZ_OPTIONS": [
+          "Close the performance cycle",
+          "Approve promotions automatically",
+          "Review progress and adjust objectives if needed",
+          "Issue final ratings"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "Ratings in an appraisal should be based on...",
+        "QUIZ_ANSWER": "Evidence of performance against agreed objectives",
+        "QUIZ_OPTIONS": [
+          "The most recent week only",
+          "Seniority alone",
+          "Evidence of performance against agreed objectives",
+          "Personal friendship"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "Rating someone highly on everything because they excel in one area is called...",
+        "QUIZ_ANSWER": "The halo effect",
+        "QUIZ_OPTIONS": [
+          "The halo effect",
+          "Calibration",
+          "Delegation",
+          "Benchmarking"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "A development plan should include...",
+        "QUIZ_ANSWER": "Specific training or experiences to close skill gaps",
+        "QUIZ_OPTIONS": [
+          "Nothing for high performers",
+          "Specific training or experiences to close skill gaps",
+          "Salary details",
+          "Only a list of weaknesses"
+        ]
+      }
+    ]
+  },
+  "COURSE_PREVIEW_IMAGE": "https://placehold.co/800x450/1E293B/FFFFFF/png?font=montserrat&text=Performance%20Management%20%26%20Appraisal",
+  "course_lessons": [
+    {
+      "TITLE": "Setting SMART Objectives",
+      "DESCRIPTION": "Objectives should be Specific, Measurable, Achievable, Relevant and Time-bound. This lesson shows how to turn departmental targets into individual SMART objectives agreed at the start of the performance cycle.",
+      "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+      "HAS_QUIZ": true,
+      "QUIZ_TYPE": "manual",
+      "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+      "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+      "QUIZ_DESCRIPTION": "Check your understanding of \"Setting SMART Objectives\".",
+      "ATTEMPTS_ALLOWED": 2,
+      "DURATION": 10,
+      "TOTAL_QUIZ_SCORE": 30,
+      "lesson_quiz": {
+        "questions": [
+          {
+            "QUIZ_QUESTION": "What does the 'M' in SMART stand for?",
+            "QUIZ_ANSWER": "Measurable",
+            "QUIZ_OPTIONS": [
+              "Measurable",
+              "Monthly",
+              "Manageable",
+              "Mandatory"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "Which objective is SMART?",
+            "QUIZ_ANSWER": "Process 95% of leave requests within 3 working days by 31 December",
+            "QUIZ_OPTIONS": [
+              "Be more efficient sometimes",
+              "Process 95% of leave requests within 3 working days by 31 December",
+              "Work harder this year",
+              "Improve things"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "When should individual objectives be agreed?",
+            "QUIZ_ANSWER": "At the start of the performance cycle",
+            "QUIZ_OPTIONS": [
+              "On the day of the appraisal",
+              "After the year ends",
+              "Never, they are optional",
+              "At the start of the performance cycle"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "TITLE": "Continuous Feedback & Documentation",
+      "DESCRIPTION": "Appraisal should never be a surprise. This lesson covers regular check-ins, mid-year reviews and keeping evidence of achievements and challenges throughout the year.",
+      "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+      "HAS_QUIZ": true,
+      "QUIZ_TYPE": "manual",
+      "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+      "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+      "QUIZ_DESCRIPTION": "Check your understanding of \"Continuous Feedback & Documentation\".",
+      "ATTEMPTS_ALLOWED": 2,
+      "DURATION": 10,
+      "TOTAL_QUIZ_SCORE": 30,
+      "lesson_quiz": {
+        "questions": [
+          {
+            "QUIZ_QUESTION": "Why hold regular performance check-ins?",
+            "QUIZ_ANSWER": "To track progress and address issues early",
+            "QUIZ_OPTIONS": [
+              "To replace the annual appraisal entirely",
+              "To find faults only",
+              "They have no value",
+              "To track progress and address issues early"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "What should be documented during the year?",
+            "QUIZ_ANSWER": "Achievements, challenges and supporting evidence",
+            "QUIZ_OPTIONS": [
+              "Achievements, challenges and supporting evidence",
+              "Only mistakes",
+              "Nothing until the appraisal",
+              "Only attendance"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "A mid-year review is used to...",
+            "QUIZ_ANSWER": "Review progress and adjust objectives if needed",
+            "QUIZ_OPTIONS": [
+              "Close the performance cycle",
+              "Approve promotions automatically",
+              "Review progress and adjust objectives if needed",
+              "Issue final ratings"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "TITLE": "The Appraisal Interview & Development Plans",
+      "DESCRIPTION": "This lesson explains how to prepare for and conduct a fair appraisal interview, avoid common rating biases, and agree a development plan for the next cycle.",
+      "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+      "HAS_QUIZ": true,
+      "QUIZ_TYPE": "manual",
+      "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+      "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+      "QUIZ_DESCRIPTION": "Check your understanding of \"The Appraisal Interview & Development Plans\".",
+      "ATTEMPTS_ALLOWED": 2,
+      "DURATION": 10,
+      "TOTAL_QUIZ_SCORE": 30,
+      "lesson_quiz": {
+        "questions": [
+          {
+            "QUIZ_QUESTION": "Ratings in an appraisal should be based on...",
+            "QUIZ_ANSWER": "Evidence of performance against agreed objectives",
+            "QUIZ_OPTIONS": [
+              "The most recent week only",
+              "Seniority alone",
+              "Evidence of performance against agreed objectives",
+              "Personal friendship"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "Rating someone highly on everything because they excel in one area is called...",
+            "QUIZ_ANSWER": "The halo effect",
+            "QUIZ_OPTIONS": [
+              "The halo effect",
+              "Calibration",
+              "Delegation",
+              "Benchmarking"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "A development plan should include...",
+            "QUIZ_ANSWER": "Specific training or experiences to close skill gaps",
+            "QUIZ_OPTIONS": [
+              "Nothing for high performers",
+              "Specific training or experiences to close skill gaps",
+              "Salary details",
+              "Only a list of weaknesses"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "course_recipients": {
+    "recipient_type": "directorate",
+    "STAFF_IDS": [
+      "14"
+    ]
+  }
+}

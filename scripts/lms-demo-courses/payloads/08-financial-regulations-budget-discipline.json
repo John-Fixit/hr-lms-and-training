@@ -1,0 +1,266 @@
+{
+  "COURSE_CATEGORY": "Procurement & Finance",
+  "COMPANY_ID": "1",
+  "COURSE_TITLE": "Financial Regulations & Budget Discipline",
+  "COURSE_OBJECTIVE": "Ensure officers who handle funds understand the Financial Regulations, budget implementation and the controls that protect public money.",
+  "COURSE_DESCRIPTION": "Covers the budget cycle, the Treasury Single Account, authorisation and payment controls, retirement of advances, and internal and external audit.",
+  "USE_AS_APPRAISAL": true,
+  "START_DATE": "2026-10-12",
+  "END_DATE": "2027-01-10",
+  "CREATOR": "1",
+  "PERFORMANCE_CYCLE_ID": 12,
+  "HAS_LINE_MANAGER": false,
+  "QUIZ_STRATEGY": "both",
+  "HAS_GENERAL_QUIZ": true,
+  "general_quiz": {
+    "QUIZ_TYPE": "manual",
+    "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+    "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+    "QUIZ_DESCRIPTION": "Final assessment for Financial Regulations & Budget Discipline.",
+    "ATTEMPTS_ALLOWED": 1,
+    "DURATION": 20,
+    "TOTAL_QUIZ_SCORE": 90,
+    "questions": [
+      {
+        "QUIZ_QUESTION": "Which is the correct order of the budget cycle?",
+        "QUIZ_ANSWER": "Preparation, approval, implementation, monitoring and evaluation",
+        "QUIZ_OPTIONS": [
+          "Approval, audit, preparation, spending",
+          "Implementation, approval, preparation, audit",
+          "Preparation, approval, implementation, monitoring and evaluation",
+          "Audit, spending, preparation, approval"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "Spending money on an item not in the approved budget without authorisation is...",
+        "QUIZ_ANSWER": "A breach of budget discipline",
+        "QUIZ_OPTIONS": [
+          "Acceptable if the item is useful",
+          "A breach of budget discipline",
+          "Required by law",
+          "Encouraged at year end"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "Why is budget monitoring important?",
+        "QUIZ_ANSWER": "To compare actual spending with plans and correct deviations",
+        "QUIZ_OPTIONS": [
+          "To compare actual spending with plans and correct deviations",
+          "It is not important",
+          "To delay payments",
+          "To increase the budget automatically"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "What is the main purpose of the Treasury Single Account?",
+        "QUIZ_ANSWER": "To consolidate government revenues into a single account at the Central Bank for better control",
+        "QUIZ_OPTIONS": [
+          "To pay staff in cash",
+          "To replace the budget",
+          "To consolidate government revenues into a single account at the Central Bank for better control",
+          "To allow each agency to open many commercial accounts"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "Segregation of duties means...",
+        "QUIZ_ANSWER": "No single officer controls all stages of a transaction",
+        "QUIZ_OPTIONS": [
+          "No single officer controls all stages of a transaction",
+          "Finance staff work in separate buildings",
+          "One officer approves, pays and records everything",
+          "Duties are shared randomly"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "Before a payment is made, it should be...",
+        "QUIZ_ANSWER": "Properly authorised, supported by documents and within budget",
+        "QUIZ_OPTIONS": [
+          "Approved only by the payee",
+          "Requested urgently by phone",
+          "Made first and documented later",
+          "Properly authorised, supported by documents and within budget"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "What does 'retiring an advance' mean?",
+        "QUIZ_ANSWER": "Accounting for how the advance was spent, with receipts, and refunding any balance",
+        "QUIZ_OPTIONS": [
+          "Retiring from service",
+          "Accounting for how the advance was spent, with receipts, and refunding any balance",
+          "Keeping the balance as a bonus",
+          "Asking for another advance"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "What is the role of internal audit?",
+        "QUIZ_ANSWER": "To independently review controls and compliance within the organisation",
+        "QUIZ_OPTIONS": [
+          "To prepare the budget",
+          "To independently review controls and compliance within the organisation",
+          "To approve all payments",
+          "To recruit staff"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "Unretired advances can result in...",
+        "QUIZ_ANSWER": "Recovery from salary and possible disciplinary action",
+        "QUIZ_OPTIONS": [
+          "No consequence",
+          "Recovery from salary and possible disciplinary action",
+          "Automatic promotion",
+          "A larger next advance"
+        ]
+      }
+    ]
+  },
+  "COURSE_PREVIEW_IMAGE": "https://placehold.co/800x450/1E293B/FFFFFF/png?font=montserrat&text=Financial%20Regulations%20%26%20Budget%20Discipline",
+  "course_lessons": [
+    {
+      "TITLE": "The Budget Cycle & Budget Discipline",
+      "DESCRIPTION": "The public budget moves through preparation, approval, implementation, and monitoring and evaluation. This lesson explains why spending must stay within appropriated amounts and approved budget lines.",
+      "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+      "HAS_QUIZ": true,
+      "QUIZ_TYPE": "manual",
+      "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+      "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+      "QUIZ_DESCRIPTION": "Check your understanding of \"The Budget Cycle & Budget Discipline\".",
+      "ATTEMPTS_ALLOWED": 2,
+      "DURATION": 10,
+      "TOTAL_QUIZ_SCORE": 30,
+      "lesson_quiz": {
+        "questions": [
+          {
+            "QUIZ_QUESTION": "Which is the correct order of the budget cycle?",
+            "QUIZ_ANSWER": "Preparation, approval, implementation, monitoring and evaluation",
+            "QUIZ_OPTIONS": [
+              "Approval, audit, preparation, spending",
+              "Implementation, approval, preparation, audit",
+              "Preparation, approval, implementation, monitoring and evaluation",
+              "Audit, spending, preparation, approval"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "Spending money on an item not in the approved budget without authorisation is...",
+            "QUIZ_ANSWER": "A breach of budget discipline",
+            "QUIZ_OPTIONS": [
+              "Acceptable if the item is useful",
+              "A breach of budget discipline",
+              "Required by law",
+              "Encouraged at year end"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "Why is budget monitoring important?",
+            "QUIZ_ANSWER": "To compare actual spending with plans and correct deviations",
+            "QUIZ_OPTIONS": [
+              "To compare actual spending with plans and correct deviations",
+              "It is not important",
+              "To delay payments",
+              "To increase the budget automatically"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "TITLE": "Treasury Single Account & Payment Controls",
+      "DESCRIPTION": "The Treasury Single Account (TSA) consolidates federal government revenues into one account at the Central Bank of Nigeria, improving visibility and control. This lesson also covers segregation of duties and approval levels for payments.",
+      "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+      "HAS_QUIZ": true,
+      "QUIZ_TYPE": "manual",
+      "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+      "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+      "QUIZ_DESCRIPTION": "Check your understanding of \"Treasury Single Account & Payment Controls\".",
+      "ATTEMPTS_ALLOWED": 2,
+      "DURATION": 10,
+      "TOTAL_QUIZ_SCORE": 30,
+      "lesson_quiz": {
+        "questions": [
+          {
+            "QUIZ_QUESTION": "What is the main purpose of the Treasury Single Account?",
+            "QUIZ_ANSWER": "To consolidate government revenues into a single account at the Central Bank for better control",
+            "QUIZ_OPTIONS": [
+              "To pay staff in cash",
+              "To replace the budget",
+              "To consolidate government revenues into a single account at the Central Bank for better control",
+              "To allow each agency to open many commercial accounts"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "Segregation of duties means...",
+            "QUIZ_ANSWER": "No single officer controls all stages of a transaction",
+            "QUIZ_OPTIONS": [
+              "No single officer controls all stages of a transaction",
+              "Finance staff work in separate buildings",
+              "One officer approves, pays and records everything",
+              "Duties are shared randomly"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "Before a payment is made, it should be...",
+            "QUIZ_ANSWER": "Properly authorised, supported by documents and within budget",
+            "QUIZ_OPTIONS": [
+              "Approved only by the payee",
+              "Requested urgently by phone",
+              "Made first and documented later",
+              "Properly authorised, supported by documents and within budget"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "TITLE": "Advances, Retirement & Audit",
+      "DESCRIPTION": "Cash advances must be retired promptly with receipts. This lesson covers retirement timelines, consequences of unretired advances, and how internal and external audit strengthen accountability.",
+      "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+      "HAS_QUIZ": true,
+      "QUIZ_TYPE": "manual",
+      "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+      "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+      "QUIZ_DESCRIPTION": "Check your understanding of \"Advances, Retirement & Audit\".",
+      "ATTEMPTS_ALLOWED": 2,
+      "DURATION": 10,
+      "TOTAL_QUIZ_SCORE": 30,
+      "lesson_quiz": {
+        "questions": [
+          {
+            "QUIZ_QUESTION": "What does 'retiring an advance' mean?",
+            "QUIZ_ANSWER": "Accounting for how the advance was spent, with receipts, and refunding any balance",
+            "QUIZ_OPTIONS": [
+              "Retiring from service",
+              "Accounting for how the advance was spent, with receipts, and refunding any balance",
+              "Keeping the balance as a bonus",
+              "Asking for another advance"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "What is the role of internal audit?",
+            "QUIZ_ANSWER": "To independently review controls and compliance within the organisation",
+            "QUIZ_OPTIONS": [
+              "To prepare the budget",
+              "To independently review controls and compliance within the organisation",
+              "To approve all payments",
+              "To recruit staff"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "Unretired advances can result in...",
+            "QUIZ_ANSWER": "Recovery from salary and possible disciplinary action",
+            "QUIZ_OPTIONS": [
+              "No consequence",
+              "Recovery from salary and possible disciplinary action",
+              "Automatic promotion",
+              "A larger next advance"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "course_recipients": {
+    "recipient_type": "directorate",
+    "STAFF_IDS": [
+      "14"
+    ]
+  }
+}

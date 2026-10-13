@@ -1,0 +1,266 @@
+{
+  "COURSE_CATEGORY": "Governance & Compliance",
+  "COMPANY_ID": "1",
+  "COURSE_TITLE": "Public Service Rules & Code of Conduct",
+  "COURSE_OBJECTIVE": "Equip officers with a working knowledge of the Public Service Rules, the Code of Conduct for public officers, and the standards of behaviour expected in government service.",
+  "COURSE_DESCRIPTION": "A practical introduction to the rules that govern appointment, conduct, discipline and accountability in the public service, with real-world scenarios on gifts, conflict of interest and asset declaration.",
+  "USE_AS_APPRAISAL": true,
+  "START_DATE": "2026-10-12",
+  "END_DATE": "2027-01-10",
+  "CREATOR": "1",
+  "PERFORMANCE_CYCLE_ID": 12,
+  "HAS_LINE_MANAGER": false,
+  "QUIZ_STRATEGY": "both",
+  "HAS_GENERAL_QUIZ": true,
+  "general_quiz": {
+    "QUIZ_TYPE": "manual",
+    "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+    "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+    "QUIZ_DESCRIPTION": "Final assessment for Public Service Rules & Code of Conduct.",
+    "ATTEMPTS_ALLOWED": 1,
+    "DURATION": 20,
+    "TOTAL_QUIZ_SCORE": 90,
+    "questions": [
+      {
+        "QUIZ_QUESTION": "Which document primarily regulates the conditions of service of federal public servants?",
+        "QUIZ_ANSWER": "The Public Service Rules",
+        "QUIZ_OPTIONS": [
+          "The Companies and Allied Matters Act",
+          "The Electoral Act",
+          "The Public Service Rules",
+          "The Labour Act only"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "Which body is responsible for receiving and verifying asset declarations by public officers?",
+        "QUIZ_ANSWER": "Code of Conduct Bureau",
+        "QUIZ_OPTIONS": [
+          "National Bureau of Statistics",
+          "Code of Conduct Bureau",
+          "Central Bank of Nigeria",
+          "Independent National Electoral Commission"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "When are public officers expected to declare their assets?",
+        "QUIZ_ANSWER": "On assumption of office, periodically while in office, and at the end of tenure",
+        "QUIZ_OPTIONS": [
+          "Only when requested by a journalist",
+          "On assumption of office, periodically while in office, and at the end of tenure",
+          "Never, it is optional",
+          "Only when they are promoted"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "A contractor offers you an expensive gift while their bid is under evaluation. What should you do?",
+        "QUIZ_ANSWER": "Decline the gift and report the offer through the appropriate channel",
+        "QUIZ_OPTIONS": [
+          "Accept it after the contract is awarded",
+          "Accept it quietly since it is a personal gift",
+          "Accept it and share it with colleagues",
+          "Decline the gift and report the offer through the appropriate channel"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "A conflict of interest exists when...",
+        "QUIZ_ANSWER": "Personal interests could improperly influence official decisions",
+        "QUIZ_OPTIONS": [
+          "A meeting runs over time",
+          "Two departments disagree on a budget",
+          "Personal interests could improperly influence official decisions",
+          "A staff member requests annual leave"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "You discover a relative owns a company bidding for a contract you are evaluating. What is the correct action?",
+        "QUIZ_ANSWER": "Declare the interest and recuse yourself from the evaluation",
+        "QUIZ_OPTIONS": [
+          "Declare the interest and recuse yourself from the evaluation",
+          "Tell the relative to lower their price",
+          "Say nothing unless asked",
+          "Continue but score the company fairly"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "Which of the following is generally treated as serious misconduct?",
+        "QUIZ_ANSWER": "Falsification of official records",
+        "QUIZ_OPTIONS": [
+          "Arriving five minutes early",
+          "Attending a training programme",
+          "Falsification of official records",
+          "Taking approved annual leave"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "Before a disciplinary sanction is applied, the officer should be...",
+        "QUIZ_ANSWER": "Issued a query and given an opportunity to respond",
+        "QUIZ_OPTIONS": [
+          "Placed on salary deduction first",
+          "Dismissed immediately",
+          "Transferred without explanation",
+          "Issued a query and given an opportunity to respond"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "The principle that every officer must be heard before being sanctioned is called...",
+        "QUIZ_ANSWER": "Fair hearing",
+        "QUIZ_OPTIONS": [
+          "Probation",
+          "Delegation",
+          "Seniority",
+          "Fair hearing"
+        ]
+      }
+    ]
+  },
+  "COURSE_PREVIEW_IMAGE": "https://placehold.co/800x450/1E293B/FFFFFF/png?font=montserrat&text=Public%20Service%20Rules%20%26%20Code%20of%20Conduct",
+  "course_lessons": [
+    {
+      "TITLE": "Introduction to the Public Service Rules",
+      "DESCRIPTION": "The Public Service Rules (PSR) set out the conditions of service for federal public officers: appointment, confirmation, promotion, leave, discipline and retirement. This lesson walks through how the PSR is structured, how it relates to circulars issued by the Office of the Head of the Civil Service of the Federation, and where officers can find the provisions that apply to them.",
+      "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+      "HAS_QUIZ": true,
+      "QUIZ_TYPE": "manual",
+      "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+      "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+      "QUIZ_DESCRIPTION": "Check your understanding of \"Introduction to the Public Service Rules\".",
+      "ATTEMPTS_ALLOWED": 2,
+      "DURATION": 10,
+      "TOTAL_QUIZ_SCORE": 30,
+      "lesson_quiz": {
+        "questions": [
+          {
+            "QUIZ_QUESTION": "Which document primarily regulates the conditions of service of federal public servants?",
+            "QUIZ_ANSWER": "The Public Service Rules",
+            "QUIZ_OPTIONS": [
+              "The Companies and Allied Matters Act",
+              "The Electoral Act",
+              "The Public Service Rules",
+              "The Labour Act only"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "Which body is responsible for receiving and verifying asset declarations by public officers?",
+            "QUIZ_ANSWER": "Code of Conduct Bureau",
+            "QUIZ_OPTIONS": [
+              "National Bureau of Statistics",
+              "Code of Conduct Bureau",
+              "Central Bank of Nigeria",
+              "Independent National Electoral Commission"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "When are public officers expected to declare their assets?",
+            "QUIZ_ANSWER": "On assumption of office, periodically while in office, and at the end of tenure",
+            "QUIZ_OPTIONS": [
+              "Only when requested by a journalist",
+              "On assumption of office, periodically while in office, and at the end of tenure",
+              "Never, it is optional",
+              "Only when they are promoted"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "TITLE": "Conflict of Interest, Gifts & Hospitality",
+      "DESCRIPTION": "A conflict of interest arises when an officer's private interests could improperly influence the performance of official duties. This lesson covers how to recognise conflicts, how to declare them, and how to handle gifts and hospitality from contractors, vendors and members of the public.",
+      "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+      "HAS_QUIZ": true,
+      "QUIZ_TYPE": "manual",
+      "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+      "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+      "QUIZ_DESCRIPTION": "Check your understanding of \"Conflict of Interest, Gifts & Hospitality\".",
+      "ATTEMPTS_ALLOWED": 2,
+      "DURATION": 10,
+      "TOTAL_QUIZ_SCORE": 30,
+      "lesson_quiz": {
+        "questions": [
+          {
+            "QUIZ_QUESTION": "A contractor offers you an expensive gift while their bid is under evaluation. What should you do?",
+            "QUIZ_ANSWER": "Decline the gift and report the offer through the appropriate channel",
+            "QUIZ_OPTIONS": [
+              "Accept it after the contract is awarded",
+              "Accept it quietly since it is a personal gift",
+              "Accept it and share it with colleagues",
+              "Decline the gift and report the offer through the appropriate channel"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "A conflict of interest exists when...",
+            "QUIZ_ANSWER": "Personal interests could improperly influence official decisions",
+            "QUIZ_OPTIONS": [
+              "A meeting runs over time",
+              "Two departments disagree on a budget",
+              "Personal interests could improperly influence official decisions",
+              "A staff member requests annual leave"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "You discover a relative owns a company bidding for a contract you are evaluating. What is the correct action?",
+            "QUIZ_ANSWER": "Declare the interest and recuse yourself from the evaluation",
+            "QUIZ_OPTIONS": [
+              "Declare the interest and recuse yourself from the evaluation",
+              "Tell the relative to lower their price",
+              "Say nothing unless asked",
+              "Continue but score the company fairly"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "TITLE": "Discipline, Misconduct & Fair Hearing",
+      "DESCRIPTION": "This lesson explains the difference between general and serious misconduct, the disciplinary process (query, response, panel review and sanction), and the principle of fair hearing that protects every officer.",
+      "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+      "HAS_QUIZ": true,
+      "QUIZ_TYPE": "manual",
+      "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+      "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+      "QUIZ_DESCRIPTION": "Check your understanding of \"Discipline, Misconduct & Fair Hearing\".",
+      "ATTEMPTS_ALLOWED": 2,
+      "DURATION": 10,
+      "TOTAL_QUIZ_SCORE": 30,
+      "lesson_quiz": {
+        "questions": [
+          {
+            "QUIZ_QUESTION": "Which of the following is generally treated as serious misconduct?",
+            "QUIZ_ANSWER": "Falsification of official records",
+            "QUIZ_OPTIONS": [
+              "Arriving five minutes early",
+              "Attending a training programme",
+              "Falsification of official records",
+              "Taking approved annual leave"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "Before a disciplinary sanction is applied, the officer should be...",
+            "QUIZ_ANSWER": "Issued a query and given an opportunity to respond",
+            "QUIZ_OPTIONS": [
+              "Placed on salary deduction first",
+              "Dismissed immediately",
+              "Transferred without explanation",
+              "Issued a query and given an opportunity to respond"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "The principle that every officer must be heard before being sanctioned is called...",
+            "QUIZ_ANSWER": "Fair hearing",
+            "QUIZ_OPTIONS": [
+              "Probation",
+              "Delegation",
+              "Seniority",
+              "Fair hearing"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "course_recipients": {
+    "recipient_type": "directorate",
+    "STAFF_IDS": [
+      "14"
+    ]
+  }
+}

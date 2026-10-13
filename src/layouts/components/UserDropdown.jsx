@@ -215,7 +215,7 @@ const UserDropdown = () => {
             </li>
             <li className="group cursor-pointer">
               <Link
-                to="/engage/home"
+                to="/lms/dashboard"
                 className="flex items-center gap-3.5 text-sm font-medium duration-300 ease-in-out hover:text-primary lg:text-base"
               >
                 <MdApps

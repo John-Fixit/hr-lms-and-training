@@ -1,0 +1,2090 @@
+[
+  {
+    "COURSE_CATEGORY": "Governance & Compliance",
+    "COMPANY_ID": "1",
+    "COURSE_TITLE": "Public Service Rules & Code of Conduct",
+    "COURSE_OBJECTIVE": "Equip officers with a working knowledge of the Public Service Rules, the Code of Conduct for public officers, and the standards of behaviour expected in government service.",
+    "COURSE_DESCRIPTION": "A practical introduction to the rules that govern appointment, conduct, discipline and accountability in the public service, with real-world scenarios on gifts, conflict of interest and asset declaration.",
+    "USE_AS_APPRAISAL": true,
+    "START_DATE": "2026-10-12",
+    "END_DATE": "2027-01-10",
+    "CREATOR": "1",
+    "PERFORMANCE_CYCLE_ID": 12,
+    "HAS_LINE_MANAGER": false,
+    "QUIZ_STRATEGY": "both",
+    "HAS_GENERAL_QUIZ": true,
+    "general_quiz": {
+      "QUIZ_TYPE": "manual",
+      "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+      "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+      "QUIZ_DESCRIPTION": "Final assessment for Public Service Rules & Code of Conduct.",
+      "ATTEMPTS_ALLOWED": 1,
+      "DURATION": 20,
+      "TOTAL_QUIZ_SCORE": 90,
+      "questions": [
+        {
+          "QUIZ_QUESTION": "Which document primarily regulates the conditions of service of federal public servants?",
+          "QUIZ_ANSWER": "The Public Service Rules",
+          "QUIZ_OPTIONS": [
+            "The Companies and Allied Matters Act",
+            "The Electoral Act",
+            "The Public Service Rules",
+            "The Labour Act only"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "Which body is responsible for receiving and verifying asset declarations by public officers?",
+          "QUIZ_ANSWER": "Code of Conduct Bureau",
+          "QUIZ_OPTIONS": [
+            "National Bureau of Statistics",
+            "Code of Conduct Bureau",
+            "Central Bank of Nigeria",
+            "Independent National Electoral Commission"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "When are public officers expected to declare their assets?",
+          "QUIZ_ANSWER": "On assumption of office, periodically while in office, and at the end of tenure",
+          "QUIZ_OPTIONS": [
+            "Only when requested by a journalist",
+            "On assumption of office, periodically while in office, and at the end of tenure",
+            "Never, it is optional",
+            "Only when they are promoted"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "A contractor offers you an expensive gift while their bid is under evaluation. What should you do?",
+          "QUIZ_ANSWER": "Decline the gift and report the offer through the appropriate channel",
+          "QUIZ_OPTIONS": [
+            "Accept it after the contract is awarded",
+            "Accept it quietly since it is a personal gift",
+            "Accept it and share it with colleagues",
+            "Decline the gift and report the offer through the appropriate channel"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "A conflict of interest exists when...",
+          "QUIZ_ANSWER": "Personal interests could improperly influence official decisions",
+          "QUIZ_OPTIONS": [
+            "A meeting runs over time",
+            "Two departments disagree on a budget",
+            "Personal interests could improperly influence official decisions",
+            "A staff member requests annual leave"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "You discover a relative owns a company bidding for a contract you are evaluating. What is the correct action?",
+          "QUIZ_ANSWER": "Declare the interest and recuse yourself from the evaluation",
+          "QUIZ_OPTIONS": [
+            "Declare the interest and recuse yourself from the evaluation",
+            "Tell the relative to lower their price",
+            "Say nothing unless asked",
+            "Continue but score the company fairly"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "Which of the following is generally treated as serious misconduct?",
+          "QUIZ_ANSWER": "Falsification of official records",
+          "QUIZ_OPTIONS": [
+            "Arriving five minutes early",
+            "Attending a training programme",
+            "Falsification of official records",
+            "Taking approved annual leave"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "Before a disciplinary sanction is applied, the officer should be...",
+          "QUIZ_ANSWER": "Issued a query and given an opportunity to respond",
+          "QUIZ_OPTIONS": [
+            "Placed on salary deduction first",
+            "Dismissed immediately",
+            "Transferred without explanation",
+            "Issued a query and given an opportunity to respond"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "The principle that every officer must be heard before being sanctioned is called...",
+          "QUIZ_ANSWER": "Fair hearing",
+          "QUIZ_OPTIONS": [
+            "Probation",
+            "Delegation",
+            "Seniority",
+            "Fair hearing"
+          ]
+        }
+      ]
+    },
+    "COURSE_PREVIEW_IMAGE": "https://placehold.co/800x450/1E293B/FFFFFF/png?font=montserrat&text=Public%20Service%20Rules%20%26%20Code%20of%20Conduct",
+    "course_lessons": [
+      {
+        "TITLE": "Introduction to the Public Service Rules",
+        "DESCRIPTION": "The Public Service Rules (PSR) set out the conditions of service for federal public officers: appointment, confirmation, promotion, leave, discipline and retirement. This lesson walks through how the PSR is structured, how it relates to circulars issued by the Office of the Head of the Civil Service of the Federation, and where officers can find the provisions that apply to them.",
+        "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+        "HAS_QUIZ": true,
+        "QUIZ_TYPE": "manual",
+        "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+        "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+        "QUIZ_DESCRIPTION": "Check your understanding of \"Introduction to the Public Service Rules\".",
+        "ATTEMPTS_ALLOWED": 2,
+        "DURATION": 10,
+        "TOTAL_QUIZ_SCORE": 30,
+        "lesson_quiz": {
+          "questions": [
+            {
+              "QUIZ_QUESTION": "Which document primarily regulates the conditions of service of federal public servants?",
+              "QUIZ_ANSWER": "The Public Service Rules",
+              "QUIZ_OPTIONS": [
+                "The Companies and Allied Matters Act",
+                "The Electoral Act",
+                "The Public Service Rules",
+                "The Labour Act only"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "Which body is responsible for receiving and verifying asset declarations by public officers?",
+              "QUIZ_ANSWER": "Code of Conduct Bureau",
+              "QUIZ_OPTIONS": [
+                "National Bureau of Statistics",
+                "Code of Conduct Bureau",
+                "Central Bank of Nigeria",
+                "Independent National Electoral Commission"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "When are public officers expected to declare their assets?",
+              "QUIZ_ANSWER": "On assumption of office, periodically while in office, and at the end of tenure",
+              "QUIZ_OPTIONS": [
+                "Only when requested by a journalist",
+                "On assumption of office, periodically while in office, and at the end of tenure",
+                "Never, it is optional",
+                "Only when they are promoted"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "TITLE": "Conflict of Interest, Gifts & Hospitality",
+        "DESCRIPTION": "A conflict of interest arises when an officer's private interests could improperly influence the performance of official duties. This lesson covers how to recognise conflicts, how to declare them, and how to handle gifts and hospitality from contractors, vendors and members of the public.",
+        "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+        "HAS_QUIZ": true,
+        "QUIZ_TYPE": "manual",
+        "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+        "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+        "QUIZ_DESCRIPTION": "Check your understanding of \"Conflict of Interest, Gifts & Hospitality\".",
+        "ATTEMPTS_ALLOWED": 2,
+        "DURATION": 10,
+        "TOTAL_QUIZ_SCORE": 30,
+        "lesson_quiz": {
+          "questions": [
+            {
+              "QUIZ_QUESTION": "A contractor offers you an expensive gift while their bid is under evaluation. What should you do?",
+              "QUIZ_ANSWER": "Decline the gift and report the offer through the appropriate channel",
+              "QUIZ_OPTIONS": [
+                "Accept it after the contract is awarded",
+                "Accept it quietly since it is a personal gift",
+                "Accept it and share it with colleagues",
+                "Decline the gift and report the offer through the appropriate channel"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "A conflict of interest exists when...",
+              "QUIZ_ANSWER": "Personal interests could improperly influence official decisions",
+              "QUIZ_OPTIONS": [
+                "A meeting runs over time",
+                "Two departments disagree on a budget",
+                "Personal interests could improperly influence official decisions",
+                "A staff member requests annual leave"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "You discover a relative owns a company bidding for a contract you are evaluating. What is the correct action?",
+              "QUIZ_ANSWER": "Declare the interest and recuse yourself from the evaluation",
+              "QUIZ_OPTIONS": [
+                "Declare the interest and recuse yourself from the evaluation",
+                "Tell the relative to lower their price",
+                "Say nothing unless asked",
+                "Continue but score the company fairly"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "TITLE": "Discipline, Misconduct & Fair Hearing",
+        "DESCRIPTION": "This lesson explains the difference between general and serious misconduct, the disciplinary process (query, response, panel review and sanction), and the principle of fair hearing that protects every officer.",
+        "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+        "HAS_QUIZ": true,
+        "QUIZ_TYPE": "manual",
+        "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+        "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+        "QUIZ_DESCRIPTION": "Check your understanding of \"Discipline, Misconduct & Fair Hearing\".",
+        "ATTEMPTS_ALLOWED": 2,
+        "DURATION": 10,
+        "TOTAL_QUIZ_SCORE": 30,
+        "lesson_quiz": {
+          "questions": [
+            {
+              "QUIZ_QUESTION": "Which of the following is generally treated as serious misconduct?",
+              "QUIZ_ANSWER": "Falsification of official records",
+              "QUIZ_OPTIONS": [
+                "Arriving five minutes early",
+                "Attending a training programme",
+                "Falsification of official records",
+                "Taking approved annual leave"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "Before a disciplinary sanction is applied, the officer should be...",
+              "QUIZ_ANSWER": "Issued a query and given an opportunity to respond",
+              "QUIZ_OPTIONS": [
+                "Placed on salary deduction first",
+                "Dismissed immediately",
+                "Transferred without explanation",
+                "Issued a query and given an opportunity to respond"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "The principle that every officer must be heard before being sanctioned is called...",
+              "QUIZ_ANSWER": "Fair hearing",
+              "QUIZ_OPTIONS": [
+                "Probation",
+                "Delegation",
+                "Seniority",
+                "Fair hearing"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "course_recipients": {
+      "recipient_type": "directorate",
+      "STAFF_IDS": [
+        "14"
+      ]
+    }
+  },
+  {
+    "COURSE_CATEGORY": "Procurement & Finance",
+    "COMPANY_ID": "1",
+    "COURSE_TITLE": "Public Procurement Fundamentals",
+    "COURSE_OBJECTIVE": "Enable officers involved in buying goods, works and services to follow the Public Procurement Act 2007 and achieve value for money with transparency.",
+    "COURSE_DESCRIPTION": "Covers the legal framework for public procurement, procurement methods, approval thresholds, the role of the Bureau of Public Procurement, and contract management and record keeping.",
+    "USE_AS_APPRAISAL": true,
+    "START_DATE": "2026-10-12",
+    "END_DATE": "2027-01-10",
+    "CREATOR": "1",
+    "PERFORMANCE_CYCLE_ID": 12,
+    "HAS_LINE_MANAGER": false,
+    "QUIZ_STRATEGY": "both",
+    "HAS_GENERAL_QUIZ": true,
+    "general_quiz": {
+      "QUIZ_TYPE": "manual",
+      "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+      "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+      "QUIZ_DESCRIPTION": "End-of-course assessment on public procurement.",
+      "ATTEMPTS_ALLOWED": 1,
+      "DURATION": 20,
+      "TOTAL_QUIZ_SCORE": 50,
+      "questions": [
+        {
+          "QUIZ_QUESTION": "What does BPP stand for?",
+          "QUIZ_ANSWER": "Bureau of Public Procurement",
+          "QUIZ_OPTIONS": [
+            "Budget and Procurement Panel",
+            "Bureau of Price Policy",
+            "Bureau of Public Procurement",
+            "Board of Public Planning"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "Which method promotes the widest competition among bidders?",
+          "QUIZ_ANSWER": "Open competitive bidding",
+          "QUIZ_OPTIONS": [
+            "Emergency purchase",
+            "Direct procurement",
+            "Single sourcing",
+            "Open competitive bidding"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "Which document gives approval to proceed with an award above certain thresholds?",
+          "QUIZ_ANSWER": "Certificate of No Objection",
+          "QUIZ_OPTIONS": [
+            "Staff ID card",
+            "Certificate of No Objection",
+            "Leave approval",
+            "Letter of Introduction"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "An evaluator with a personal interest in a bidder should...",
+          "QUIZ_ANSWER": "Declare it and step aside",
+          "QUIZ_OPTIONS": [
+            "Declare it and step aside",
+            "Share bid details with the bidder",
+            "Keep it private",
+            "Score that bidder higher"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "The main goal of public procurement is...",
+          "QUIZ_ANSWER": "Achieving value for money for government",
+          "QUIZ_OPTIONS": [
+            "Reducing documentation",
+            "Spending the full budget quickly",
+            "Achieving value for money for government",
+            "Rewarding loyal vendors"
+          ]
+        }
+      ]
+    },
+    "COURSE_PREVIEW_IMAGE": "https://placehold.co/800x450/1E293B/FFFFFF/png?font=montserrat&text=Public%20Procurement%20Fundamentals",
+    "course_lessons": [
+      {
+        "TITLE": "Principles & Legal Framework of Public Procurement",
+        "DESCRIPTION": "Public procurement at the federal level is governed by the Public Procurement Act 2007, which established the Bureau of Public Procurement (BPP). This lesson introduces the core principles of value for money, competition, transparency, accountability and fairness.",
+        "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+        "HAS_QUIZ": true,
+        "QUIZ_TYPE": "manual",
+        "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+        "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+        "QUIZ_DESCRIPTION": "Check your understanding of \"Principles & Legal Framework of Public Procurement\".",
+        "ATTEMPTS_ALLOWED": 2,
+        "DURATION": 10,
+        "TOTAL_QUIZ_SCORE": 30,
+        "lesson_quiz": {
+          "questions": [
+            {
+              "QUIZ_QUESTION": "Which law governs public procurement at the federal level in Nigeria?",
+              "QUIZ_ANSWER": "Public Procurement Act 2007",
+              "QUIZ_OPTIONS": [
+                "Fiscal Responsibility Act 2007",
+                "Public Procurement Act 2007",
+                "Pension Reform Act 2014",
+                "Freedom of Information Act 2011"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "Which body regulates and monitors federal public procurement?",
+              "QUIZ_ANSWER": "Bureau of Public Procurement",
+              "QUIZ_OPTIONS": [
+                "Nigerian Customs Service",
+                "National Assembly Service Commission",
+                "Corporate Affairs Commission",
+                "Bureau of Public Procurement"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "Which of these is a core principle of public procurement?",
+              "QUIZ_ANSWER": "Value for money",
+              "QUIZ_OPTIONS": [
+                "Avoiding competition",
+                "Preference for familiar vendors",
+                "Value for money",
+                "Speed over documentation"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "TITLE": "Procurement Methods & Approvals",
+        "DESCRIPTION": "Open competitive bidding is the default method for public procurement. Other methods, such as selective tendering, request for quotations and direct procurement, are allowed only in justified circumstances. This lesson explains when each method applies and how approval thresholds and the Certificate of No Objection work.",
+        "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+        "HAS_QUIZ": true,
+        "QUIZ_TYPE": "manual",
+        "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+        "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+        "QUIZ_DESCRIPTION": "Check your understanding of \"Procurement Methods & Approvals\".",
+        "ATTEMPTS_ALLOWED": 2,
+        "DURATION": 10,
+        "TOTAL_QUIZ_SCORE": 30,
+        "lesson_quiz": {
+          "questions": [
+            {
+              "QUIZ_QUESTION": "What is the default procurement method for large public contracts?",
+              "QUIZ_ANSWER": "Open competitive bidding",
+              "QUIZ_OPTIONS": [
+                "Lottery",
+                "Direct award to a known vendor",
+                "Verbal agreement",
+                "Open competitive bidding"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "Direct procurement may be used...",
+              "QUIZ_ANSWER": "Only in justified and documented exceptional circumstances",
+              "QUIZ_OPTIONS": [
+                "When the vendor is a friend",
+                "Whenever it is faster",
+                "For every contract below any amount",
+                "Only in justified and documented exceptional circumstances"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "Splitting a contract into smaller parts to avoid approval thresholds is...",
+              "QUIZ_ANSWER": "Prohibited",
+              "QUIZ_OPTIONS": [
+                "Allowed at year end",
+                "Required for large contracts",
+                "Encouraged",
+                "Prohibited"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "TITLE": "Contract Management & Record Keeping",
+        "DESCRIPTION": "Procurement does not end at contract award. This lesson covers monitoring delivery, handling contract variations, certifying completion, and keeping a complete procurement file as an audit trail.",
+        "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+        "HAS_QUIZ": true,
+        "QUIZ_TYPE": "manual",
+        "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+        "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+        "QUIZ_DESCRIPTION": "Check your understanding of \"Contract Management & Record Keeping\".",
+        "ATTEMPTS_ALLOWED": 2,
+        "DURATION": 10,
+        "TOTAL_QUIZ_SCORE": 30,
+        "lesson_quiz": {
+          "questions": [
+            {
+              "QUIZ_QUESTION": "Why must complete procurement records be kept?",
+              "QUIZ_ANSWER": "To provide an audit trail and ensure accountability",
+              "QUIZ_OPTIONS": [
+                "Only for the vendor's benefit",
+                "To provide an audit trail and ensure accountability",
+                "To fill storage space",
+                "They are not necessary after payment"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "A contract variation should be...",
+              "QUIZ_ANSWER": "Justified, documented and approved by the appropriate authority",
+              "QUIZ_OPTIONS": [
+                "Hidden from auditors",
+                "Justified, documented and approved by the appropriate authority",
+                "Applied without any approval",
+                "Agreed verbally with the vendor"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "Before payment is made for works, what should be confirmed?",
+              "QUIZ_ANSWER": "That the works were delivered and certified as meeting specifications",
+              "QUIZ_OPTIONS": [
+                "That the works were delivered and certified as meeting specifications",
+                "Nothing, payment comes first",
+                "That the vendor has asked twice",
+                "That the budget year is ending"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "course_recipients": {
+      "recipient_type": "directorate",
+      "STAFF_IDS": [
+        "14"
+      ]
+    }
+  },
+  {
+    "COURSE_CATEGORY": "ICT & Security",
+    "COMPANY_ID": "1",
+    "COURSE_TITLE": "Data Protection & Cybersecurity Awareness",
+    "COURSE_OBJECTIVE": "Help every staff member protect personal data and official information, and recognise and report common cyber threats.",
+    "COURSE_DESCRIPTION": "An awareness course on the Nigeria Data Protection Act 2023, safe handling of personal and official data, phishing and social engineering, passwords and incident reporting.",
+    "USE_AS_APPRAISAL": true,
+    "START_DATE": "2026-10-12",
+    "END_DATE": "2027-01-10",
+    "CREATOR": "1",
+    "PERFORMANCE_CYCLE_ID": 12,
+    "HAS_LINE_MANAGER": false,
+    "QUIZ_STRATEGY": "both",
+    "HAS_GENERAL_QUIZ": true,
+    "general_quiz": {
+      "QUIZ_TYPE": "manual",
+      "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+      "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+      "QUIZ_DESCRIPTION": "Final assessment for Data Protection & Cybersecurity Awareness.",
+      "ATTEMPTS_ALLOWED": 1,
+      "DURATION": 20,
+      "TOTAL_QUIZ_SCORE": 90,
+      "questions": [
+        {
+          "QUIZ_QUESTION": "What is Nigeria's primary data protection law?",
+          "QUIZ_ANSWER": "Nigeria Data Protection Act 2023",
+          "QUIZ_OPTIONS": [
+            "Nigeria Data Protection Act 2023",
+            "Evidence Act 2011",
+            "Cybercrimes Act 2015 only",
+            "Copyright Act"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "Which body regulates data protection in Nigeria?",
+          "QUIZ_ANSWER": "Nigeria Data Protection Commission",
+          "QUIZ_OPTIONS": [
+            "Nigeria Data Protection Commission",
+            "Federal Inland Revenue Service",
+            "National Orientation Agency",
+            "Nigerian Communications Commission"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "Which of these is personal data?",
+          "QUIZ_ANSWER": "A staff member's phone number and home address",
+          "QUIZ_OPTIONS": [
+            "The weather forecast",
+            "A published government press release",
+            "The name of a public holiday",
+            "A staff member's phone number and home address"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "You get an email from 'IT Support' asking you to confirm your password through a link. What should you do?",
+          "QUIZ_ANSWER": "Don't click, and report it to the IT/security team",
+          "QUIZ_OPTIONS": [
+            "Click the link and confirm quickly",
+            "Reply with your password",
+            "Forward it to all colleagues",
+            "Don't click, and report it to the IT/security team"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "Which is a common sign of a phishing email?",
+          "QUIZ_ANSWER": "Urgent tone and a sender address that doesn't match the organisation",
+          "QUIZ_OPTIONS": [
+            "Correct spelling of your name",
+            "An email sent during work hours",
+            "A message from your known supervisor's verified address",
+            "Urgent tone and a sender address that doesn't match the organisation"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "What is the best practice for passwords?",
+          "QUIZ_ANSWER": "Use a long, unique passphrase for each account and enable multi-factor authentication",
+          "QUIZ_OPTIONS": [
+            "Use a long, unique passphrase for each account and enable multi-factor authentication",
+            "Write it on a sticky note on your monitor",
+            "Use the same password everywhere",
+            "Share it with a trusted colleague"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "You need to step away from your computer. What should you do?",
+          "QUIZ_ANSWER": "Lock your screen",
+          "QUIZ_OPTIONS": [
+            "Nothing, it's fine for a few minutes",
+            "Lock your screen",
+            "Leave it open for a colleague",
+            "Turn off the monitor only"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "How should official documents be shared?",
+          "QUIZ_ANSWER": "Through approved official channels and systems",
+          "QUIZ_OPTIONS": [
+            "Through personal email accounts",
+            "On unencrypted USB drives left on desks",
+            "Through approved official channels and systems",
+            "On public social media groups"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "You suspect a data breach. What is the right first step?",
+          "QUIZ_ANSWER": "Report it immediately to the designated officer or IT security",
+          "QUIZ_OPTIONS": [
+            "Delete the evidence",
+            "Post about it online",
+            "Report it immediately to the designated officer or IT security",
+            "Wait to see if it happens again"
+          ]
+        }
+      ]
+    },
+    "COURSE_PREVIEW_IMAGE": "https://placehold.co/800x450/1E293B/FFFFFF/png?font=montserrat&text=Data%20Protection%20%26%20Cybersecurity%20Awareness",
+    "course_lessons": [
+      {
+        "TITLE": "Personal Data & the Nigeria Data Protection Act",
+        "DESCRIPTION": "The Nigeria Data Protection Act 2023 sets out how personal data must be collected, processed, stored and shared, and established the Nigeria Data Protection Commission (NDPC). This lesson explains what counts as personal data and the principles of lawful, fair and secure processing.",
+        "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+        "HAS_QUIZ": true,
+        "QUIZ_TYPE": "manual",
+        "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+        "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+        "QUIZ_DESCRIPTION": "Check your understanding of \"Personal Data & the Nigeria Data Protection Act\".",
+        "ATTEMPTS_ALLOWED": 2,
+        "DURATION": 10,
+        "TOTAL_QUIZ_SCORE": 30,
+        "lesson_quiz": {
+          "questions": [
+            {
+              "QUIZ_QUESTION": "What is Nigeria's primary data protection law?",
+              "QUIZ_ANSWER": "Nigeria Data Protection Act 2023",
+              "QUIZ_OPTIONS": [
+                "Nigeria Data Protection Act 2023",
+                "Evidence Act 2011",
+                "Cybercrimes Act 2015 only",
+                "Copyright Act"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "Which body regulates data protection in Nigeria?",
+              "QUIZ_ANSWER": "Nigeria Data Protection Commission",
+              "QUIZ_OPTIONS": [
+                "Nigeria Data Protection Commission",
+                "Federal Inland Revenue Service",
+                "National Orientation Agency",
+                "Nigerian Communications Commission"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "Which of these is personal data?",
+              "QUIZ_ANSWER": "A staff member's phone number and home address",
+              "QUIZ_OPTIONS": [
+                "The weather forecast",
+                "A published government press release",
+                "The name of a public holiday",
+                "A staff member's phone number and home address"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "TITLE": "Phishing & Social Engineering",
+        "DESCRIPTION": "Most cyber incidents start with a human being tricked. This lesson shows how to spot phishing emails, fake calls and suspicious links, and what to do when you receive one.",
+        "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+        "HAS_QUIZ": true,
+        "QUIZ_TYPE": "manual",
+        "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+        "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+        "QUIZ_DESCRIPTION": "Check your understanding of \"Phishing & Social Engineering\".",
+        "ATTEMPTS_ALLOWED": 2,
+        "DURATION": 10,
+        "TOTAL_QUIZ_SCORE": 30,
+        "lesson_quiz": {
+          "questions": [
+            {
+              "QUIZ_QUESTION": "You get an email from 'IT Support' asking you to confirm your password through a link. What should you do?",
+              "QUIZ_ANSWER": "Don't click, and report it to the IT/security team",
+              "QUIZ_OPTIONS": [
+                "Click the link and confirm quickly",
+                "Reply with your password",
+                "Forward it to all colleagues",
+                "Don't click, and report it to the IT/security team"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "Which is a common sign of a phishing email?",
+              "QUIZ_ANSWER": "Urgent tone and a sender address that doesn't match the organisation",
+              "QUIZ_OPTIONS": [
+                "Correct spelling of your name",
+                "An email sent during work hours",
+                "A message from your known supervisor's verified address",
+                "Urgent tone and a sender address that doesn't match the organisation"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "What is the best practice for passwords?",
+              "QUIZ_ANSWER": "Use a long, unique passphrase for each account and enable multi-factor authentication",
+              "QUIZ_OPTIONS": [
+                "Use a long, unique passphrase for each account and enable multi-factor authentication",
+                "Write it on a sticky note on your monitor",
+                "Use the same password everywhere",
+                "Share it with a trusted colleague"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "TITLE": "Handling Official Information & Reporting Incidents",
+        "DESCRIPTION": "Good security habits protect the organisation every day: locking your screen, using approved channels to share documents, classifying information correctly and reporting incidents quickly.",
+        "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+        "HAS_QUIZ": true,
+        "QUIZ_TYPE": "manual",
+        "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+        "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+        "QUIZ_DESCRIPTION": "Check your understanding of \"Handling Official Information & Reporting Incidents\".",
+        "ATTEMPTS_ALLOWED": 2,
+        "DURATION": 10,
+        "TOTAL_QUIZ_SCORE": 30,
+        "lesson_quiz": {
+          "questions": [
+            {
+              "QUIZ_QUESTION": "You need to step away from your computer. What should you do?",
+              "QUIZ_ANSWER": "Lock your screen",
+              "QUIZ_OPTIONS": [
+                "Nothing, it's fine for a few minutes",
+                "Lock your screen",
+                "Leave it open for a colleague",
+                "Turn off the monitor only"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "How should official documents be shared?",
+              "QUIZ_ANSWER": "Through approved official channels and systems",
+              "QUIZ_OPTIONS": [
+                "Through personal email accounts",
+                "On unencrypted USB drives left on desks",
+                "Through approved official channels and systems",
+                "On public social media groups"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "You suspect a data breach. What is the right first step?",
+              "QUIZ_ANSWER": "Report it immediately to the designated officer or IT security",
+              "QUIZ_OPTIONS": [
+                "Delete the evidence",
+                "Post about it online",
+                "Report it immediately to the designated officer or IT security",
+                "Wait to see if it happens again"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "course_recipients": {
+      "recipient_type": "directorate",
+      "STAFF_IDS": [
+        "14"
+      ]
+    }
+  },
+  {
+    "COURSE_CATEGORY": "Soft Skills",
+    "COMPANY_ID": "1",
+    "COURSE_TITLE": "Effective Official Communication & Memo Writing",
+    "COURSE_OBJECTIVE": "Improve the clarity, tone and structure of official memos, letters, minutes, emails and presentations.",
+    "COURSE_DESCRIPTION": "A hands-on course on writing for government and corporate audiences: structuring memos, recording minutes, email etiquette and presenting information persuasively.",
+    "USE_AS_APPRAISAL": true,
+    "START_DATE": "2026-10-12",
+    "END_DATE": "2027-01-10",
+    "CREATOR": "1",
+    "PERFORMANCE_CYCLE_ID": 12,
+    "HAS_LINE_MANAGER": false,
+    "QUIZ_STRATEGY": "both",
+    "HAS_GENERAL_QUIZ": true,
+    "general_quiz": {
+      "QUIZ_TYPE": "manual",
+      "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+      "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+      "QUIZ_DESCRIPTION": "Final assessment for Effective Official Communication & Memo Writing.",
+      "ATTEMPTS_ALLOWED": 1,
+      "DURATION": 20,
+      "TOTAL_QUIZ_SCORE": 90,
+      "questions": [
+        {
+          "QUIZ_QUESTION": "What is the most important quality of official writing?",
+          "QUIZ_ANSWER": "Clarity and conciseness",
+          "QUIZ_OPTIONS": [
+            "Length",
+            "Clarity and conciseness",
+            "Decorative fonts",
+            "Use of complex vocabulary"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "Where should the main message of a memo appear?",
+          "QUIZ_ANSWER": "Early, near the beginning",
+          "QUIZ_OPTIONS": [
+            "Early, near the beginning",
+            "Only in the attachment",
+            "Hidden in the last paragraph",
+            "It should not be stated directly"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "What tone is appropriate for official correspondence?",
+          "QUIZ_ANSWER": "Formal and courteous",
+          "QUIZ_OPTIONS": [
+            "Sarcastic",
+            "Aggressive",
+            "Casual slang",
+            "Formal and courteous"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "A memo's subject line should...",
+          "QUIZ_ANSWER": "State the purpose briefly and specifically",
+          "QUIZ_OPTIONS": [
+            "State the purpose briefly and specifically",
+            "Be left blank",
+            "Contain the full memo",
+            "Only say 'Important'"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "Good meeting minutes should record...",
+          "QUIZ_ANSWER": "Decisions, action points, owners and deadlines",
+          "QUIZ_OPTIONS": [
+            "Decisions, action points, owners and deadlines",
+            "Every word spoken",
+            "Personal opinions of the secretary",
+            "Only the attendance list"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "Why do official memos carry reference numbers?",
+          "QUIZ_ANSWER": "To make tracking and filing easier",
+          "QUIZ_OPTIONS": [
+            "For decoration",
+            "To make them longer",
+            "They are not needed",
+            "To make tracking and filing easier"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "When should you use 'Reply All'?",
+          "QUIZ_ANSWER": "Only when every recipient needs your response",
+          "QUIZ_OPTIONS": [
+            "Never",
+            "Only on Fridays",
+            "Only when every recipient needs your response",
+            "Always"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "A good presentation slide has...",
+          "QUIZ_ANSWER": "A few key points and supporting visuals",
+          "QUIZ_OPTIONS": [
+            "Full paragraphs of text",
+            "A few key points and supporting visuals",
+            "As many colours as possible",
+            "No title"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "What should you always do before sending an important email?",
+          "QUIZ_ANSWER": "Proofread it and check the recipients and attachments",
+          "QUIZ_OPTIONS": [
+            "Send it twice",
+            "Proofread it and check the recipients and attachments",
+            "Add more recipients",
+            "Remove the subject line"
+          ]
+        }
+      ]
+    },
+    "COURSE_PREVIEW_IMAGE": "https://placehold.co/800x450/1E293B/FFFFFF/png?font=montserrat&text=Effective%20Official%20Communication%20%26%20Memo%20Writing",
+    "course_lessons": [
+      {
+        "TITLE": "Principles of Official Writing",
+        "DESCRIPTION": "Official writing should be clear, concise, correct and courteous. This lesson covers knowing your audience, putting the key message first, choosing a formal but readable tone, and avoiding unnecessary jargon.",
+        "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+        "HAS_QUIZ": true,
+        "QUIZ_TYPE": "manual",
+        "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+        "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+        "QUIZ_DESCRIPTION": "Check your understanding of \"Principles of Official Writing\".",
+        "ATTEMPTS_ALLOWED": 2,
+        "DURATION": 10,
+        "TOTAL_QUIZ_SCORE": 30,
+        "lesson_quiz": {
+          "questions": [
+            {
+              "QUIZ_QUESTION": "What is the most important quality of official writing?",
+              "QUIZ_ANSWER": "Clarity and conciseness",
+              "QUIZ_OPTIONS": [
+                "Length",
+                "Clarity and conciseness",
+                "Decorative fonts",
+                "Use of complex vocabulary"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "Where should the main message of a memo appear?",
+              "QUIZ_ANSWER": "Early, near the beginning",
+              "QUIZ_OPTIONS": [
+                "Early, near the beginning",
+                "Only in the attachment",
+                "Hidden in the last paragraph",
+                "It should not be stated directly"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "What tone is appropriate for official correspondence?",
+              "QUIZ_ANSWER": "Formal and courteous",
+              "QUIZ_OPTIONS": [
+                "Sarcastic",
+                "Aggressive",
+                "Casual slang",
+                "Formal and courteous"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "TITLE": "Writing Memos & Minutes",
+        "DESCRIPTION": "This lesson breaks down the parts of a memo (reference, date, subject, body and action required) and shows how to write minutes that capture decisions, action points, owners and deadlines.",
+        "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+        "HAS_QUIZ": true,
+        "QUIZ_TYPE": "manual",
+        "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+        "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+        "QUIZ_DESCRIPTION": "Check your understanding of \"Writing Memos & Minutes\".",
+        "ATTEMPTS_ALLOWED": 2,
+        "DURATION": 10,
+        "TOTAL_QUIZ_SCORE": 30,
+        "lesson_quiz": {
+          "questions": [
+            {
+              "QUIZ_QUESTION": "A memo's subject line should...",
+              "QUIZ_ANSWER": "State the purpose briefly and specifically",
+              "QUIZ_OPTIONS": [
+                "State the purpose briefly and specifically",
+                "Be left blank",
+                "Contain the full memo",
+                "Only say 'Important'"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "Good meeting minutes should record...",
+              "QUIZ_ANSWER": "Decisions, action points, owners and deadlines",
+              "QUIZ_OPTIONS": [
+                "Decisions, action points, owners and deadlines",
+                "Every word spoken",
+                "Personal opinions of the secretary",
+                "Only the attendance list"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "Why do official memos carry reference numbers?",
+              "QUIZ_ANSWER": "To make tracking and filing easier",
+              "QUIZ_OPTIONS": [
+                "For decoration",
+                "To make them longer",
+                "They are not needed",
+                "To make tracking and filing easier"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "TITLE": "Email Etiquette & Presentations",
+        "DESCRIPTION": "Email and slide presentations are now the main ways we communicate at work. This lesson covers subject lines, reply-all discipline, attachments, proofreading and designing slides that support, rather than replace, the speaker.",
+        "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+        "HAS_QUIZ": true,
+        "QUIZ_TYPE": "manual",
+        "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+        "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+        "QUIZ_DESCRIPTION": "Check your understanding of \"Email Etiquette & Presentations\".",
+        "ATTEMPTS_ALLOWED": 2,
+        "DURATION": 10,
+        "TOTAL_QUIZ_SCORE": 30,
+        "lesson_quiz": {
+          "questions": [
+            {
+              "QUIZ_QUESTION": "When should you use 'Reply All'?",
+              "QUIZ_ANSWER": "Only when every recipient needs your response",
+              "QUIZ_OPTIONS": [
+                "Never",
+                "Only on Fridays",
+                "Only when every recipient needs your response",
+                "Always"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "A good presentation slide has...",
+              "QUIZ_ANSWER": "A few key points and supporting visuals",
+              "QUIZ_OPTIONS": [
+                "Full paragraphs of text",
+                "A few key points and supporting visuals",
+                "As many colours as possible",
+                "No title"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "What should you always do before sending an important email?",
+              "QUIZ_ANSWER": "Proofread it and check the recipients and attachments",
+              "QUIZ_OPTIONS": [
+                "Send it twice",
+                "Proofread it and check the recipients and attachments",
+                "Add more recipients",
+                "Remove the subject line"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "course_recipients": {
+      "recipient_type": "directorate",
+      "STAFF_IDS": [
+        "14"
+      ]
+    }
+  },
+  {
+    "COURSE_CATEGORY": "Leadership",
+    "COMPANY_ID": "1",
+    "COURSE_TITLE": "Leadership & People Management for Supervisors",
+    "COURSE_OBJECTIVE": "Prepare new and current supervisors to lead teams, delegate effectively, motivate staff and handle conflict professionally.",
+    "COURSE_DESCRIPTION": "Practical leadership skills for unit heads and team leads in government agencies and corporate organisations: the supervisor's role, delegation, motivation, feedback and conflict resolution.",
+    "USE_AS_APPRAISAL": true,
+    "START_DATE": "2026-10-12",
+    "END_DATE": "2027-01-10",
+    "CREATOR": "1",
+    "PERFORMANCE_CYCLE_ID": 12,
+    "HAS_LINE_MANAGER": false,
+    "QUIZ_STRATEGY": "both",
+    "HAS_GENERAL_QUIZ": true,
+    "general_quiz": {
+      "QUIZ_TYPE": "manual",
+      "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+      "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+      "QUIZ_DESCRIPTION": "Final assessment for Leadership & People Management for Supervisors.",
+      "ATTEMPTS_ALLOWED": 1,
+      "DURATION": 20,
+      "TOTAL_QUIZ_SCORE": 90,
+      "questions": [
+        {
+          "QUIZ_QUESTION": "What is a supervisor's primary responsibility?",
+          "QUIZ_ANSWER": "Guiding the team to achieve organisational goals",
+          "QUIZ_OPTIONS": [
+            "Avoiding contact with staff",
+            "Doing all the work personally",
+            "Approving only their own leave",
+            "Guiding the team to achieve organisational goals"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "Clear expectations help staff to...",
+          "QUIZ_ANSWER": "Understand what success looks like in their role",
+          "QUIZ_OPTIONS": [
+            "Work without direction",
+            "Understand what success looks like in their role",
+            "Ignore deadlines",
+            "Avoid responsibility"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "A supervisor who leads by example...",
+          "QUIZ_ANSWER": "Demonstrates the behaviour they expect from the team",
+          "QUIZ_OPTIONS": [
+            "Demonstrates the behaviour they expect from the team",
+            "Sets rules that apply only to others",
+            "Avoids difficult tasks",
+            "Arrives late regularly"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "Effective delegation includes...",
+          "QUIZ_ANSWER": "Clear instructions, authority to act and agreed check-ins",
+          "QUIZ_OPTIONS": [
+            "Assigning tasks without explanation",
+            "Clear instructions, authority to act and agreed check-ins",
+            "Taking the task back at the first mistake",
+            "Delegating only unpleasant tasks"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "Which is a strong non-financial motivator?",
+          "QUIZ_ANSWER": "Recognition and opportunities for growth",
+          "QUIZ_OPTIONS": [
+            "Unclear goals",
+            "Recognition and opportunities for growth",
+            "Constant reassignment",
+            "Public criticism"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "Micromanagement usually leads to...",
+          "QUIZ_ANSWER": "Lower morale and reduced initiative",
+          "QUIZ_OPTIONS": [
+            "Higher trust",
+            "Faster decision-making by staff",
+            "Lower morale and reduced initiative",
+            "Better delegation"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "Good feedback is...",
+          "QUIZ_ANSWER": "Specific, timely and focused on behaviour",
+          "QUIZ_OPTIONS": [
+            "Specific, timely and focused on behaviour",
+            "Personal and emotional",
+            "Given only during annual appraisal",
+            "Vague and delayed"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "When two team members are in conflict, the supervisor should first...",
+          "QUIZ_ANSWER": "Listen to both sides privately and identify the issue",
+          "QUIZ_OPTIONS": [
+            "Listen to both sides privately and identify the issue",
+            "Take sides publicly",
+            "Ignore it until it goes away",
+            "Report both for discipline immediately"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "In the Situation-Behaviour-Impact model, 'Impact' describes...",
+          "QUIZ_ANSWER": "The effect the behaviour had on work or people",
+          "QUIZ_OPTIONS": [
+            "The supervisor's mood",
+            "The staff member's personality",
+            "The time of day",
+            "The effect the behaviour had on work or people"
+          ]
+        }
+      ]
+    },
+    "COURSE_PREVIEW_IMAGE": "https://placehold.co/800x450/1E293B/FFFFFF/png?font=montserrat&text=Leadership%20%26%20People%20Management%20for%20Supervisors",
+    "course_lessons": [
+      {
+        "TITLE": "The Role of a Supervisor",
+        "DESCRIPTION": "Supervisors connect organisational goals to daily work. This lesson covers planning and assigning work, setting expectations, monitoring performance and serving as a role model for integrity and discipline.",
+        "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+        "HAS_QUIZ": true,
+        "QUIZ_TYPE": "manual",
+        "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+        "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+        "QUIZ_DESCRIPTION": "Check your understanding of \"The Role of a Supervisor\".",
+        "ATTEMPTS_ALLOWED": 2,
+        "DURATION": 10,
+        "TOTAL_QUIZ_SCORE": 30,
+        "lesson_quiz": {
+          "questions": [
+            {
+              "QUIZ_QUESTION": "What is a supervisor's primary responsibility?",
+              "QUIZ_ANSWER": "Guiding the team to achieve organisational goals",
+              "QUIZ_OPTIONS": [
+                "Avoiding contact with staff",
+                "Doing all the work personally",
+                "Approving only their own leave",
+                "Guiding the team to achieve organisational goals"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "Clear expectations help staff to...",
+              "QUIZ_ANSWER": "Understand what success looks like in their role",
+              "QUIZ_OPTIONS": [
+                "Work without direction",
+                "Understand what success looks like in their role",
+                "Ignore deadlines",
+                "Avoid responsibility"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "A supervisor who leads by example...",
+              "QUIZ_ANSWER": "Demonstrates the behaviour they expect from the team",
+              "QUIZ_OPTIONS": [
+                "Demonstrates the behaviour they expect from the team",
+                "Sets rules that apply only to others",
+                "Avoids difficult tasks",
+                "Arrives late regularly"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "TITLE": "Delegation & Motivation",
+        "DESCRIPTION": "Delegation develops staff and frees the supervisor to focus on priorities. This lesson covers what to delegate, how to brief, how to follow up without micromanaging, and what motivates people at work.",
+        "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+        "HAS_QUIZ": true,
+        "QUIZ_TYPE": "manual",
+        "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+        "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+        "QUIZ_DESCRIPTION": "Check your understanding of \"Delegation & Motivation\".",
+        "ATTEMPTS_ALLOWED": 2,
+        "DURATION": 10,
+        "TOTAL_QUIZ_SCORE": 30,
+        "lesson_quiz": {
+          "questions": [
+            {
+              "QUIZ_QUESTION": "Effective delegation includes...",
+              "QUIZ_ANSWER": "Clear instructions, authority to act and agreed check-ins",
+              "QUIZ_OPTIONS": [
+                "Assigning tasks without explanation",
+                "Clear instructions, authority to act and agreed check-ins",
+                "Taking the task back at the first mistake",
+                "Delegating only unpleasant tasks"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "Which is a strong non-financial motivator?",
+              "QUIZ_ANSWER": "Recognition and opportunities for growth",
+              "QUIZ_OPTIONS": [
+                "Unclear goals",
+                "Recognition and opportunities for growth",
+                "Constant reassignment",
+                "Public criticism"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "Micromanagement usually leads to...",
+              "QUIZ_ANSWER": "Lower morale and reduced initiative",
+              "QUIZ_OPTIONS": [
+                "Higher trust",
+                "Faster decision-making by staff",
+                "Lower morale and reduced initiative",
+                "Better delegation"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "TITLE": "Feedback & Conflict Resolution",
+        "DESCRIPTION": "Timely, specific feedback improves performance. This lesson introduces a simple feedback model (situation, behaviour, impact) and steps to resolve team conflicts fairly and early.",
+        "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+        "HAS_QUIZ": true,
+        "QUIZ_TYPE": "manual",
+        "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+        "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+        "QUIZ_DESCRIPTION": "Check your understanding of \"Feedback & Conflict Resolution\".",
+        "ATTEMPTS_ALLOWED": 2,
+        "DURATION": 10,
+        "TOTAL_QUIZ_SCORE": 30,
+        "lesson_quiz": {
+          "questions": [
+            {
+              "QUIZ_QUESTION": "Good feedback is...",
+              "QUIZ_ANSWER": "Specific, timely and focused on behaviour",
+              "QUIZ_OPTIONS": [
+                "Specific, timely and focused on behaviour",
+                "Personal and emotional",
+                "Given only during annual appraisal",
+                "Vague and delayed"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "When two team members are in conflict, the supervisor should first...",
+              "QUIZ_ANSWER": "Listen to both sides privately and identify the issue",
+              "QUIZ_OPTIONS": [
+                "Listen to both sides privately and identify the issue",
+                "Take sides publicly",
+                "Ignore it until it goes away",
+                "Report both for discipline immediately"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "In the Situation-Behaviour-Impact model, 'Impact' describes...",
+              "QUIZ_ANSWER": "The effect the behaviour had on work or people",
+              "QUIZ_OPTIONS": [
+                "The supervisor's mood",
+                "The staff member's personality",
+                "The time of day",
+                "The effect the behaviour had on work or people"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "course_recipients": {
+      "recipient_type": "directorate",
+      "STAFF_IDS": [
+        "14"
+      ]
+    }
+  },
+  {
+    "COURSE_CATEGORY": "HR & Performance",
+    "COMPANY_ID": "1",
+    "COURSE_TITLE": "Performance Management & Appraisal",
+    "COURSE_OBJECTIVE": "Help staff and supervisors set SMART objectives, track performance throughout the year and conduct fair, evidence-based appraisals.",
+    "COURSE_DESCRIPTION": "Covers the full performance cycle: goal setting, continuous feedback, documentation, the appraisal interview and development planning, aligned with annual performance evaluation practice in the public service.",
+    "USE_AS_APPRAISAL": true,
+    "START_DATE": "2026-10-12",
+    "END_DATE": "2027-01-10",
+    "CREATOR": "1",
+    "PERFORMANCE_CYCLE_ID": 12,
+    "HAS_LINE_MANAGER": false,
+    "QUIZ_STRATEGY": "both",
+    "HAS_GENERAL_QUIZ": true,
+    "general_quiz": {
+      "QUIZ_TYPE": "manual",
+      "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+      "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+      "QUIZ_DESCRIPTION": "Final assessment for Performance Management & Appraisal.",
+      "ATTEMPTS_ALLOWED": 1,
+      "DURATION": 20,
+      "TOTAL_QUIZ_SCORE": 90,
+      "questions": [
+        {
+          "QUIZ_QUESTION": "What does the 'M' in SMART stand for?",
+          "QUIZ_ANSWER": "Measurable",
+          "QUIZ_OPTIONS": [
+            "Measurable",
+            "Monthly",
+            "Manageable",
+            "Mandatory"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "Which objective is SMART?",
+          "QUIZ_ANSWER": "Process 95% of leave requests within 3 working days by 31 December",
+          "QUIZ_OPTIONS": [
+            "Be more efficient sometimes",
+            "Process 95% of leave requests within 3 working days by 31 December",
+            "Work harder this year",
+            "Improve things"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "When should individual objectives be agreed?",
+          "QUIZ_ANSWER": "At the start of the performance cycle",
+          "QUIZ_OPTIONS": [
+            "On the day of the appraisal",
+            "After the year ends",
+            "Never, they are optional",
+            "At the start of the performance cycle"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "Why hold regular performance check-ins?",
+          "QUIZ_ANSWER": "To track progress and address issues early",
+          "QUIZ_OPTIONS": [
+            "To replace the annual appraisal entirely",
+            "To find faults only",
+            "They have no value",
+            "To track progress and address issues early"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "What should be documented during the year?",
+          "QUIZ_ANSWER": "Achievements, challenges and supporting evidence",
+          "QUIZ_OPTIONS": [
+            "Achievements, challenges and supporting evidence",
+            "Only mistakes",
+            "Nothing until the appraisal",
+            "Only attendance"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "A mid-year review is used to...",
+          "QUIZ_ANSWER": "Review progress and adjust objectives if needed",
+          "QUIZ_OPTIONS": [
+            "Close the performance cycle",
+            "Approve promotions automatically",
+            "Review progress and adjust objectives if needed",
+            "Issue final ratings"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "Ratings in an appraisal should be based on...",
+          "QUIZ_ANSWER": "Evidence of performance against agreed objectives",
+          "QUIZ_OPTIONS": [
+            "The most recent week only",
+            "Seniority alone",
+            "Evidence of performance against agreed objectives",
+            "Personal friendship"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "Rating someone highly on everything because they excel in one area is called...",
+          "QUIZ_ANSWER": "The halo effect",
+          "QUIZ_OPTIONS": [
+            "The halo effect",
+            "Calibration",
+            "Delegation",
+            "Benchmarking"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "A development plan should include...",
+          "QUIZ_ANSWER": "Specific training or experiences to close skill gaps",
+          "QUIZ_OPTIONS": [
+            "Nothing for high performers",
+            "Specific training or experiences to close skill gaps",
+            "Salary details",
+            "Only a list of weaknesses"
+          ]
+        }
+      ]
+    },
+    "COURSE_PREVIEW_IMAGE": "https://placehold.co/800x450/1E293B/FFFFFF/png?font=montserrat&text=Performance%20Management%20%26%20Appraisal",
+    "course_lessons": [
+      {
+        "TITLE": "Setting SMART Objectives",
+        "DESCRIPTION": "Objectives should be Specific, Measurable, Achievable, Relevant and Time-bound. This lesson shows how to turn departmental targets into individual SMART objectives agreed at the start of the performance cycle.",
+        "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+        "HAS_QUIZ": true,
+        "QUIZ_TYPE": "manual",
+        "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+        "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+        "QUIZ_DESCRIPTION": "Check your understanding of \"Setting SMART Objectives\".",
+        "ATTEMPTS_ALLOWED": 2,
+        "DURATION": 10,
+        "TOTAL_QUIZ_SCORE": 30,
+        "lesson_quiz": {
+          "questions": [
+            {
+              "QUIZ_QUESTION": "What does the 'M' in SMART stand for?",
+              "QUIZ_ANSWER": "Measurable",
+              "QUIZ_OPTIONS": [
+                "Measurable",
+                "Monthly",
+                "Manageable",
+                "Mandatory"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "Which objective is SMART?",
+              "QUIZ_ANSWER": "Process 95% of leave requests within 3 working days by 31 December",
+              "QUIZ_OPTIONS": [
+                "Be more efficient sometimes",
+                "Process 95% of leave requests within 3 working days by 31 December",
+                "Work harder this year",
+                "Improve things"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "When should individual objectives be agreed?",
+              "QUIZ_ANSWER": "At the start of the performance cycle",
+              "QUIZ_OPTIONS": [
+                "On the day of the appraisal",
+                "After the year ends",
+                "Never, they are optional",
+                "At the start of the performance cycle"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "TITLE": "Continuous Feedback & Documentation",
+        "DESCRIPTION": "Appraisal should never be a surprise. This lesson covers regular check-ins, mid-year reviews and keeping evidence of achievements and challenges throughout the year.",
+        "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+        "HAS_QUIZ": true,
+        "QUIZ_TYPE": "manual",
+        "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+        "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+        "QUIZ_DESCRIPTION": "Check your understanding of \"Continuous Feedback & Documentation\".",
+        "ATTEMPTS_ALLOWED": 2,
+        "DURATION": 10,
+        "TOTAL_QUIZ_SCORE": 30,
+        "lesson_quiz": {
+          "questions": [
+            {
+              "QUIZ_QUESTION": "Why hold regular performance check-ins?",
+              "QUIZ_ANSWER": "To track progress and address issues early",
+              "QUIZ_OPTIONS": [
+                "To replace the annual appraisal entirely",
+                "To find faults only",
+                "They have no value",
+                "To track progress and address issues early"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "What should be documented during the year?",
+              "QUIZ_ANSWER": "Achievements, challenges and supporting evidence",
+              "QUIZ_OPTIONS": [
+                "Achievements, challenges and supporting evidence",
+                "Only mistakes",
+                "Nothing until the appraisal",
+                "Only attendance"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "A mid-year review is used to...",
+              "QUIZ_ANSWER": "Review progress and adjust objectives if needed",
+              "QUIZ_OPTIONS": [
+                "Close the performance cycle",
+                "Approve promotions automatically",
+                "Review progress and adjust objectives if needed",
+                "Issue final ratings"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "TITLE": "The Appraisal Interview & Development Plans",
+        "DESCRIPTION": "This lesson explains how to prepare for and conduct a fair appraisal interview, avoid common rating biases, and agree a development plan for the next cycle.",
+        "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+        "HAS_QUIZ": true,
+        "QUIZ_TYPE": "manual",
+        "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+        "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+        "QUIZ_DESCRIPTION": "Check your understanding of \"The Appraisal Interview & Development Plans\".",
+        "ATTEMPTS_ALLOWED": 2,
+        "DURATION": 10,
+        "TOTAL_QUIZ_SCORE": 30,
+        "lesson_quiz": {
+          "questions": [
+            {
+              "QUIZ_QUESTION": "Ratings in an appraisal should be based on...",
+              "QUIZ_ANSWER": "Evidence of performance against agreed objectives",
+              "QUIZ_OPTIONS": [
+                "The most recent week only",
+                "Seniority alone",
+                "Evidence of performance against agreed objectives",
+                "Personal friendship"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "Rating someone highly on everything because they excel in one area is called...",
+              "QUIZ_ANSWER": "The halo effect",
+              "QUIZ_OPTIONS": [
+                "The halo effect",
+                "Calibration",
+                "Delegation",
+                "Benchmarking"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "A development plan should include...",
+              "QUIZ_ANSWER": "Specific training or experiences to close skill gaps",
+              "QUIZ_OPTIONS": [
+                "Nothing for high performers",
+                "Specific training or experiences to close skill gaps",
+                "Salary details",
+                "Only a list of weaknesses"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "course_recipients": {
+      "recipient_type": "directorate",
+      "STAFF_IDS": [
+        "14"
+      ]
+    }
+  },
+  {
+    "COURSE_CATEGORY": "Service Delivery",
+    "COMPANY_ID": "1",
+    "COURSE_TITLE": "Customer Service Excellence & SERVICOM",
+    "COURSE_OBJECTIVE": "Build a citizen- and customer-focused service culture in line with SERVICOM principles.",
+    "COURSE_DESCRIPTION": "Explores service standards, the SERVICOM charter, handling complaints, communicating with stakeholders and continuously improving service delivery.",
+    "USE_AS_APPRAISAL": true,
+    "START_DATE": "2026-10-12",
+    "END_DATE": "2027-01-10",
+    "CREATOR": "1",
+    "PERFORMANCE_CYCLE_ID": 12,
+    "HAS_LINE_MANAGER": false,
+    "QUIZ_STRATEGY": "both",
+    "HAS_GENERAL_QUIZ": true,
+    "general_quiz": {
+      "QUIZ_TYPE": "manual",
+      "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+      "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+      "QUIZ_DESCRIPTION": "Final assessment for Customer Service Excellence & SERVICOM.",
+      "ATTEMPTS_ALLOWED": 1,
+      "DURATION": 20,
+      "TOTAL_QUIZ_SCORE": 90,
+      "questions": [
+        {
+          "QUIZ_QUESTION": "What does SERVICOM stand for?",
+          "QUIZ_ANSWER": "Service Compact with All Nigerians",
+          "QUIZ_OPTIONS": [
+            "Service Committee of Ministers",
+            "Service Commission of Management",
+            "Servants Communication Network",
+            "Service Compact with All Nigerians"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "A service charter tells customers...",
+          "QUIZ_ANSWER": "What services to expect, the standards, and how to complain",
+          "QUIZ_OPTIONS": [
+            "Staff home addresses",
+            "What services to expect, the standards, and how to complain",
+            "Only the agency's history",
+            "The internal salary structure"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "Which value is central to good public service delivery?",
+          "QUIZ_ANSWER": "Timeliness and fairness",
+          "QUIZ_OPTIONS": [
+            "Delay to show importance",
+            "Timeliness and fairness",
+            "Secrecy",
+            "Favouritism"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "What is the first step when handling a complaint?",
+          "QUIZ_ANSWER": "Listen actively and acknowledge the concern",
+          "QUIZ_OPTIONS": [
+            "Argue the point",
+            "Listen actively and acknowledge the concern",
+            "Transfer the customer immediately",
+            "Ignore the complaint"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "When you can't resolve an issue yourself, you should...",
+          "QUIZ_ANSWER": "Escalate it, tell the customer the next steps, and follow up",
+          "QUIZ_OPTIONS": [
+            "End the conversation",
+            "Escalate it, tell the customer the next steps, and follow up",
+            "Promise something you can't deliver",
+            "Tell the customer it's not your job"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "Why should complaints be recorded?",
+          "QUIZ_ANSWER": "To track resolution and identify recurring problems",
+          "QUIZ_OPTIONS": [
+            "To track resolution and identify recurring problems",
+            "Only for legal cases",
+            "To blame staff",
+            "They should not be recorded"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "Which is a useful service metric?",
+          "QUIZ_ANSWER": "Average time taken to resolve a request",
+          "QUIZ_OPTIONS": [
+            "Number of meetings held",
+            "Office paint colour",
+            "Average time taken to resolve a request",
+            "Number of staff birthdays"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "Customer feedback should be used to...",
+          "QUIZ_ANSWER": "Identify and fix root causes of poor service",
+          "QUIZ_OPTIONS": [
+            "Nothing",
+            "Identify and fix root causes of poor service",
+            "Fill a report that nobody reads",
+            "Punish customers who complain"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "Continuous improvement means...",
+          "QUIZ_ANSWER": "Regularly reviewing and improving how services are delivered",
+          "QUIZ_OPTIONS": [
+            "Improving only after an audit",
+            "Regularly reviewing and improving how services are delivered",
+            "Changing nothing once a process works",
+            "Hiring more staff every year"
+          ]
+        }
+      ]
+    },
+    "COURSE_PREVIEW_IMAGE": "https://placehold.co/800x450/1E293B/FFFFFF/png?font=montserrat&text=Customer%20Service%20Excellence%20%26%20SERVICOM",
+    "course_lessons": [
+      {
+        "TITLE": "Understanding SERVICOM & Service Charters",
+        "DESCRIPTION": "SERVICOM (Service Compact with All Nigerians) commits government agencies to deliver services that are timely, fair, honest, effective and transparent. This lesson explains service charters, published service standards, and the role of SERVICOM units in agencies.",
+        "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+        "HAS_QUIZ": true,
+        "QUIZ_TYPE": "manual",
+        "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+        "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+        "QUIZ_DESCRIPTION": "Check your understanding of \"Understanding SERVICOM & Service Charters\".",
+        "ATTEMPTS_ALLOWED": 2,
+        "DURATION": 10,
+        "TOTAL_QUIZ_SCORE": 30,
+        "lesson_quiz": {
+          "questions": [
+            {
+              "QUIZ_QUESTION": "What does SERVICOM stand for?",
+              "QUIZ_ANSWER": "Service Compact with All Nigerians",
+              "QUIZ_OPTIONS": [
+                "Service Committee of Ministers",
+                "Service Commission of Management",
+                "Servants Communication Network",
+                "Service Compact with All Nigerians"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "A service charter tells customers...",
+              "QUIZ_ANSWER": "What services to expect, the standards, and how to complain",
+              "QUIZ_OPTIONS": [
+                "Staff home addresses",
+                "What services to expect, the standards, and how to complain",
+                "Only the agency's history",
+                "The internal salary structure"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "Which value is central to good public service delivery?",
+              "QUIZ_ANSWER": "Timeliness and fairness",
+              "QUIZ_OPTIONS": [
+                "Delay to show importance",
+                "Timeliness and fairness",
+                "Secrecy",
+                "Favouritism"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "TITLE": "Handling Complaints & Difficult Customers",
+        "DESCRIPTION": "Complaints are free feedback. This lesson covers active listening, empathy, staying calm, taking ownership and following through to resolution and record keeping.",
+        "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+        "HAS_QUIZ": true,
+        "QUIZ_TYPE": "manual",
+        "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+        "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+        "QUIZ_DESCRIPTION": "Check your understanding of \"Handling Complaints & Difficult Customers\".",
+        "ATTEMPTS_ALLOWED": 2,
+        "DURATION": 10,
+        "TOTAL_QUIZ_SCORE": 30,
+        "lesson_quiz": {
+          "questions": [
+            {
+              "QUIZ_QUESTION": "What is the first step when handling a complaint?",
+              "QUIZ_ANSWER": "Listen actively and acknowledge the concern",
+              "QUIZ_OPTIONS": [
+                "Argue the point",
+                "Listen actively and acknowledge the concern",
+                "Transfer the customer immediately",
+                "Ignore the complaint"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "When you can't resolve an issue yourself, you should...",
+              "QUIZ_ANSWER": "Escalate it, tell the customer the next steps, and follow up",
+              "QUIZ_OPTIONS": [
+                "End the conversation",
+                "Escalate it, tell the customer the next steps, and follow up",
+                "Promise something you can't deliver",
+                "Tell the customer it's not your job"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "Why should complaints be recorded?",
+              "QUIZ_ANSWER": "To track resolution and identify recurring problems",
+              "QUIZ_OPTIONS": [
+                "To track resolution and identify recurring problems",
+                "Only for legal cases",
+                "To blame staff",
+                "They should not be recorded"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "TITLE": "Continuous Service Improvement",
+        "DESCRIPTION": "Excellent organisations measure service, ask customers for feedback and fix root causes. This lesson introduces simple service metrics and improvement cycles.",
+        "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+        "HAS_QUIZ": true,
+        "QUIZ_TYPE": "manual",
+        "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+        "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+        "QUIZ_DESCRIPTION": "Check your understanding of \"Continuous Service Improvement\".",
+        "ATTEMPTS_ALLOWED": 2,
+        "DURATION": 10,
+        "TOTAL_QUIZ_SCORE": 30,
+        "lesson_quiz": {
+          "questions": [
+            {
+              "QUIZ_QUESTION": "Which is a useful service metric?",
+              "QUIZ_ANSWER": "Average time taken to resolve a request",
+              "QUIZ_OPTIONS": [
+                "Number of meetings held",
+                "Office paint colour",
+                "Average time taken to resolve a request",
+                "Number of staff birthdays"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "Customer feedback should be used to...",
+              "QUIZ_ANSWER": "Identify and fix root causes of poor service",
+              "QUIZ_OPTIONS": [
+                "Nothing",
+                "Identify and fix root causes of poor service",
+                "Fill a report that nobody reads",
+                "Punish customers who complain"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "Continuous improvement means...",
+              "QUIZ_ANSWER": "Regularly reviewing and improving how services are delivered",
+              "QUIZ_OPTIONS": [
+                "Improving only after an audit",
+                "Regularly reviewing and improving how services are delivered",
+                "Changing nothing once a process works",
+                "Hiring more staff every year"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "course_recipients": {
+      "recipient_type": "directorate",
+      "STAFF_IDS": [
+        "14"
+      ]
+    }
+  },
+  {
+    "COURSE_CATEGORY": "Procurement & Finance",
+    "COMPANY_ID": "1",
+    "COURSE_TITLE": "Financial Regulations & Budget Discipline",
+    "COURSE_OBJECTIVE": "Ensure officers who handle funds understand the Financial Regulations, budget implementation and the controls that protect public money.",
+    "COURSE_DESCRIPTION": "Covers the budget cycle, the Treasury Single Account, authorisation and payment controls, retirement of advances, and internal and external audit.",
+    "USE_AS_APPRAISAL": true,
+    "START_DATE": "2026-10-12",
+    "END_DATE": "2027-01-10",
+    "CREATOR": "1",
+    "PERFORMANCE_CYCLE_ID": 12,
+    "HAS_LINE_MANAGER": false,
+    "QUIZ_STRATEGY": "both",
+    "HAS_GENERAL_QUIZ": true,
+    "general_quiz": {
+      "QUIZ_TYPE": "manual",
+      "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+      "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+      "QUIZ_DESCRIPTION": "Final assessment for Financial Regulations & Budget Discipline.",
+      "ATTEMPTS_ALLOWED": 1,
+      "DURATION": 20,
+      "TOTAL_QUIZ_SCORE": 90,
+      "questions": [
+        {
+          "QUIZ_QUESTION": "Which is the correct order of the budget cycle?",
+          "QUIZ_ANSWER": "Preparation, approval, implementation, monitoring and evaluation",
+          "QUIZ_OPTIONS": [
+            "Approval, audit, preparation, spending",
+            "Implementation, approval, preparation, audit",
+            "Preparation, approval, implementation, monitoring and evaluation",
+            "Audit, spending, preparation, approval"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "Spending money on an item not in the approved budget without authorisation is...",
+          "QUIZ_ANSWER": "A breach of budget discipline",
+          "QUIZ_OPTIONS": [
+            "Acceptable if the item is useful",
+            "A breach of budget discipline",
+            "Required by law",
+            "Encouraged at year end"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "Why is budget monitoring important?",
+          "QUIZ_ANSWER": "To compare actual spending with plans and correct deviations",
+          "QUIZ_OPTIONS": [
+            "To compare actual spending with plans and correct deviations",
+            "It is not important",
+            "To delay payments",
+            "To increase the budget automatically"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "What is the main purpose of the Treasury Single Account?",
+          "QUIZ_ANSWER": "To consolidate government revenues into a single account at the Central Bank for better control",
+          "QUIZ_OPTIONS": [
+            "To pay staff in cash",
+            "To replace the budget",
+            "To consolidate government revenues into a single account at the Central Bank for better control",
+            "To allow each agency to open many commercial accounts"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "Segregation of duties means...",
+          "QUIZ_ANSWER": "No single officer controls all stages of a transaction",
+          "QUIZ_OPTIONS": [
+            "No single officer controls all stages of a transaction",
+            "Finance staff work in separate buildings",
+            "One officer approves, pays and records everything",
+            "Duties are shared randomly"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "Before a payment is made, it should be...",
+          "QUIZ_ANSWER": "Properly authorised, supported by documents and within budget",
+          "QUIZ_OPTIONS": [
+            "Approved only by the payee",
+            "Requested urgently by phone",
+            "Made first and documented later",
+            "Properly authorised, supported by documents and within budget"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "What does 'retiring an advance' mean?",
+          "QUIZ_ANSWER": "Accounting for how the advance was spent, with receipts, and refunding any balance",
+          "QUIZ_OPTIONS": [
+            "Retiring from service",
+            "Accounting for how the advance was spent, with receipts, and refunding any balance",
+            "Keeping the balance as a bonus",
+            "Asking for another advance"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "What is the role of internal audit?",
+          "QUIZ_ANSWER": "To independently review controls and compliance within the organisation",
+          "QUIZ_OPTIONS": [
+            "To prepare the budget",
+            "To independently review controls and compliance within the organisation",
+            "To approve all payments",
+            "To recruit staff"
+          ]
+        },
+        {
+          "QUIZ_QUESTION": "Unretired advances can result in...",
+          "QUIZ_ANSWER": "Recovery from salary and possible disciplinary action",
+          "QUIZ_OPTIONS": [
+            "No consequence",
+            "Recovery from salary and possible disciplinary action",
+            "Automatic promotion",
+            "A larger next advance"
+          ]
+        }
+      ]
+    },
+    "COURSE_PREVIEW_IMAGE": "https://placehold.co/800x450/1E293B/FFFFFF/png?font=montserrat&text=Financial%20Regulations%20%26%20Budget%20Discipline",
+    "course_lessons": [
+      {
+        "TITLE": "The Budget Cycle & Budget Discipline",
+        "DESCRIPTION": "The public budget moves through preparation, approval, implementation, and monitoring and evaluation. This lesson explains why spending must stay within appropriated amounts and approved budget lines.",
+        "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+        "HAS_QUIZ": true,
+        "QUIZ_TYPE": "manual",
+        "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+        "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+        "QUIZ_DESCRIPTION": "Check your understanding of \"The Budget Cycle & Budget Discipline\".",
+        "ATTEMPTS_ALLOWED": 2,
+        "DURATION": 10,
+        "TOTAL_QUIZ_SCORE": 30,
+        "lesson_quiz": {
+          "questions": [
+            {
+              "QUIZ_QUESTION": "Which is the correct order of the budget cycle?",
+              "QUIZ_ANSWER": "Preparation, approval, implementation, monitoring and evaluation",
+              "QUIZ_OPTIONS": [
+                "Approval, audit, preparation, spending",
+                "Implementation, approval, preparation, audit",
+                "Preparation, approval, implementation, monitoring and evaluation",
+                "Audit, spending, preparation, approval"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "Spending money on an item not in the approved budget without authorisation is...",
+              "QUIZ_ANSWER": "A breach of budget discipline",
+              "QUIZ_OPTIONS": [
+                "Acceptable if the item is useful",
+                "A breach of budget discipline",
+                "Required by law",
+                "Encouraged at year end"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "Why is budget monitoring important?",
+              "QUIZ_ANSWER": "To compare actual spending with plans and correct deviations",
+              "QUIZ_OPTIONS": [
+                "To compare actual spending with plans and correct deviations",
+                "It is not important",
+                "To delay payments",
+                "To increase the budget automatically"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "TITLE": "Treasury Single Account & Payment Controls",
+        "DESCRIPTION": "The Treasury Single Account (TSA) consolidates federal government revenues into one account at the Central Bank of Nigeria, improving visibility and control. This lesson also covers segregation of duties and approval levels for payments.",
+        "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+        "HAS_QUIZ": true,
+        "QUIZ_TYPE": "manual",
+        "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+        "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+        "QUIZ_DESCRIPTION": "Check your understanding of \"Treasury Single Account & Payment Controls\".",
+        "ATTEMPTS_ALLOWED": 2,
+        "DURATION": 10,
+        "TOTAL_QUIZ_SCORE": 30,
+        "lesson_quiz": {
+          "questions": [
+            {
+              "QUIZ_QUESTION": "What is the main purpose of the Treasury Single Account?",
+              "QUIZ_ANSWER": "To consolidate government revenues into a single account at the Central Bank for better control",
+              "QUIZ_OPTIONS": [
+                "To pay staff in cash",
+                "To replace the budget",
+                "To consolidate government revenues into a single account at the Central Bank for better control",
+                "To allow each agency to open many commercial accounts"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "Segregation of duties means...",
+              "QUIZ_ANSWER": "No single officer controls all stages of a transaction",
+              "QUIZ_OPTIONS": [
+                "No single officer controls all stages of a transaction",
+                "Finance staff work in separate buildings",
+                "One officer approves, pays and records everything",
+                "Duties are shared randomly"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "Before a payment is made, it should be...",
+              "QUIZ_ANSWER": "Properly authorised, supported by documents and within budget",
+              "QUIZ_OPTIONS": [
+                "Approved only by the payee",
+                "Requested urgently by phone",
+                "Made first and documented later",
+                "Properly authorised, supported by documents and within budget"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "TITLE": "Advances, Retirement & Audit",
+        "DESCRIPTION": "Cash advances must be retired promptly with receipts. This lesson covers retirement timelines, consequences of unretired advances, and how internal and external audit strengthen accountability.",
+        "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+        "HAS_QUIZ": true,
+        "QUIZ_TYPE": "manual",
+        "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+        "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+        "QUIZ_DESCRIPTION": "Check your understanding of \"Advances, Retirement & Audit\".",
+        "ATTEMPTS_ALLOWED": 2,
+        "DURATION": 10,
+        "TOTAL_QUIZ_SCORE": 30,
+        "lesson_quiz": {
+          "questions": [
+            {
+              "QUIZ_QUESTION": "What does 'retiring an advance' mean?",
+              "QUIZ_ANSWER": "Accounting for how the advance was spent, with receipts, and refunding any balance",
+              "QUIZ_OPTIONS": [
+                "Retiring from service",
+                "Accounting for how the advance was spent, with receipts, and refunding any balance",
+                "Keeping the balance as a bonus",
+                "Asking for another advance"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "What is the role of internal audit?",
+              "QUIZ_ANSWER": "To independently review controls and compliance within the organisation",
+              "QUIZ_OPTIONS": [
+                "To prepare the budget",
+                "To independently review controls and compliance within the organisation",
+                "To approve all payments",
+                "To recruit staff"
+              ]
+            },
+            {
+              "QUIZ_QUESTION": "Unretired advances can result in...",
+              "QUIZ_ANSWER": "Recovery from salary and possible disciplinary action",
+              "QUIZ_OPTIONS": [
+                "No consequence",
+                "Recovery from salary and possible disciplinary action",
+                "Automatic promotion",
+                "A larger next advance"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "course_recipients": {
+      "recipient_type": "directorate",
+      "STAFF_IDS": [
+        "14"
+      ]
+    }
+  }
+]

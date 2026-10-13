@@ -13,10 +13,10 @@ const AddCourseRecipient = (props) => {
     props;
 
   const recipientTypes = [
-    { label: "Staffs", value: "staff" },
+    // { label: "Staffs", value: "staff" },
     { label: "Directorate", value: "directorate" },
     { label: "Department", value: "department" },
-    { label: "Region", value: "region" },
+    // { label: "Region", value: "region" },
     { label: "Designation", value: "designation" },
   ];
 
@@ -26,7 +26,7 @@ const AddCourseRecipient = (props) => {
 
   useEffect(() => {
     if (!recipientType) {
-      setValue("recipientType", "staff");
+      setValue("recipientType", "directorate");
     }
   }, [recipientType, setValue]);
 

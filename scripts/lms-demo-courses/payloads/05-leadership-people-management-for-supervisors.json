@@ -1,0 +1,266 @@
+{
+  "COURSE_CATEGORY": "Leadership",
+  "COMPANY_ID": "1",
+  "COURSE_TITLE": "Leadership & People Management for Supervisors",
+  "COURSE_OBJECTIVE": "Prepare new and current supervisors to lead teams, delegate effectively, motivate staff and handle conflict professionally.",
+  "COURSE_DESCRIPTION": "Practical leadership skills for unit heads and team leads in government agencies and corporate organisations: the supervisor's role, delegation, motivation, feedback and conflict resolution.",
+  "USE_AS_APPRAISAL": true,
+  "START_DATE": "2026-10-12",
+  "END_DATE": "2027-01-10",
+  "CREATOR": "1",
+  "PERFORMANCE_CYCLE_ID": 12,
+  "HAS_LINE_MANAGER": false,
+  "QUIZ_STRATEGY": "both",
+  "HAS_GENERAL_QUIZ": true,
+  "general_quiz": {
+    "QUIZ_TYPE": "manual",
+    "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+    "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+    "QUIZ_DESCRIPTION": "Final assessment for Leadership & People Management for Supervisors.",
+    "ATTEMPTS_ALLOWED": 1,
+    "DURATION": 20,
+    "TOTAL_QUIZ_SCORE": 90,
+    "questions": [
+      {
+        "QUIZ_QUESTION": "What is a supervisor's primary responsibility?",
+        "QUIZ_ANSWER": "Guiding the team to achieve organisational goals",
+        "QUIZ_OPTIONS": [
+          "Avoiding contact with staff",
+          "Doing all the work personally",
+          "Approving only their own leave",
+          "Guiding the team to achieve organisational goals"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "Clear expectations help staff to...",
+        "QUIZ_ANSWER": "Understand what success looks like in their role",
+        "QUIZ_OPTIONS": [
+          "Work without direction",
+          "Understand what success looks like in their role",
+          "Ignore deadlines",
+          "Avoid responsibility"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "A supervisor who leads by example...",
+        "QUIZ_ANSWER": "Demonstrates the behaviour they expect from the team",
+        "QUIZ_OPTIONS": [
+          "Demonstrates the behaviour they expect from the team",
+          "Sets rules that apply only to others",
+          "Avoids difficult tasks",
+          "Arrives late regularly"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "Effective delegation includes...",
+        "QUIZ_ANSWER": "Clear instructions, authority to act and agreed check-ins",
+        "QUIZ_OPTIONS": [
+          "Assigning tasks without explanation",
+          "Clear instructions, authority to act and agreed check-ins",
+          "Taking the task back at the first mistake",
+          "Delegating only unpleasant tasks"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "Which is a strong non-financial motivator?",
+        "QUIZ_ANSWER": "Recognition and opportunities for growth",
+        "QUIZ_OPTIONS": [
+          "Unclear goals",
+          "Recognition and opportunities for growth",
+          "Constant reassignment",
+          "Public criticism"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "Micromanagement usually leads to...",
+        "QUIZ_ANSWER": "Lower morale and reduced initiative",
+        "QUIZ_OPTIONS": [
+          "Higher trust",
+          "Faster decision-making by staff",
+          "Lower morale and reduced initiative",
+          "Better delegation"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "Good feedback is...",
+        "QUIZ_ANSWER": "Specific, timely and focused on behaviour",
+        "QUIZ_OPTIONS": [
+          "Specific, timely and focused on behaviour",
+          "Personal and emotional",
+          "Given only during annual appraisal",
+          "Vague and delayed"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "When two team members are in conflict, the supervisor should first...",
+        "QUIZ_ANSWER": "Listen to both sides privately and identify the issue",
+        "QUIZ_OPTIONS": [
+          "Listen to both sides privately and identify the issue",
+          "Take sides publicly",
+          "Ignore it until it goes away",
+          "Report both for discipline immediately"
+        ]
+      },
+      {
+        "QUIZ_QUESTION": "In the Situation-Behaviour-Impact model, 'Impact' describes...",
+        "QUIZ_ANSWER": "The effect the behaviour had on work or people",
+        "QUIZ_OPTIONS": [
+          "The supervisor's mood",
+          "The staff member's personality",
+          "The time of day",
+          "The effect the behaviour had on work or people"
+        ]
+      }
+    ]
+  },
+  "COURSE_PREVIEW_IMAGE": "https://placehold.co/800x450/1E293B/FFFFFF/png?font=montserrat&text=Leadership%20%26%20People%20Management%20for%20Supervisors",
+  "course_lessons": [
+    {
+      "TITLE": "The Role of a Supervisor",
+      "DESCRIPTION": "Supervisors connect organisational goals to daily work. This lesson covers planning and assigning work, setting expectations, monitoring performance and serving as a role model for integrity and discipline.",
+      "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+      "HAS_QUIZ": true,
+      "QUIZ_TYPE": "manual",
+      "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+      "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+      "QUIZ_DESCRIPTION": "Check your understanding of \"The Role of a Supervisor\".",
+      "ATTEMPTS_ALLOWED": 2,
+      "DURATION": 10,
+      "TOTAL_QUIZ_SCORE": 30,
+      "lesson_quiz": {
+        "questions": [
+          {
+            "QUIZ_QUESTION": "What is a supervisor's primary responsibility?",
+            "QUIZ_ANSWER": "Guiding the team to achieve organisational goals",
+            "QUIZ_OPTIONS": [
+              "Avoiding contact with staff",
+              "Doing all the work personally",
+              "Approving only their own leave",
+              "Guiding the team to achieve organisational goals"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "Clear expectations help staff to...",
+            "QUIZ_ANSWER": "Understand what success looks like in their role",
+            "QUIZ_OPTIONS": [
+              "Work without direction",
+              "Understand what success looks like in their role",
+              "Ignore deadlines",
+              "Avoid responsibility"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "A supervisor who leads by example...",
+            "QUIZ_ANSWER": "Demonstrates the behaviour they expect from the team",
+            "QUIZ_OPTIONS": [
+              "Demonstrates the behaviour they expect from the team",
+              "Sets rules that apply only to others",
+              "Avoids difficult tasks",
+              "Arrives late regularly"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "TITLE": "Delegation & Motivation",
+      "DESCRIPTION": "Delegation develops staff and frees the supervisor to focus on priorities. This lesson covers what to delegate, how to brief, how to follow up without micromanaging, and what motivates people at work.",
+      "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+      "HAS_QUIZ": true,
+      "QUIZ_TYPE": "manual",
+      "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+      "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+      "QUIZ_DESCRIPTION": "Check your understanding of \"Delegation & Motivation\".",
+      "ATTEMPTS_ALLOWED": 2,
+      "DURATION": 10,
+      "TOTAL_QUIZ_SCORE": 30,
+      "lesson_quiz": {
+        "questions": [
+          {
+            "QUIZ_QUESTION": "Effective delegation includes...",
+            "QUIZ_ANSWER": "Clear instructions, authority to act and agreed check-ins",
+            "QUIZ_OPTIONS": [
+              "Assigning tasks without explanation",
+              "Clear instructions, authority to act and agreed check-ins",
+              "Taking the task back at the first mistake",
+              "Delegating only unpleasant tasks"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "Which is a strong non-financial motivator?",
+            "QUIZ_ANSWER": "Recognition and opportunities for growth",
+            "QUIZ_OPTIONS": [
+              "Unclear goals",
+              "Recognition and opportunities for growth",
+              "Constant reassignment",
+              "Public criticism"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "Micromanagement usually leads to...",
+            "QUIZ_ANSWER": "Lower morale and reduced initiative",
+            "QUIZ_OPTIONS": [
+              "Higher trust",
+              "Faster decision-making by staff",
+              "Lower morale and reduced initiative",
+              "Better delegation"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "TITLE": "Feedback & Conflict Resolution",
+      "DESCRIPTION": "Timely, specific feedback improves performance. This lesson introduces a simple feedback model (situation, behaviour, impact) and steps to resolve team conflicts fairly and early.",
+      "MEDIA_ATTACHMENT": "https://pdfobject.com/pdf/sample.pdf",
+      "HAS_QUIZ": true,
+      "QUIZ_TYPE": "manual",
+      "QUIZ_UPLOAD_FILE_URL": "https://pdfobject.com/pdf/sample.pdf",
+      "QUIZ_UPLOAD_INSTRUCTION": "Answer all questions. Select one option per question and submit before the timer runs out.",
+      "QUIZ_DESCRIPTION": "Check your understanding of \"Feedback & Conflict Resolution\".",
+      "ATTEMPTS_ALLOWED": 2,
+      "DURATION": 10,
+      "TOTAL_QUIZ_SCORE": 30,
+      "lesson_quiz": {
+        "questions": [
+          {
+            "QUIZ_QUESTION": "Good feedback is...",
+            "QUIZ_ANSWER": "Specific, timely and focused on behaviour",
+            "QUIZ_OPTIONS": [
+              "Specific, timely and focused on behaviour",
+              "Personal and emotional",
+              "Given only during annual appraisal",
+              "Vague and delayed"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "When two team members are in conflict, the supervisor should first...",
+            "QUIZ_ANSWER": "Listen to both sides privately and identify the issue",
+            "QUIZ_OPTIONS": [
+              "Listen to both sides privately and identify the issue",
+              "Take sides publicly",
+              "Ignore it until it goes away",
+              "Report both for discipline immediately"
+            ]
+          },
+          {
+            "QUIZ_QUESTION": "In the Situation-Behaviour-Impact model, 'Impact' describes...",
+            "QUIZ_ANSWER": "The effect the behaviour had on work or people",
+            "QUIZ_OPTIONS": [
+              "The supervisor's mood",
+              "The staff member's personality",
+              "The time of day",
+              "The effect the behaviour had on work or people"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "course_recipients": {
+    "recipient_type": "directorate",
+    "STAFF_IDS": [
+      "14"
+    ]
+  }
+}
