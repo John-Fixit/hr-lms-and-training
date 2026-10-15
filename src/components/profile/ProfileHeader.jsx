@@ -391,9 +391,9 @@ export default function ProfileHeader() {
               </div>
             </div>
           </div>
-          <div className="md:w-auto w-full">
+          {/* <div className="md:w-auto w-full">
             <QuickLink clickedTab={openQuickLink} />
-          </div>
+          </div> */}
         </div>
       </div>
 

@@ -9,6 +9,7 @@ import ToastProvider from "./providers/ToastProvider.jsx";
 import QueryProvider from "./providers/QueryProvider.jsx";
 import PostContext from "./context/Post.jsx";
 import { SocketContextProvider } from "./context/SocketContext.jsx";
+import App_Data_Provider from "./providers/App_Data_provider.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
@@ -19,7 +20,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <QueryProvider>
             <SocketContextProvider>
               <PostContext>
+                <App_Data_Provider>
                 <App />
+                </App_Data_Provider>
               </PostContext>
             </SocketContextProvider>
           </QueryProvider>
