@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import PropTypes from "prop-types";
-import { Button, Drawer, Input, Select } from "antd";
+import { Button, ConfigProvider, Drawer, Input, Select } from "antd";
 import {
   Pagination,
   Table,
@@ -11,8 +11,9 @@ import {
   TableHeader,
   TableRow,
 } from "@nextui-org/react";
-import PageHeader from "../../../components/payroll_components/PageHeader";
-import Separator from "../../../components/payroll_components/Separator";
+import TrainingPageHeader from "../../../components/core/training/shared/TrainingPageHeader";
+import { TRAINING_THEME } from "../../../components/core/training/shared/trainingTheme";
+import "../../../components/core/training/shared/trainingDesignSystem.css";
 import {
   useGetTrainingFees,
   useUpdateTrainingFees,
@@ -168,20 +169,18 @@ const TrainingDTA = () => {
   );
 
   return (
-    <main className="py-6 font-helvetica">
-      <PageHeader
+    <ConfigProvider theme={TRAINING_THEME}>
+    <main className="training-suite space-y-6 py-6">
+      <TrainingPageHeader
         header_text="Training DTA"
         breadCrumb_data={[
           { name: "HR" },
           { name: "Training" },
           { name: "DTA" },
         ]}
-        // buttonProp={[{ button_text: "Create DTA", fn: openCreateDrawer }]}
       />
 
-      <Separator separator_text="DTA LIST" />
-
-      <section className="mt-6 bg-white rounded-xl border border-[#EAECF0] p-4 font-helvetica">
+      <section className="bg-white rounded-xl border border-slate-200 p-4">
         <Table
           aria-label="Training DTA table"
           radius="sm"
@@ -262,7 +261,7 @@ const TrainingDTA = () => {
             total={pages}
             onChange={setPage}
             classNames={{
-              cursor: "bg-[#00BCC2] text-white",
+              cursor: "bg-[#6366F1] text-white",
             }}
           />
         </div>
@@ -363,7 +362,6 @@ const TrainingDTA = () => {
             <Button
               type="primary"
               htmlType="submit"
-              className="bg-[#00BCC2]"
               size="large"
               loading={isUpdatingTrainingFee}
             >
@@ -373,6 +371,7 @@ const TrainingDTA = () => {
         </form>
       </Drawer>
     </main>
+    </ConfigProvider>
   );
 };
 

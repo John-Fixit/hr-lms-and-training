@@ -121,7 +121,7 @@ const GenerateLetterDrawer = ({ open, onClose, training, staffList }) => {
         </div>
         <Button
           type="primary"
-          className="bg-[#00BCC2]"
+          className="bg-[#6366F1]"
           size="large"
           disabled={!selectedTemplate || isLoadingTemplate}
           onClick={() => handlePrintToPdf?.()}

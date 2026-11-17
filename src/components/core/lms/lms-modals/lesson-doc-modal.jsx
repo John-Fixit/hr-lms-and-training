@@ -1,43 +1,178 @@
-import { ConfigProvider, Image, Modal } from "antd";
+import { ConfigProvider, Modal } from "antd";
 import { useEffect, useMemo, useState } from "react";
+import PropTypes from "prop-types";
 import { useCourseStore } from "../../../../hooks/useCourseStore";
 import { filePrefix } from "../../../../utils/filePrefix";
+import { mediaKindFromPath } from "../../../../utils/fileExtension";
 import { useUpdateCourseLesson } from "../../../../API/lms-apis/course";
-import { errorToast } from "../../../../utils/toastMsgPop";
 import useCurrentUser from "../../../../hooks/useCurrentUser";
+
+/** Public demo clip used when a lesson has no uploaded material. */
+export const DEMO_LESSON_VIDEO = encodeURI(
+  "/assets/images/Computer Basics_ What Is a Computer and How Does It Work_.mp4",
+);
+
+function hasLessonMaterial(path) {
+  if (path == null) return false;
+  const value = String(path).trim();
+  return Boolean(value) && value.toLowerCase() !== "null" && value.toLowerCase() !== "undefined";
+}
+
+function prependBaseURL(path) {
+  if (!path) return "";
+  if (path.startsWith("http://") || path.startsWith("https://") || path.startsWith("/")) {
+    return path;
+  }
+  return `${filePrefix}${path}`;
+}
+
+function videoType(src) {
+  const lower = src.toLowerCase();
+  if (lower.includes(".webm")) return "video/webm";
+  if (lower.includes(".ogg") || lower.includes(".ogv")) return "video/ogg";
+  if (lower.includes(".mov")) return "video/quicktime";
+  return "video/mp4";
+}
+
+function PdfPreview({ src }) {
+  return (
+    <iframe
+      src={src}
+      className="h-[80vh] w-full rounded-md bg-slate-100"
+      title="PDF preview"
+    />
+  );
+}
+
+PdfPreview.propTypes = { src: PropTypes.string };
+
+function ImagePreview({ src, onError }) {
+  return (
+    <div className="flex max-h-[80vh] items-center justify-center bg-slate-950/90 p-2">
+      <img
+        src={src}
+        alt="Lesson material"
+        className="max-h-[78vh] max-w-full object-contain"
+        onError={onError}
+      />
+    </div>
+  );
+}
+
+ImagePreview.propTypes = { src: PropTypes.string, onError: PropTypes.func };
+
+function VideoPreview({ src, onError }) {
+  return (
+    <video
+      key={src}
+      controls
+      playsInline
+      preload="metadata"
+      className="max-h-[80vh] w-full rounded-md bg-black"
+      onError={onError}
+    >
+      <source src={src} type={videoType(src)} />
+      Your browser cannot play this video.{" "}
+      <a href={src} target="_blank" rel="noreferrer">
+        Open file
+      </a>
+    </video>
+  );
+}
+
+VideoPreview.propTypes = { src: PropTypes.string, onError: PropTypes.func };
+
+function OfficePreview({ src }) {
+  return (
+    <iframe
+      src={`https://docs.google.com/gview?url=${encodeURIComponent(src)}&embedded=true`}
+      className="h-[80vh] w-full rounded-md bg-slate-100"
+      title="Document preview"
+    />
+  );
+}
+
+OfficePreview.propTypes = { src: PropTypes.string };
+
+/** When the URL has no extension, try image then video, then offer a download. */
+function UnknownPreview({ src }) {
+  const [mode, setMode] = useState("image");
+
+  if (mode === "image") {
+    return (
+      <img
+        src={src}
+        alt="Lesson material"
+        className="mx-auto max-h-[78vh] max-w-full object-contain"
+        onError={() => setMode("video")}
+      />
+    );
+  }
+
+  if (mode === "video") {
+    return (
+      <video
+        key={src}
+        controls
+        playsInline
+        preload="metadata"
+        className="max-h-[80vh] w-full rounded-md bg-black"
+        onError={() => setMode("pdf")}
+      >
+        <source src={src} />
+      </video>
+    );
+  }
+
+  if (mode === "pdf") {
+    return (
+      <iframe
+        src={src}
+        className="h-[80vh] w-full rounded-md bg-slate-100"
+        title="Material preview"
+        onError={() => setMode("file")}
+      />
+    );
+  }
+
+  return <VideoPreview src={DEMO_LESSON_VIDEO} />;
+}
+
+UnknownPreview.propTypes = { src: PropTypes.string };
 
 const LessonDocModal = () => {
   const { data, updateData } = useCourseStore();
+  const { userData } = useCurrentUser();
+  const { mutateAsync: updateCourseLesson } = useUpdateCourseLesson();
 
-  const {userData} = useCurrentUser();
+  const { is_open_lesson_doc, filePath, lesson, fileKind } = data;
+  const [loadFailed, setLoadFailed] = useState(false);
 
-  const { is_open_lesson_doc, filePath, lesson } = data;
-  const {mutateAsync: updateCourseLesson} = useUpdateCourseLesson();
+  useEffect(() => {
+    setLoadFailed(false);
+  }, [filePath, is_open_lesson_doc]);
 
-useEffect(()=>{
-  const updateLessonView = async () => {
-     const payload = {
-      update_type: "isviewed",
-      json: {
-    "IS_VIEWED":true,
-    "DATE_VIEWED": new Date().toISOString(),
-    "LESSON_RECIPIENT_ID": lesson?.LESSON_RECIPIENT_ID,
-    STAFF_ID: userData?.data?.STAFF_ID
-}
+  useEffect(() => {
+    const updateLessonView = async () => {
+      const payload = {
+        update_type: "isviewed",
+        json: {
+          IS_VIEWED: true,
+          DATE_VIEWED: new Date().toISOString(),
+          LESSON_RECIPIENT_ID: lesson?.LESSON_RECIPIENT_ID,
+          STAFF_ID: userData?.data?.STAFF_ID,
+        },
+      };
+      try {
+        await updateCourseLesson(payload);
+      } catch {
+        // viewing still works if the viewed flag fails
+      }
+    };
+    if (is_open_lesson_doc && !lesson?.IS_VIEWED) {
+      updateLessonView();
     }
-    try{
-      const res = await updateCourseLesson(payload);
-      console.log(res);
-    }catch(err){
-      const errMsg = err?.response?.data?.message || "Failed to update lesson view";
-      // errorToast(errMsg);
-    }
-  }
-  // request to trigger view will be here
-  if(is_open_lesson_doc && !lesson?.IS_VIEWED){
-   updateLessonView();
-  }
-}, [is_open_lesson_doc, lesson])
+  }, [is_open_lesson_doc, lesson, updateCourseLesson, userData?.data?.STAFF_ID]);
 
   const handleCloseModal = () => {
     updateData({
@@ -45,109 +180,61 @@ useEffect(()=>{
     });
   };
 
-  const prependBaseURL = (filePath) => {
-    // Check if the file path already has a base URL
-    if (filePath?.startsWith("http://") || filePath?.startsWith("https://")) {
-      return filePath; // Return the original file path if it has a base URL
-    } else {
-      return `${filePrefix}${filePath}`; // Prepend the base URL
-    }
-  };
-
-  const fullPath = prependBaseURL(filePath);
-
-  const fileExtension = fullPath?.split(".")?.pop()?.toLowerCase();
-
-  //============used this codes to force refresh the ifrrame because it is caching the previous file displayed=============
-
+  const usingFallback = !hasLessonMaterial(filePath) || loadFailed;
+  const fullPath = usingFallback ? DEMO_LESSON_VIDEO : prependBaseURL(filePath);
   const uniqueUrl = useMemo(
-    () => `${fullPath}?timestamp=${new Date().getTime()}`,
-    [fullPath]
+    () => (fullPath ? `${fullPath}${fullPath.includes("?") ? "&" : "?"}t=${Date.now()}` : ""),
+    [fullPath, is_open_lesson_doc],
   );
 
-  //================= ends here ===================
-
-  const [open, setOpen] = useState(false);
+  const kind = usingFallback
+    ? "video"
+    : mediaKindFromPath(
+        lesson?.FILE_NAME || lesson?.DOCUMENT_TYPE || filePath,
+        fileKind,
+      );
 
   const renderContent = () => {
-    if (fileExtension === "pdf") {
+    if (kind === "pdf") return <PdfPreview src={uniqueUrl} />;
+    if (kind === "image") {
+      return <ImagePreview src={fullPath} onError={() => setLoadFailed(true)} />;
+    }
+    if (kind === "video") {
       return (
-        <iframe
-          src={uniqueUrl}
-          className="w-full h-[85vh]"
-          frameBorder="0"
-          title="PDF Preview"
-        ></iframe>
-      );
-    } else if (["jpg", "jpeg", "png", "gif"].includes(fileExtension)) {
-      return (
-        <Image
-          wrapperStyle={{
-            display: "none",
-          }}
-          preview={{
-            visible: is_open_lesson_doc,
-            src: fullPath,
-            onVisibleChange: () => handleCloseModal(),
-          }}
+        <VideoPreview
           src={fullPath}
+          onError={usingFallback ? undefined : () => setLoadFailed(true)}
         />
       );
-    } else if (["doc", "docx"].includes(fileExtension)) {
-      return (
-        <iframe
-          src={`https://docs.google.com/gview?url=${uniqueUrl}&embedded=true`}
-          className="w-full h-[85vh]"
-          frameBorder="0"
-          title="Preview docx"
-        ></iframe>
-      );
-    } else {
-      return <p>File format not supported for preview.</p>;
     }
+    if (kind === "office") return <OfficePreview src={uniqueUrl} />;
+    return <UnknownPreview src={fullPath} />;
   };
 
   return (
-    <>
-      {["jpg", "jpeg", "png", "gif"].includes(fileExtension) ? (
-        <>
-          {/* <Modal
-          centered
-          open={is_open_lesson_doc}
-          footer={null}
-          onCancel={() => handleCloseModal(false)}
-          width={{
-            xs: "90%",
-            sm: "80%",
-            md: "70%",
-            lg: "60%",
-            xl: "50%",
-            xxl: "40%",
-          }}
-        >
-        </Modal> */}
-          {renderContent()}
-        </>
-      ) : (
-        <ConfigProvider
-          theme={{
-            components: {
-              Modal: {},
-            },
-          }}
-        >
-          <Modal
-            open={is_open_lesson_doc}
-            onCancel={handleCloseModal}
-            footer={null}
-            width={"auto"}
-            className="!top-[20px] !z-[1002]"
-          >
-            <div className="mt-6">{renderContent()}</div>
-          </Modal>
-        </ConfigProvider>
-      )}
-    </>
+    <ConfigProvider
+      theme={{
+        components: {
+          Modal: {},
+        },
+      }}
+    >
+      <Modal
+        open={Boolean(is_open_lesson_doc)}
+        onCancel={handleCloseModal}
+        footer={null}
+        width={kind === "pdf" || kind === "office" ? "90%" : 880}
+        title={
+          <span className="font-outfit text-base font-semibold text-slate-800">
+            {lesson?.TITLE || "Lesson material"}
+          </span>
+        }
+        destroyOnClose
+        className="!top-[20px] !z-[1002]"
+      >
+        <div className="mt-2">{renderContent()}</div>
+      </Modal>
+    </ConfigProvider>
   );
 };
 

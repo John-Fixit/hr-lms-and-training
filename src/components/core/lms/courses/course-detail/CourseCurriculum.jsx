@@ -5,23 +5,17 @@ import { FaEye, FaRegFilePdf } from "react-icons/fa";
 import { FiDownloadCloud, FiUploadCloud } from "react-icons/fi";
 import PropTypes from "prop-types";
 import { useCourseStore } from "../../../../../hooks/useCourseStore";
-import { fileExtension } from "../../../../../utils/fileExtension";
+import { mediaKindFromPath } from "../../../../../utils/fileExtension";
 import LessonDocModal from "../../lms-modals/lesson-doc-modal";
 import QuizConfirmModal from "../../lms-modals/QuizConfirmModal";
 import { uploadFileData } from "../../../../../utils/uploadfile";
 import useCurrentUser from "../../../../../hooks/useCurrentUser";
 
 const findFileType = (file) => {
-  const extension = fileExtension(file);
-  if (["mp4", "mov", "avi", "mkv"].includes(extension)) {
-    return "video";
-  } else if (["pdf"].includes(extension)) {
-    return "pdf";
-  } else if (["jpg", "jpeg", "png", "gif", "bmp", "svg"].includes(extension)) {
-    return "image";
-  } else {
-    return "video"; // default type
-  }
+  const kind = mediaKindFromPath(file);
+  if (kind === "office") return "pdf";
+  if (kind === "unknown") return "image";
+  return kind;
 };
 
 const documentType = {
@@ -44,6 +38,7 @@ const CourseCurriculum = ({ course }) => {
       lesson: lesson,
       quizScope,
       generalQuizData,
+      course,
     });
   };
 
@@ -52,6 +47,7 @@ const CourseCurriculum = ({ course }) => {
       filePath: lesson?.MEDIA_ATTACHMENT,
       is_open_lesson_doc: true,
       lesson: lesson,
+      fileKind: findFileType(lesson?.MEDIA_ATTACHMENT || lesson?.FILE_NAME),
     });
   };
 

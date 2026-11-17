@@ -16,6 +16,8 @@ import FormHeader from "../../shared/FormHeader";
 import { useMutateGetStaffByType } from "../../../../API/variation";
 import { filePrefix } from "../../../../utils/filePrefix";
 import { errorToast, successToast } from "../../../../utils/toastMsgPop";
+import CourseSkillPicker from "../shared/CourseSkillPicker";
+import { normalizeSkillIds } from "../shared/awardCompletionSkills";
 
 const { TextArea } = Input;
 
@@ -129,6 +131,16 @@ function TrainingDetailTab({
           onChange={(e) => update("courseName", e.target.value)}
           placeholder="Enter the course name"
           className="w-full mt-1"
+        />
+      </div>
+      <div className="">
+        <FieldLabel>SKILLS AWARDED </FieldLabel>
+        <p className="text-xs text-slate-500 mt-0.5 mb-1">
+         Staff who complete this training receive these skills.
+        </p>
+        <CourseSkillPicker
+          value={formValue.skills}
+          onChange={(ids) => update("skills", ids)}
         />
       </div>
       <div className="">
@@ -497,7 +509,7 @@ function ApprovalTab({
       </div>
       {approvals?.length > 0 && (
         <div className="mt-2">
-          <p className="font-helvetica text-[#00BCC2] font-medium mb-2">
+          <p className="font-helvetica text-[#6366F1] font-medium mb-2">
             Selected approvers ({approvals.length})
           </p>
           <ul className="space-y-2">
@@ -564,6 +576,7 @@ const defaultFormValue = {
   gradeIds: [],
   selectedStaff: [],
   approvals: [],
+  skills: [],
 };
 
 const pickValue = (data, ...keys) => {
@@ -669,6 +682,9 @@ const mapTrainingToFormValue = (data = {}) => {
       ? pickValue(data, "staff", "STAFF", "selectedStaff")
       : [],
     approvals,
+    skills: normalizeSkillIds(
+      pickValue(data, "SKILLS", "skills", "SKILL_IDS", "skill_ids"),
+    ),
   };
 };
 
@@ -884,6 +900,7 @@ export function NewTrainingDrawer({
       signatory:
         formValue?.approvals?.map((item) => item?.value || item?.key)[0] ||
         null,
+      skills: formValue?.skills || [],
     };
     try {
       const res = await createTraining(json);

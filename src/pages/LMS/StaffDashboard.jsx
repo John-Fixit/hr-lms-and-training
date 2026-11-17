@@ -152,7 +152,7 @@ export default function StaffDashboard() {
   const pageTitle = isLearningRoute
     ? "My Learning"
     : isStaffRoute
-      ? "My Courses"
+      ? "LMS Course"
       : "Employee Dashboard";
   const pageDescription = isLearningRoute
     ? "Continue the courses assigned to you and keep track of your learning progress."
@@ -229,14 +229,14 @@ export default function StaffDashboard() {
         </section>
 
         <section className="mt-7">
-          <div className="mb-4">
+          {/* <div className="mb-4">
             <p             className="text-[11px] font-semibold uppercase tracking-[0.15em] text-[#6258e8]">
               {showCreatorFeatures ? "Course management" : "Course catalog"}
             </p>
             <h2 className="mt-1 text-xl font-semibold tracking-tight text-[#17263c]">
               {showCreatorFeatures ? "Courses you created" : "Courses assigned to you"}
             </h2>
-          </div>
+          </div> */}
           {showCreatorFeatures ? (
             <StaffCoursesTable />
           ) : (

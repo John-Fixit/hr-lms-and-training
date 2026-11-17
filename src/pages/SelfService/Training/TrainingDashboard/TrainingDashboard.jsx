@@ -1,51 +1,31 @@
 /* eslint-disable no-unused-vars */
-import { useState, useMemo, useEffect, useCallback } from "react";
-import PageHeader from "../../../../components/payroll_components/PageHeader";
-import Separator from "../../../../components/payroll_components/Separator";
-// import FormBuilder from "../../../HR/Performance/Setup/FormBuilder.jsx";
-
+import { useState, useCallback } from "react";
+import { ConfigProvider, Drawer } from "antd";
+import { Building2, CheckCircle2, Hourglass } from "lucide-react";
 import useCurrentUser from "../../../../hooks/useCurrentUser.jsx";
 import {
   useGetCoordinatorTrainingStaff,
   useGetMyTraining,
   useSeenTrainingNotification,
 } from "../../../../API/training.js";
-import { MdOutlinePending } from "react-icons/md";
-import { AiOutlineFileDone } from "react-icons/ai";
-import { Drawer } from "antd";
 import TrainingTable from "../../../../components/core/training/TrainingTable.jsx";
 import {
   TrainingReviewDrawer,
   ViewStaffDrawer,
 } from "../../../../components/core/training/index.js";
 import TrainingCategoryNotificationTemplate from "../../../../components/core/templates/TrainingCategoryNotificationTemplate.jsx";
-import RequestCard from "../../../Approval/RequestCard.jsx";
+import TrainingPageHeader from "../../../../components/core/training/shared/TrainingPageHeader.jsx";
+import TrainingPageTabs from "../../../../components/core/training/shared/TrainingPageTabs.jsx";
+import TrainingStatusStrip from "../../../../components/core/training/shared/TrainingStatusStrip.jsx";
+import { TRAINING_THEME } from "../../../../components/core/training/shared/trainingTheme.js";
+import "../../../../components/core/training/shared/trainingDesignSystem.css";
 import { errorToast } from "../../../../utils/toastMsgPop.js";
-import { NewTrainingDrawer } from "../../../../components/core/training/create-new-training/NewTraining.jsx";
 import BookFlightDrawer from "../../../../components/core/templates/BookFlightDrawer.jsx";
 
-const statusData = [
-  {
-    id: "awaiting",
-    label: "Awaiting",
-    icon: MdOutlinePending,
-    b_color: "bg-amber-100",
-    t_color: "text-amber-600",
-  },
-  {
-    id: "completed",
-    label: "Completed",
-    icon: AiOutlineFileDone,
-    b_color: "bg-green-100",
-    t_color: "text-green-600",
-  },
-  {
-    id: "regional",
-    label: "RM/Directorate",
-    icon: MdOutlinePending,
-    b_color: "bg-amber-100",
-    t_color: "text-amber-600",
-  },
+const MY_TRAINING_TABS = [
+  { id: "awaiting", label: "Awaiting", icon: Hourglass, sub: "Upcoming or in progress" },
+  { id: "completed", label: "Completed", icon: CheckCircle2, sub: "Finished" },
+  { id: "regional", label: "RM/Directorate", icon: Building2, sub: "Regional nominations" },
 ];
 export default function TrainingDashboard() {
   // drawer data
@@ -174,32 +154,34 @@ export default function TrainingDashboard() {
   }
 
   return (
-    <>
-      <main>
-        <PageHeader
-          header_text={"Training"}
-          breadCrumb_data={[{ name: "Self Service" }, { name: "Training" }]}
-        // btnAvailable={true}
-        // buttonProp={[
-        //   { button_text: "Add New Training", fn: handleAddNewTraining },
-        // ]}
+    <ConfigProvider theme={TRAINING_THEME}>
+      <main className="training-suite space-y-6 py-6">
+        <TrainingPageHeader
+          header_text="My Training"
+          breadCrumb_data={[{ name: "Internal" }, { name: "Training" }, { name: "My Training" }]}
+          subtitle="Internal / Training"
         />
-        <div className="mt-5">{/* <hr /> */}</div>
-
-        <Separator separator_text={"OVERVIEW"} />
-        <RequestCard
-          requestHistory={statusData}
-          selectTab={selectTab}
-          requestStatus={selectedTab}
-          requestNo={detailsNo}
-          loading={{
-            awaiting: pendingTrainingLoading,
-            completed: completedTrainingLoading,
-            regional: regionalTrainingLoading,
-          }}
+        <TrainingStatusStrip
+          items={MY_TRAINING_TABS.map((tab) => ({
+            ...tab,
+            count: Array.isArray(detailsNo(tab.id)) ? detailsNo(tab.id).length : 0,
+          }))}
+          active={selectedTab}
+          onChange={selectTab}
+          loading={pendingTrainingLoading || completedTrainingLoading || regionalTrainingLoading}
+        />
+        <TrainingPageTabs
+          tabs={MY_TRAINING_TABS.map((tab) => ({
+            ...tab,
+            count: Array.isArray(detailsNo(tab.id)) ? detailsNo(tab.id).length : 0,
+          }))}
+          active={selectedTab}
+          onChange={selectTab}
+          idPrefix="my-training"
+          label="My training status"
         />
 
-        <div className="my-8">
+        <div>
           <TrainingTable
             tableData={tableData}
             selectedTab={selectedTab}
@@ -262,7 +244,7 @@ export default function TrainingDashboard() {
           />
         </Drawer>
       </main>
-    </>
+    </ConfigProvider>
   );
 }
 

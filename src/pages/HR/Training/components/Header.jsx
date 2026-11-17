@@ -18,7 +18,7 @@ export default function Header({ addNew, courseOnly }) {
         <div className="flex justify-between items-center">
           <div className="text-center">
             <h2 className="font-helvetica font-bold text-3xl">
-              {courseOnly ? "Course" : "Course Notification"}
+              {courseOnly ? "Training Course" : "Course Notification"}
             </h2>
             <div>
               <span className="text-gray-400 uppercase text-xs flex items-center gap-1 font-helvetica">
@@ -27,7 +27,7 @@ export default function Header({ addNew, courseOnly }) {
             </div>
           </div>
           <Button
-            className="bg-[#00BCC2] hover:bg-[#00979C] transition-all rounded-[4px] text-white font-medium px-4 py-2 font-helvetica flex items-center gap-1 shadow"
+            className="bg-[#6366F1] hover:bg-[#4F46E5] transition-all rounded-[4px] text-white font-medium px-4 py-2 font-helvetica flex items-center gap-1 shadow"
             onClick={addNew}
           >
             <IoMdAddCircle size={18} />

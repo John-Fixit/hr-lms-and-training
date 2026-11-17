@@ -148,7 +148,7 @@ function TrainingReviewDrawer({ open, onClose, training = null, onSuccess }) {
             loading={submitting}
             // disabled={uploading || !uploadedCertificate?.file_url_id}
             onClick={handleSubmit}
-            className="bg-[#00BCC2] hover:!bg-[#00a0a5] border-none"
+            className="bg-[#6366F1] hover:!bg-[#4F46E5] border-none"
           >
             Submit review
           </Button>

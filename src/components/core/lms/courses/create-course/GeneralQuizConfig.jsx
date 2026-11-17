@@ -15,7 +15,7 @@ const GeneralQuizConfig = ({ watch, setValue, handlePrev, handleNext }) => {
   const quizType = watch("general_quiz.quiz_type") || "manual";
 
   const handleUpload = async (file) => {
-    const res = await uploadFileData(file, userData?.token);
+    const res = await uploadLmsCourseFile(file, userData?.token);
     return res?.file_url;
   };
 

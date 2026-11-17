@@ -9,6 +9,7 @@ import GeneralQuizConfig from "../courses/create-course/GeneralQuizConfig";
 import useCurrentUser from "../../../../hooks/useCurrentUser";
 import { useCreateCourse } from "../../../../API/lms-apis/course";
 import { errorToast, successToast } from "../../../../utils/toastMsgPop";
+import { normalizeSkillIds } from "../../training/shared/awardCompletionSkills";
 
 const curriculumDefaultRows = {
   lesson_title: "",
@@ -48,6 +49,7 @@ const CreateCourseDrawer = () => {
       recipientType: "staff",
       quiz_strategy: "lesson",
       general_quiz: null,
+      skills: [],
     },
   });
 
@@ -75,6 +77,12 @@ const CreateCourseDrawer = () => {
           courseDetail?.course_recipients?.recipient_type || "staff",
         quiz_strategy: courseDetail?.QUIZ_STRATEGY || "lesson",
         general_quiz: courseDetail?.general_quiz || null,
+        skills: normalizeSkillIds(
+          courseDetail?.SKILLS ??
+            courseDetail?.skills ??
+            courseDetail?.SKILL_IDS ??
+            courseDetail?.skill_ids,
+        ),
       });
     }
   }, [courseDetail, editCourse, hook_form_props]);
@@ -164,6 +172,7 @@ const CreateCourseDrawer = () => {
             }
           : null,
       COURSE_PREVIEW_IMAGE: rest?.course_thumbnail_url,
+      skills: rest?.skills || [],
       course_lessons: formattedCurriculum,
       course_recipients: {
         recipient_type: rest?.recipientType,

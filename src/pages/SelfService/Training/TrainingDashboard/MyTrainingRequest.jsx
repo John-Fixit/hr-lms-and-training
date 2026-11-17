@@ -1,86 +1,41 @@
 /* eslint-disable no-unused-vars */
-import { useState, useMemo, useEffect, useCallback } from "react";
-import PageHeader from "../../../../components/payroll_components/PageHeader.jsx";
-import Separator from "../../../../components/payroll_components/Separator.jsx";
-// import FormBuilder from "../../../HR/Performance/Setup/FormBuilder.jsx";
-
+import { useState, useCallback } from "react";
+import { ConfigProvider } from "antd";
+import {
+  BadgeCheck,
+  CheckCircle2,
+  FileText,
+  Hourglass,
+  XCircle,
+} from "lucide-react";
 import useCurrentUser from "../../../../hooks/useCurrentUser.jsx";
 import {
   useGetMyTrainingRequest,
   useGetTrainingParticipants,
   useSeenTrainingNotification,
 } from "../../../../API/training.js";
-import {
-  MdOutlineApproval,
-  MdOutlineCancel,
-  MdOutlineCheckCircle,
-  MdOutlinePending,
-} from "react-icons/md";
-import { AiOutlineFileDone } from "react-icons/ai";
 import TrainingTable from "../../../../components/core/training/TrainingTable.jsx";
-import {
-  TrainingReviewDrawer,
-  ViewStaffDrawer,
-} from "../../../../components/core/training/index.js";
-import RequestCard from "../../../Approval/RequestCard.jsx";
+import { ViewStaffDrawer } from "../../../../components/core/training/index.js";
+import TrainingPageHeader from "../../../../components/core/training/shared/TrainingPageHeader.jsx";
+import TrainingPageTabs from "../../../../components/core/training/shared/TrainingPageTabs.jsx";
+import TrainingStatusStrip from "../../../../components/core/training/shared/TrainingStatusStrip.jsx";
+import { TRAINING_THEME } from "../../../../components/core/training/shared/trainingTheme.js";
+import "../../../../components/core/training/shared/trainingDesignSystem.css";
 import { errorToast } from "../../../../utils/toastMsgPop.js";
 import { NewTrainingDrawer } from "../../../../components/core/training/create-new-training/NewTraining.jsx";
-import { FaFirstdraft } from "react-icons/fa";
 
-const statusData = [
-  {
-    id: "draft",
-    label: "Draft",
-    icon: FaFirstdraft,
-    b_color: "bg-purple-100",
-    t_color: "text-purple-600",
-  },
-  {
-    id: "pending",
-    label: "Pending",
-    icon: MdOutlinePending,
-    b_color: "bg-amber-100",
-    t_color: "text-amber-600",
-  },
-
-  {
-    id: "approved",
-    label: "Approved",
-    icon: MdOutlineCheckCircle,
-    b_color: "bg-green-100",
-    t_color: "text-green-600",
-  },
-  {
-    id: "hr approved",
-    label: "HR Approved",
-    icon: MdOutlineApproval,
-    b_color: "bg-green-100",
-    t_color: "text-green-600",
-  },
-  {
-    id: "completed",
-    label: "Completed",
-    icon: AiOutlineFileDone,
-    b_color: "bg-blue-100",
-    t_color: "text-blue-600",
-  },
-  {
-    id: "declined",
-    label: "Declined",
-    icon: MdOutlineCancel,
-    b_color: "bg-red-100",
-    t_color: "text-red-600",
-  },
+const REQUEST_TABS = [
+  { id: "draft", label: "Draft", icon: FileText, sub: "Not submitted" },
+  { id: "pending", label: "Pending", icon: Hourglass, sub: "Awaiting approval" },
+  { id: "approved", label: "Approved", icon: CheckCircle2, sub: "Line manager approved" },
+  { id: "hr approved", label: "HR Approved", icon: BadgeCheck, sub: "Cleared by HR" },
+  { id: "completed", label: "Completed", icon: CheckCircle2, sub: "Finished" },
+  { id: "declined", label: "Declined", icon: XCircle, sub: "Not approved" },
 ];
 
 export default function MyTrainingRequest() {
   // drawer data
   const [selectedTab, setSelectedTab] = useState("pending");
-  const [reviewDrawerOpen, setReviewDrawerOpen] = useState(false);
-  const [selectedTrainingForReview, setSelectedTrainingForReview] =
-    useState(null);
-
-  const [yearFilter, setYearFilter] = useState(new Date().getFullYear());
 
   const { userData } = useCurrentUser();
 
@@ -142,6 +97,8 @@ export default function MyTrainingRequest() {
       return hrApprovedTrainingList;
     } else if (value == "completed") {
       return completedTrainingList;
+    } else if (value == "declined") {
+      return declinedTrainingList;
     }
   };
 
@@ -196,61 +153,55 @@ export default function MyTrainingRequest() {
   };
 
   return (
-    <>
-      <main>
-        <PageHeader
-          header_text={"My Training Request"}
-          breadCrumb_data={[{ name: "Self Service" }, { name: "Training" }]}
-          btnAvailable={true}
+    <ConfigProvider theme={TRAINING_THEME}>
+      <main className="training-suite space-y-6 py-6">
+        <TrainingPageHeader
+          header_text="Training Approval"
+          breadCrumb_data={[
+            { name: "Self service" },
+            { name: "Training Approval" },
+          ]}
+          subtitle="Self service / Training"
           buttonProp={[
             { button_text: "Add New Training", fn: handleAddNewTraining },
           ]}
         />
-        <div className="mt-5">{/* <hr /> */}</div>
-
-        <Separator separator_text={"OVERVIEW"} />
-        <RequestCard
-          requestHistory={statusData}
-          selectTab={selectTab}
-          requestStatus={selectedTab}
-          requestNo={detailsNo}
-          loading={{
-            pending: pending_loading,
-            approved: approved_loading,
-            hr_approved: hr_approved_loading,
-            completed: completed_loading,
-            declined: declined_loading,
-          }}
+        <TrainingStatusStrip
+          items={REQUEST_TABS.map((tab) => ({
+            ...tab,
+            count: Array.isArray(detailsNo(tab.id)) ? detailsNo(tab.id).length : 0,
+          }))}
+          active={selectedTab}
+          onChange={selectTab}
+          loading={
+            pending_loading ||
+            approved_loading ||
+            hr_approved_loading ||
+            completed_loading ||
+            declined_loading
+          }
+        />
+        <TrainingPageTabs
+          tabs={REQUEST_TABS.map((tab) => ({
+            ...tab,
+            count: Array.isArray(detailsNo(tab.id)) ? detailsNo(tab.id).length : 0,
+          }))}
+          active={selectedTab}
+          onChange={selectTab}
+          idPrefix="hr-training-requests"
+          label="Request status"
         />
 
-        <div className="my-8">
+        <div>
           <TrainingTable
             tableData={tableData}
             selectedTab={selectedTab}
-            pageName="self-service"
-            onReview={(row) => {
-              setSelectedTrainingForReview(row);
-              setReviewDrawerOpen(true);
-            }}
+            pageName="hr-training"
             onViewStaff={(row) => handleViewStaff(row)}
           />
         </div>
 
         <NewTrainingDrawer isOpen={isOpen} setIsOpen={handleCloseDrawer} />
-
-        <TrainingReviewDrawer
-          open={reviewDrawerOpen}
-          onClose={() => {
-            setReviewDrawerOpen(false);
-            setSelectedTrainingForReview(null);
-          }}
-          training={selectedTrainingForReview}
-          yearFilter={yearFilter}
-          setYearFilter={setYearFilter}
-          onSuccess={() => {
-            // Optional: refetch is handled by API hook invalidation
-          }}
-        />
 
         <ViewStaffDrawer
           open={staffDrawerOpen}
@@ -283,7 +234,7 @@ export default function MyTrainingRequest() {
           }}
         />
       </main>
-    </>
+    </ConfigProvider>
   );
 }
 
