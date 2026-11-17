@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Button, ConfigProvider } from "antd";
 import { useReactToPrint } from "react-to-print";
 import dayjs from "dayjs";
+import { brand } from "../../../config/brand";
 
 const boxClass = "inline-block w-4 h-4 border border-black align-middle";
 
@@ -138,7 +139,7 @@ OneToTenScale.defaultProps = {
 const TrainingFeedback = forwardRef(function TrainingFeedback(
   {
     review,
-    logoSrc = "/assets/images/NCAA.png",
+    logoSrc = brand.logo,
     showDownloadButton = true,
     downloadFileName = "Training Feedback Form.pdf",
     training = null,
@@ -212,12 +213,12 @@ const TrainingFeedback = forwardRef(function TrainingFeedback(
               <div className="flex items-center gap-2">
                 <img
                   src={logoSrc}
-                  alt="NCAA Logo"
+                  alt={`${brand.shortName} logo`}
                   className="w-10 h-10 object-contain"
                 />
                 <div className="flex-1 text-center leading-tight">
                   <h1 className="text-[18px] md:text-[22px] font-bold m-0 uppercase">
-                    Nigeria Civil Aviation Authority
+                    {brand.name}
                   </h1>
                   <p className="text-[13px] md:text-[15px] font-bold m-0 uppercase">
                     Corporate Headquarters, Abuja

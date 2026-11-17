@@ -203,7 +203,7 @@
 
 /* eslint-disable no-unused-vars */
 import { useState } from "react";
-import logo from "/assets/images/community-logo.png";
+import { brand } from "../../config/brand";
 import { FaEyeSlash } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
 import { useForm } from "react-hook-form";
@@ -276,9 +276,13 @@ export default function Login() {
         <section className="form_section w-[85%] lg:w-[35vw] md:w-[55vw] rounded-2xl bg-white/80 backdrop-blur-xl shadow-xl border border-white/20 overflow-hidden relative z-10">
           {/* Header with gradient */}
           <div className="bg-gradient-to-r from-[#092035] to-[#0a2a45] px-10 py-12 text-center">
-            <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
-                <Lock className="w-6 h-6 text-[#092035]" />
+            <div className="w-fit p-1.5 bg-white/20 backdrop-blur-sm rounded-2xl mx-auto mb-5">
+              <div className="h-14 w-32 bg-white rounded-xl flex items-center justify-center px-3">
+                <img
+                  src={brand.logo}
+                  alt={`${brand.shortName} logo`}
+                  className="h-full w-full object-contain"
+                />
               </div>
             </div>
             <h4 className="text-white text-3xl font-bold mb-2">Welcome Back</h4>

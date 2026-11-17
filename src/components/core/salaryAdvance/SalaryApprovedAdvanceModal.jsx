@@ -4,6 +4,7 @@ import { Button, cn } from "@nextui-org/react";
 import { MdDownloadForOffline } from "react-icons/md";
 import { useRef, useState } from "react";
 import { useReactToPrint } from "react-to-print";
+import { brand } from "../../../config/brand";
 
 // import useCurrentUser from "../../../hooks/useCurrentUser";
 
@@ -161,14 +162,14 @@ const SalaryApprovedAdvanceModal = ({ isOpen, setIsOpen, onPrint }) => {
             <div className="flex flex-col gap-2 items-center justify-between mb-4">
               <div className="flex">
                 <img
-                  src="/assets/images/NCAA.png"
-                  className="w-20 h-[4.4rem]"
+                  src={brand.logo}
+                  className="w-20 h-[4.4rem] object-contain"
                   alt=""
                 />
               </div>
               <div className="text-black  flex items-center flex-col justify-center">
                 <div className="text-lg font-extrabold font-Judson">
-                  NIGERIAN CIVIL AVIATION AUTHORITY
+                  {brand.name.toUpperCase()}
                 </div>
                 <div className="text-xs font-[600] font-Judson">
                   NNAMDI AZIKIWE INTERNATIONAL AIRPORT, ABUJA

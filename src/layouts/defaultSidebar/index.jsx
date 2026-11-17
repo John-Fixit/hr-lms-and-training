@@ -7,6 +7,7 @@ import { defaultMenuHome } from "../sidebar/routes";
 import { Tooltip, Avatar } from "@nextui-org/react";
 import { IoIosArrowForward } from "react-icons/io";
 import useCurrentUser from "../../hooks/useCurrentUser";
+import { brand } from "../../config/brand";
 import { filePrefix } from "../../utils/filePrefix";
 
 const DefaultSidebar = () => {
@@ -101,14 +102,22 @@ const DefaultSidebar = () => {
             }`}
           >
             <div className="flex items-center gap-3">
-              <img
-                src="/NCAA.png"
-                alt="NCAA"
-                className="w-10 h-10 rounded-full object-cover shrink-0"
-              />
-              {!sidebarMinimizedHome && (
+              <div
+                className={`flex h-10 shrink-0 items-center justify-center rounded-lg bg-white ${
+                  sidebarMinimizedHome || brand.showNameWithLogo
+                    ? "w-10 p-1"
+                    : "w-28 px-3 py-1.5"
+                }`}
+              >
+                <img
+                  src={brand.logo}
+                  alt={`${brand.shortName} logo`}
+                  className="h-full w-full object-contain"
+                />
+              </div>
+              {!sidebarMinimizedHome && brand.showNameWithLogo && (
                 <p className="text-white text-sm font-semibold leading-tight">
-                  Nigerian Civil Aviation Authority
+                  {brand.name}
                 </p>
               )}
             </div>

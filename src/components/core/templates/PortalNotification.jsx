@@ -73,7 +73,7 @@ import { toStringDate } from "../../../utils/utitlities";
 const PortalNotification = forwardRef(function PortalNotification(
   {
     training,
-    // logoSrc = "/assets/images/NCAA.png",
+    // logoSrc = "/assets/images/argon-logo.png",
     // showDownloadButton = false,
     // downloadFileName = "Portal Notification.pdf",
     // isCoordinator = false,
@@ -235,7 +235,7 @@ const PortalNotification = forwardRef(function PortalNotification(
         //       <div className="flex items-center justify-center gap-5">
         //         <img
         //           src={logoSrc}
-        //           alt="NCAA Logo"
+        //           alt="Argon logo"
         //           className="w-28 h-20 object-contain"
         //         />
         //         <div className="flex flex-col items-center text-center space-y-0">

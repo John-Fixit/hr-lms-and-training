@@ -7,6 +7,7 @@ import { useGetProfilePayslip } from "../../../API/profile";
 import useCurrentUser from "../../../hooks/useCurrentUser";
 import { formatNumberWithComma } from "../../../utils/utitlities";
 import { Loader } from "lucide-react";
+import { brand } from "../../../config/brand";
 
 const monthNames = [
   "January",
@@ -198,7 +199,7 @@ const PayslipDrawer = ({ user }) => {
       <div
         className="absolute inset-0 flex items-center justify-center pointer-events-none"
         style={{
-          background: `url("/assets/images/NCAA.png") center/600px no-repeat`,
+          background: `url("${brand.logo}") center/600px no-repeat`,
           opacity: 0.12, // faint watermark
         }}
       ></div>
@@ -216,7 +217,7 @@ const PayslipDrawer = ({ user }) => {
 
         <div className="flex gap-2 items-center justify-between mb-10">
           <div className="flex">
-            <img src="/assets/images/NCAA.png" className="w-20 h-20" alt="" />
+            <img src={brand.logo} className="w-20 h-20 object-contain" alt={`${brand.shortName} logo`} />
           </div>
           <div className="text-4xl text-black font-open-sans font-[500]">
             Payslip

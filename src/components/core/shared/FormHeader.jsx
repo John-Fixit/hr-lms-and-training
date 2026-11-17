@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
+import { brand } from "../../../config/brand";
 
-const DEFAULT_LOGO_SRC = "/assets/images/NCAA.png";
+const DEFAULT_LOGO_SRC = brand.logo;
 
 export default function FormHeader({ title, subtitle, className = "" }) {
   return (

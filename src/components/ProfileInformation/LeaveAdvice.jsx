@@ -1,9 +1,9 @@
 /* eslint-disable react/display-name */
 
 import { forwardRef } from "react";
-import logo from "../../assets/images/ncaa_logo.png";
 import PropTypes from "prop-types";
 import dgSignature from "./dgm-hr-signature.png";
+import { brand } from "../../config/brand";
 // import { useGetRequest_Detail } from "../../API/api_urls/my_approvals";
 
 const signature = dgSignature;
@@ -27,14 +27,14 @@ const LeaveAdvice = forwardRef(({ request_detail }, ref) => {
                 <img
                   className="block ml-auto mr-auto "
                   width="120px"
-                  src={logo}
+                  src={brand.logo}
                   alt=""
                 />
               </p>
 
               <div className="text-center my-4 flex flex-col gap-2">
                 <p>
-                  <strong>NIGERIAN CIVIL AVIATION AUTHORITY</strong>
+                  <strong>{brand.name.toUpperCase()}</strong>
                 </p>
                 <p>
                   <strong>
@@ -63,7 +63,7 @@ const LeaveAdvice = forwardRef(({ request_detail }, ref) => {
                 </p>
                 <p>{request_detail?.DESIGNATION}</p>
                 <p>{request_detail?.DIRECTORATE}</p>
-                <p>NIGERIAN CIVIL AVIATION AUTHORITY</p>
+                <p>{brand.name.toUpperCase()}</p>
               </div>
 
               <p className="text-center my-2">
