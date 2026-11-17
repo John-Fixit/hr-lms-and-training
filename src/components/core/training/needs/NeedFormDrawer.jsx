@@ -96,6 +96,14 @@ export default function NeedFormDrawer({ open, onClose, submission, need, prefil
         ...values,
         course_id: values.mode === "CATALOGUE" ? values.course_id : null,
         proposed_title: values.mode === "PROPOSED" ? values.proposed_title : "",
+        // Display context for sample mode only; the live payload mapper doesn't send these.
+        department: submission.DEPARTMENT,
+        course_title: values.mode === "CATALOGUE" ? course?.COURSE_TITLE : undefined,
+        course_code: values.mode === "CATALOGUE" ? course?.COURSE_CODE : undefined,
+        staff: (values.staff_ids ?? []).map((id) => {
+          const member = deptStaff.find((s) => s.STAFF_ID === id);
+          return { STAFF_ID: id, NAME: member ? staffFullName(member) : "", DESIGNATION: member?.DESIGNATION ?? "" };
+        }),
       });
       successToast(res?.message);
       onClose();

@@ -113,7 +113,12 @@ export default function SubmissionDrawer({ submissionId, open, onClose }) {
               </>
             )}
             {canEdit && needs.length > 0 && (
-              <Button type="primary" icon={<Send size={14} />} loading={submitting} onClick={() => run(submit({ submission_id: submissionId }))}>
+              <Button type="primary" icon={<Send size={14} />} loading={submitting} onClick={() => run(submit({
+                submission_id: submissionId,
+                tna_id: submission?.TNA_ID,
+                department: submission?.DEPARTMENT,
+                department_id: submission?.DEPARTMENT_ID,
+              }))}>
                 Submit {submission.STATUS === "RETURNED" ? "again" : "for review"}
               </Button>
             )}

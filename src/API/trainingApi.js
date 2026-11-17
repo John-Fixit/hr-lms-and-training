@@ -159,6 +159,8 @@ export function useTrainingMutation({
   mapPayload = (payload) => payload,
   invalidate = [],
   mockHandler,
+  // Set when the mock is written against the screen's payload rather than the backend shape.
+  mockReceivesRawPayload = false,
 }) {
   const queryClient = useQueryClient();
   return useMutation({
@@ -170,7 +172,8 @@ export function useTrainingMutation({
           error.response = { data: { message: error.message } };
           throw error;
         }
-        return asMutationResult(await runMock(() => mockHandler(mapped)));
+        const mockPayload = mockReceivesRawPayload ? payload : mapped;
+        return asMutationResult(await runMock(() => mockHandler(mockPayload)));
       }
       return responseMutation(await postTraining(endpoint, withCompany(mapped)));
     },

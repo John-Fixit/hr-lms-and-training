@@ -15,6 +15,7 @@ import {
   responseList,
   staffFullName,
   toNumber,
+  trainingWritesAreLive,
   useTrainingMutation,
   useTrainingQuery,
   withActor,
@@ -70,11 +71,14 @@ function enrichNeed(need) {
   const { sessions } = sessionsStore.get();
   return {
     ...need,
-    TITLE: course?.COURSE_TITLE ?? need.PROPOSED_TITLE,
-    COURSE_CODE: course?.COURSE_CODE ?? "",
+    TITLE: course?.COURSE_TITLE ?? (need.COURSE_TITLE || need.PROPOSED_TITLE),
+    COURSE_CODE: course?.COURSE_CODE ?? need.COURSE_CODE ?? "",
     STAFF: need.STAFF_IDS.map((id) => {
       const s = staffById(id);
-      return { STAFF_ID: id, NAME: s ? `${s.LAST_NAME} ${s.FIRST_NAME}` : "Unknown", DESIGNATION: s?.DESIGNATION ?? "" };
+      if (s) return { STAFF_ID: id, NAME: `${s.LAST_NAME} ${s.FIRST_NAME}`, DESIGNATION: s.DESIGNATION ?? "" };
+      // Live staff aren't in the sample directory; use the names captured when the need was saved.
+      const known = need.STAFF_SNAPSHOT?.find((member) => String(member.STAFF_ID) === String(id));
+      return { STAFF_ID: id, NAME: known?.NAME ?? "Unknown", DESIGNATION: known?.DESIGNATION ?? "" };
     }),
     SESSIONS: (need.SESSION_IDS ?? [])
       .map((id) => sessions.find((s) => s.SESSION_ID === id))
@@ -91,11 +95,15 @@ function needFields(payload) {
   if (participants < 1) throw mockApiError("Estimate at least one participant.");
   const course = isCatalogue ? courseById(payload.course_id) : null;
   return {
-    COURSE_ID: course?.COURSE_ID ?? null,
+    // Live catalogue courses aren't in the sample catalogue, so keep the chosen id and its labels.
+    COURSE_ID: course?.COURSE_ID ?? (isCatalogue ? payload.course_id : null),
+    COURSE_TITLE: course ? "" : payload.course_title ?? "",
+    COURSE_CODE: course ? "" : payload.course_code ?? "",
     PROPOSED_TITLE: isCatalogue ? "" : payload.proposed_title.trim(),
-    SKILL_IDS: payload.skill_ids?.length ? payload.skill_ids : course?.SKILLS.map((s) => s.SKILL_ID) ?? [],
+    SKILL_IDS: payload.skill_ids?.length ? payload.skill_ids : course?.SKILLS?.map((s) => s.SKILL_ID) ?? [],
     SOURCE: payload.source ?? "DEPARTMENT",
     STAFF_IDS: payload.staff_ids ?? [],
+    STAFF_SNAPSHOT: payload.staff ?? [],
     PARTICIPANTS: participants,
     JUSTIFICATION: payload.justification.trim(),
     EXPECTED_OUTCOME: payload.expected_outcome?.trim() ?? "",
@@ -105,8 +113,102 @@ function needFields(payload) {
 }
 
 function assertEditable(store, submission) {
+  // A live round isn't in the sample store; the drawer already checks its live status.
+  if (submission.IS_LIVE_COPY && !store.rounds.some((r) => r.TNA_ID === submission.TNA_ID)) return;
   const round = getRound(store, submission.TNA_ID);
   if (round.STATUS !== "OPEN") throw mockApiError("This assessment is closed.");
+}
+
+/**
+ * Finds the submission in sample data. While writes are in sample mode, a live
+ * department submission gets a local copy so its needs can be drafted against it.
+ */
+function findOrAdoptSubmission(store, payload) {
+  const id = payload?.submission_id;
+  const existing = store.submissions.find((s) => String(s.SUBMISSION_ID) === String(id));
+  if (existing) return existing;
+  if (id == null || id === "" || isSampleId(id) || !payload.department) {
+    throw mockApiError("Submission not found.");
+  }
+  const copy = {
+    SUBMISSION_ID: id,
+    TNA_ID: payload.tna_id,
+    DEPARTMENT: payload.department,
+    DEPARTMENT_ID: payload.department_id,
+    STATUS: "NOT_STARTED",
+    SUBMITTED_BY: "",
+    SUBMITTED_AT: null,
+    REVIEW_COMMENT: "",
+    REVIEWED_AT: null,
+    IS_LIVE_COPY: true,
+  };
+  store.submissions.push(copy);
+  return copy;
+}
+
+/** Fixed test record: the HUMAN RESOURCES submission always starts with this need in sample mode. */
+const HR_TEST_DEPARTMENT = "HUMAN RESOURCES";
+const HR_TEST_NEED = {
+  COURSE_ID: "crs-cmp101",
+  COURSE_TITLE: "Public Service Rules & Financial Regulations",
+  COURSE_CODE: "CMP-101",
+  PROPOSED_TITLE: "",
+  SKILL_IDS: ["sk-psr"],
+  SOURCE: "DEPARTMENT",
+  STAFF_IDS: [],
+  STAFF_SNAPSHOT: [],
+  PARTICIPANTS: 1,
+  ESTIMATED_COST: 80000,
+  PRIORITY: "MEDIUM",
+  JUSTIFICATION:
+    "The officer regularly applies the Public Service Rules and Financial Regulations when advising on staff "
+    + "welfare, discipline, leave and payments. Recent reviews showed inconsistent interpretation of some provisions. "
+    + "This course will refresh the officer’s understanding of the current provisions, reduce compliance errors, and "
+    + "ensure HR decisions and advice to the department are consistent with approved rules and procedures.",
+  EXPECTED_OUTCOME:
+    "The participant will correctly apply the Public Service Rules and Financial Regulations in HR processes, reduce "
+    + "rule-related errors and audit queries, and advise management and colleagues with confidence. Within three "
+    + "months of completion, the participant will share key learnings with the department.",
+};
+
+/** Seeds HR_TEST_NEED once per HR submission; a tester can then edit, remove or submit it. */
+function seedHrTestNeed(submission) {
+  if (trainingWritesAreLive() || !submission?.SUBMISSION_ID) return;
+  if (String(submission.DEPARTMENT ?? "").trim().toUpperCase() !== HR_TEST_DEPARTMENT) return;
+  const store = needsStore.get();
+  const copy = findOrAdoptSubmission(store, {
+    submission_id: submission.SUBMISSION_ID,
+    tna_id: submission.TNA_ID,
+    department: submission.DEPARTMENT,
+    department_id: submission.DEPARTMENT_ID,
+  });
+  if (copy.TEST_NEED_SEEDED) return; // seeded before — respect later edits or removal
+  store.needs.push({
+    NEED_ID: mockId("need"),
+    TNA_ID: copy.TNA_ID,
+    SUBMISSION_ID: copy.SUBMISSION_ID,
+    DEPARTMENT: copy.DEPARTMENT,
+    ...HR_TEST_NEED,
+    STATUS: "PROPOSED",
+    HR_COMMENT: "",
+    SESSION_IDS: [],
+  });
+  copy.TEST_NEED_SEEDED = true;
+  if (copy.STATUS === "NOT_STARTED") copy.STATUS = "DRAFT";
+  needsStore.save();
+}
+
+/** Sample-mode needs and status saved against a live submission, for overlaying on live reads. */
+function liveCopyOverlay({ submissionId, tnaId }) {
+  const store = needsStore.get();
+  const copies = store.submissions.filter((s) => s.IS_LIVE_COPY
+    && (submissionId == null || String(s.SUBMISSION_ID) === String(submissionId))
+    && (tnaId == null || String(s.TNA_ID) === String(tnaId)));
+  const ids = new Set(copies.map((s) => String(s.SUBMISSION_ID)));
+  return {
+    submission: copies[0] ?? null,
+    needs: tagSample(store.needs.filter((n) => ids.has(String(n.SUBMISSION_ID))).map(enrichNeed)),
+  };
 }
 
 const mockServer = {
@@ -247,8 +349,7 @@ const mockServer = {
 
   saveNeed(payload) {
     const store = needsStore.get();
-    const submission = store.submissions.find((s) => s.SUBMISSION_ID === payload?.submission_id);
-    if (!submission) throw mockApiError("Submission not found.");
+    const submission = findOrAdoptSubmission(store, payload);
     assertEditable(store, submission);
     const fields = needFields(payload);
     if (payload.need_id) {
@@ -285,8 +386,7 @@ const mockServer = {
 
   submitSubmission(payload) {
     const store = needsStore.get();
-    const submission = store.submissions.find((s) => s.SUBMISSION_ID === payload?.submission_id);
-    if (!submission) throw mockApiError("Submission not found.");
+    const submission = findOrAdoptSubmission(store, payload);
     assertEditable(store, submission);
     if (!store.needs.some((n) => n.SUBMISSION_ID === submission.SUBMISSION_ID)) {
       throw mockApiError("Add at least one need before submitting.");
@@ -473,7 +573,27 @@ export const useGetTnaRound = (tnaId) =>
       if (isSampleId(tnaId)) return tagSample(mapRound(mockServer.round(tnaId), mockServer.needs(tnaId)));
       const round = responseData(await getTraining(`tna/round/${tnaId}`));
       const needs = responseList(await postTraining("tna/needs", withCompany({ tna_id: tnaId }))).map(mapNeed);
-      const mapped = mapRound(round, needs);
+      mapRound(round, needs).SUBMISSIONS
+        ?.filter((item) => !needs.some((need) => String(need.SUBMISSION_ID) === String(item.SUBMISSION_ID)))
+        .forEach((item) => seedHrTestNeed({ ...item, TNA_ID: item.TNA_ID ?? tnaId }));
+      // Include needs drafted in sample mode (and the HR test need) in the round's counts.
+      const mapped = mapRound(round, [...needs, ...liveCopyOverlay({ tnaId }).needs]);
+      mapped.SUBMISSIONS = mapped.SUBMISSIONS?.map((item) => {
+        const local = liveCopyOverlay({ submissionId: item.SUBMISSION_ID });
+        if (!local.submission) return item;
+        const all = [
+          ...needs.filter((need) => String(need.SUBMISSION_ID) === String(item.SUBMISSION_ID)),
+          ...local.needs,
+        ];
+        return {
+          ...item,
+          STATUS: local.submission.STATUS !== "NOT_STARTED" ? local.submission.STATUS : item.STATUS,
+          NEED_COUNT: all.length,
+          HIGH_PRIORITY: all.filter((need) => need.PRIORITY === "HIGH").length,
+          ESTIMATED_COST: all.reduce((sum, need) => sum + need.ESTIMATED_COST, 0),
+          PARTICIPANTS: all.reduce((sum, need) => sum + need.PARTICIPANTS, 0),
+        };
+      });
       const sample = mockServer.round("tna-2027");
       if (mapped.SUBMISSIONS?.length) return mapped;
       return fillUnconfirmed(mapped, {
@@ -502,7 +622,7 @@ export const useGetTnaNeeds = (tnaId) =>
     mockWhen: () => isSampleId(tnaId),
     mockHandler: () => mockServer.needs(tnaId),
     transform: (needs) => {
-      const mapped = needs.map(mapNeed);
+      const mapped = [...needs.map(mapNeed), ...liveCopyOverlay({ tnaId }).needs];
       if (mapped.length) return mapped;
       return tagSample(mockServer.needs("tna-2027"));
     },
@@ -522,11 +642,19 @@ export const useGetTnaSubmission = (submissionId) =>
         ...submission,
         NEEDS: asArray(submission?.NEEDS),
       });
-      if (mapped.NEEDS?.length) return mapped;
-      const sample = mockServer.rounds()
-        .flatMap((round) => mockServer.round(round.TNA_ID).SUBMISSIONS ?? [])
-        .find((item) => item.NEEDS?.length);
-      return fillUnconfirmed(mapped, sample ? { NEEDS: tagSample(sample.NEEDS) } : {});
+      if (!mapped.NEEDS.length) seedHrTestNeed({ ...mapped, SUBMISSION_ID: mapped.SUBMISSION_ID ?? submissionId });
+      // Needs drafted in sample mode against this live submission (writes not live yet).
+      const local = liveCopyOverlay({ submissionId });
+      if (!local.submission) return mapped;
+      const needs = [...mapped.NEEDS, ...local.needs];
+      return {
+        ...mapped,
+        STATUS: local.submission.STATUS !== "NOT_STARTED" ? local.submission.STATUS : mapped.STATUS,
+        SUBMITTED_AT: local.submission.SUBMITTED_AT ?? mapped.SUBMITTED_AT,
+        NEEDS: needs,
+        NEED_COUNT: needs.length,
+        SAMPLE_FIELDS: [...(mapped.SAMPLE_FIELDS ?? []), "NEEDS", "STATUS"],
+      };
     },
   });
 
@@ -551,6 +679,8 @@ const useNeedsMutation = (endpoint, mapPayload) =>
     mapPayload,
     invalidate: [[QUERY_ROOT], ["training_sessions"]],
     mockHandler: MOCK_MUTATIONS[endpoint],
+    // The TNA mocks read the screen's field names (submission_id, need_ids, participants…).
+    mockReceivesRawPayload: true,
   });
 
 /** Proposed: POST training/tna/create_round — { title, year, description, objectives, start_date, deadline, responsible_officer, departments, status } */
