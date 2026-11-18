@@ -376,7 +376,7 @@ const TrainingTable = ({
                 selectedTab === "sent") && (
                   <Button
                     size="small"
-                    className="bg-[#00BCC2] text-white font-medium min-w-0 px-2 tex-xs"
+                    className="bg-[#6366F1] text-white font-medium min-w-0 px-2 tex-xs"
                     onClick={() => onViewStaff?.(row)}
                   >
                     View Staff
@@ -386,14 +386,14 @@ const TrainingTable = ({
                 <>
                   <Button
                     size="small"
-                    className="bg-[#00BCC2] text-white font-medium min-w-0 px-2 tex-xs"
+                    className="bg-[#6366F1] text-white font-medium min-w-0 px-2 tex-xs"
                     onClick={() => onViewStaff?.(row)}
                   >
                     View Staff
                   </Button>
                   <Button
                     size="small"
-                    className="bg-[#00BCC2] text-white font-medium min-w-0 px-2 tex-xs"
+                    className="bg-[#6366F1] text-white font-medium min-w-0 px-2 tex-xs"
                     onClick={() => onEditCourse?.(row)}
                   >
                     Edit Course
@@ -453,7 +453,7 @@ const TrainingTable = ({
                   // >
                   //   <Button
                   //     type="primary"
-                  //     className="!bg-[#00BCC2] text-white hover:text-white font-medium min-w-0 px-2 tex-xs"
+                  //     className="!bg-[#6366F1] text-white hover:text-white font-medium min-w-0 px-2 tex-xs"
                   //     onClick={() => onViewStaff?.(row)}
                   //   >
                   //     View
@@ -529,7 +529,7 @@ const TrainingTable = ({
               
               <Button
                     size="small"
-                    className="bg-[#00BCC2] text-white font-medium min-w-0 px-2 tex-xs"
+                    className="bg-[#6366F1] text-white font-medium min-w-0 px-2 tex-xs"
                     icon={<TbPlaneDeparture size={18} />}
                 onClick={() => handleBookFlightNow?.(row)}
                   >

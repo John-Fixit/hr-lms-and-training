@@ -16,6 +16,7 @@ import {
   mergeTemplateContent,
 } from "../../../../utils/trainingTemplateTokens";
 import { errorToast } from "../../../../utils/toastMsgPop";
+import { brand } from "../../../../config/brand";
 
 function safeText(value, fallback = "") {
   if (value == null || value === "") return fallback;
@@ -52,7 +53,7 @@ const GenerateLetterDrawer = ({ open, onClose, training, staffList }) => {
 
   const handlePrintToPdf = useReactToPrint({
     content: () => printRef.current,
-    documentTitle: "NCAA Training Letter",
+    documentTitle: `${brand.shortName} Training Letter`,
     removeAfterPrint: true,
   });
 
@@ -121,7 +122,7 @@ const GenerateLetterDrawer = ({ open, onClose, training, staffList }) => {
         </div>
         <Button
           type="primary"
-          className="bg-[#00BCC2]"
+          className="bg-[#6366F1]"
           size="large"
           disabled={!selectedTemplate || isLoadingTemplate}
           onClick={() => handlePrintToPdf?.()}
@@ -143,13 +144,13 @@ const GenerateLetterDrawer = ({ open, onClose, training, staffList }) => {
           <header className="pb-5 mb-6">
             <div className="flex text-center items-center gap-4 relative">
               <img
-                src="/assets/images/NCAA.png"
-                alt="NCAA Logo"
+                src={brand.logo}
+                alt={`${brand.shortName} logo`}
                 className="w-[100px] h-[100px] object-contain ml-10"
               />
               <div className="text-cente flex flex-col ml20">
                 <span className="text-[28px] font-bold mb-0 leading-0 p-0 font-open-sans">
-                  NIGERIA CIVIL AVIATION AUTHORITY
+                  {brand.name.toUpperCase()}
                 </span>
                 <span className="text-[18px] font-bold mb-0 font-open-sans">
                   Corporate Headquarters, Abuja

@@ -1,19 +1,7 @@
 import {
   LayoutDashboard,
-  UserCog,
-  CalendarDays,
-  TrendingUp,
   GraduationCap,
-  CheckCircle2,
-  Bell,
-  Wallet,
-  Coins,
-  CircleDollarSign,
-  CalendarRange,
-  FileBarChart,
   Users2,
-  Building2,
-  Settings,
 } from "lucide-react";
 
 /**
@@ -22,10 +10,15 @@ import {
  */
 export const appNavigationMenu = [
   {
-    title: "Internal",
     items: [
       {
-        name: "Training",
+        name: "Dashboard",
+        icon: LayoutDashboard,
+        route: "/lms/dashboard",
+        enabled: true,
+      },
+      {
+        name: "Self service",
         icon: GraduationCap,
         children: [
           {
@@ -34,19 +27,54 @@ export const appNavigationMenu = [
             enabled: true,
           },
           {
-            name: "Training Requests",
+            name: "My Learning",
+            route: "/lms/learning",
+            enabled: true,
+          },
+          {
+            name: "Training Approval",
             route: "/people/training/request",
             enabled: true,
           },
         ],
       },
       {
-        name: "HR Training",
+        name: "Administration",
         icon: Users2,
         children: [
           {
-            name: "Course",
+            name: "Skills & Competency",
+            route: "/people/hr/training/skills",
+            enabled: true,
+            requiresHR: true,
+          },
+          {
+            name: "Training Needs",
+            route: "/people/hr/training/needs",
+            enabled: true,
+            requiresHR: true,
+          },
+          {
+            name: "LMS Course",
+            route: "/lms/staff",
+            enabled: true,
+            requiresHR: true,
+          },
+          {
+            name: "Training Course",
             route: "/people/hr/training/course",
+            enabled: true,
+            requiresHR: true,
+          },
+          {
+            name: "Catalogue",
+            route: "/people/hr/training/catalogue",
+            enabled: true,
+            requiresHR: true,
+          },
+          {
+            name: "Calendar",
+            route: "/people/hr/training/calendar",
             enabled: true,
             requiresHR: true,
           },
@@ -80,30 +108,19 @@ export const appNavigationMenu = [
             enabled: true,
             requiresHR: true,
           },
+          {
+            name: "Requests & Approvals",
+            route: "/people/hr/training/requests",
+            enabled: true,
+            requiresHR: true,
+          },
+          {
+            name: "Trainers & Providers",
+            route: "/people/hr/training/providers",
+            enabled: true,
+            requiresHR: true,
+          },
         ],
-      },
-    ],
-  },
-  {
-    title: "External",
-    items: [
-      {
-        name: "Dashboard",
-        icon: LayoutDashboard,
-        route: "/lms/dashboard",
-        enabled: true,
-      },
-      {
-        name: "My Learning",
-        icon: GraduationCap,
-        route: "/lms/learning",
-        enabled: true,
-      },
-      {
-        name: "My Courses",
-        icon: UserCog,
-        route: "/lms/staff",
-        enabled: true,
       },
     ],
   },

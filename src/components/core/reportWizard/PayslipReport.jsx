@@ -8,6 +8,7 @@ import { MdDownloadForOffline } from "react-icons/md";
 import { useReactToPrint } from "react-to-print";
 import { formatNumberWithComma } from "../../../utils/utitlities";
 import { Loader } from "lucide-react";
+import { brand } from "../../../config/brand";
 
 
 const monthNames = [
@@ -209,7 +210,7 @@ const deductGross = useMemo(() =>{
     <div
       className="flex flex-col px-6 py-3 bg-white !font-open-sans"
       style={{
-        backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("/assets/images/NCAA.png")`,
+        backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("${brand.logo}")`,
         backgroundSize: "600px",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "bottom",
@@ -223,7 +224,7 @@ const deductGross = useMemo(() =>{
 
       <div className="flex gap-2 items-center justify-between mb-10">
         <div className="flex">
-          <img src="/assets/images/NCAA.png" className="w-20 h-20" alt="" />
+          <img src={brand.logo} className="w-20 h-20 object-contain" alt={`${brand.shortName} logo`} />
         </div>
         <div className="text-4xl text-black font-open-sans font-[500]">Payslip</div>
       </div>

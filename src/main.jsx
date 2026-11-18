@@ -10,6 +10,9 @@ import QueryProvider from "./providers/QueryProvider.jsx";
 import PostContext from "./context/Post.jsx";
 import { SocketContextProvider } from "./context/SocketContext.jsx";
 import App_Data_Provider from "./providers/App_Data_provider.jsx";
+import { applyBrandFavicon } from "./config/brand.js";
+
+applyBrandFavicon();
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>

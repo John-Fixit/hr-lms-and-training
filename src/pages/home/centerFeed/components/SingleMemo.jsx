@@ -5,6 +5,7 @@ import { downloadFile } from "../../../../utils/utitlities";
 import moment from "moment";
 import { GrFormView } from "react-icons/gr";
 import ExpandedDrawerWithButton from "../../../../components/modals/ExpandedDrawerWithButton";
+import { brand } from "../../../../config/brand";
 
   
   const SingleMemo = ({isMedium = false, memo}) => {
@@ -15,7 +16,11 @@ import ExpandedDrawerWithButton from "../../../../components/modals/ExpandedDraw
         <div className="flex h-[5rem] px-[1.8rem] items-center justify-between border-b">
           <div className="flex  gap-3">
             <div className=" overflow-hidden  h-10  flex items-end">
-              <Avatar src="/assets/images/ncaa.jpeg"/>
+              <Avatar
+                src={brand.logo}
+                alt={`${brand.shortName} logo`}
+                classNames={{ base: "bg-white border", img: "object-contain p-1" }}
+              />
             </div>
   
             <div className="flex flex-col">

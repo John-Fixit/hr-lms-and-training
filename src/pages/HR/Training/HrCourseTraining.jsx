@@ -1,12 +1,17 @@
 import { useState, useCallback } from "react";
-import Header from "./components/Header";
-import Separator from "../../../components/payroll_components/Separator";
+import { ConfigProvider } from "antd";
+import { CheckCircle2, Hourglass } from "lucide-react";
 import { NewTrainingDrawer } from "../../../components/core/training/create-new-training/NewTraining";
 import {
   TrainingTable,
   ViewStaffDrawer,
   TrainingReviewListDrawer,
 } from "../../../components/core/training";
+import TrainingPageHeader from "../../../components/core/training/shared/TrainingPageHeader";
+import TrainingPageTabs from "../../../components/core/training/shared/TrainingPageTabs";
+import TrainingStatusStrip from "../../../components/core/training/shared/TrainingStatusStrip";
+import { TRAINING_THEME } from "../../../components/core/training/shared/trainingTheme";
+import "../../../components/core/training/shared/trainingDesignSystem.css";
 import {
   useApproveCourse,
   useCompleteTraining,
@@ -17,25 +22,12 @@ import {
 } from "../../../API/training";
 import { errorToast, successToast } from "../../../utils/toastMsgPop";
 import useCurrentUser from "../../../hooks/useCurrentUser";
-import RequestCard from "../../Approval/RequestCard";
-import { MdOutlinePending } from "react-icons/md";
-import { AiOutlineFileDone } from "react-icons/ai";
+import { useSaveStaffSkill } from "../../../API/trainingSkills";
+import { awardSkillsForCompletedTraining } from "../../../components/core/training/shared/awardCompletionSkills";
 
-const statusData = [
-  {
-    id: "awaiting",
-    label: "Awaiting",
-    icon: MdOutlinePending,
-    b_color: "bg-amber-100",
-    t_color: "text-amber-600",
-  },
-  {
-    id: "approved",
-    label: "Approved",
-    icon: AiOutlineFileDone,
-    b_color: "bg-green-100",
-    t_color: "text-green-600",
-  },
+const COURSE_TABS = [
+  { id: "awaiting", label: "Awaiting", icon: Hourglass, sub: "Pending approval" },
+  { id: "approved", label: "Approved", icon: CheckCircle2, sub: "Ready to run" },
 ];
 
 const HrCourseTraining = () => {
@@ -159,6 +151,7 @@ const HrCourseTraining = () => {
 
   const { mutateAsync: mutateApprove } = useApproveCourse();
   const { mutateAsync: mutateComplete } = useCompleteTraining();
+  const { mutateAsync: saveStaffSkill } = useSaveStaffSkill();
 
   /** Approve – connect your API here (e.g. training_id: row.TRAINING_ID) */
   const handleApprove = useCallback(
@@ -188,6 +181,11 @@ const HrCourseTraining = () => {
           training_id: row.TRAINING_ID,
           company_id: userData?.data?.COMPANY_ID,
         });
+        await awardSkillsForCompletedTraining({
+          row,
+          fetchParticipants: fetchCourseParticipants,
+          saveStaffSkill,
+        });
         successToast(res?.data?.message || res?.message);
         // refetch();
       } catch (err) {
@@ -196,7 +194,7 @@ const HrCourseTraining = () => {
         );
       }
     },
-    [mutateComplete, userData?.data?.COMPANY_ID],
+    [mutateComplete, userData?.data?.COMPANY_ID, fetchCourseParticipants, saveStaffSkill],
   );
 
   const handleEditCourse = useCallback(
@@ -220,22 +218,33 @@ const HrCourseTraining = () => {
   );
 
   return (
-    <div className="py-8 font-helvetica">
-      <Header addNew={addNew} courseOnly={true} />
-      <div className="mb-6">
-        <Separator separator_text={"History"} />
-      </div>
-      <RequestCard
-        requestHistory={statusData}
-        selectTab={selectTab}
-        requestStatus={selectedTab}
-        requestNo={detailsNo}
-        loading={{
-          awaiting: pendingTrainingLoading,
-          approved: approvedTrainingLoading,
-        }}
+    <ConfigProvider theme={TRAINING_THEME}>
+    <div className="training-suite space-y-6 py-6">
+      <TrainingPageHeader
+        header_text="Training Course"
+        breadCrumb_data={[{ name: "HR" }, { name: "Training" }, { name: "Training Course" }]}
+        buttonProp={[{ button_text: "Create Course", fn: addNew }]}
       />
-      <div className="my-8">
+      <TrainingStatusStrip
+        items={COURSE_TABS.map((tab) => ({
+          ...tab,
+          count: Array.isArray(detailsNo(tab.id)) ? detailsNo(tab.id).length : 0,
+        }))}
+        active={selectedTab}
+        onChange={selectTab}
+        loading={pendingTrainingLoading || approvedTrainingLoading}
+      />
+      <TrainingPageTabs
+        tabs={COURSE_TABS.map((tab) => ({
+          ...tab,
+          count: Array.isArray(detailsNo(tab.id)) ? detailsNo(tab.id).length : 0,
+        }))}
+        active={selectedTab}
+        onChange={selectTab}
+        idPrefix="hr-course"
+        label="Course status"
+      />
+      <div>
         <TrainingTable
           tableData={tableData}
           onViewStaff={handleViewStaff}
@@ -296,6 +305,7 @@ const HrCourseTraining = () => {
         />
       )}
     </div>
+    </ConfigProvider>
   );
 };
 

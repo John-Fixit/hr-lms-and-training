@@ -6,8 +6,10 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { useCourseStore } from "../../../../hooks/useCourseStore";
 import SubmitConfirmOverlay from "./SubmitConfirmOverlay";
 import { useUpdateCourseLesson } from "../../../../API/lms-apis/course";
+import { useSaveStaffSkill } from "../../../../API/trainingSkills";
 import { errorToast, successToast } from "../../../../utils/toastMsgPop";
 import useCurrentUser from "../../../../hooks/useCurrentUser";
+import { awardSkillsOnCompletion } from "../../training/shared/awardCompletionSkills";
 import useQuizAttemptStore from "../../../../hooks/useQuizAttemptStore";
 
 // Mock quiz data
@@ -141,6 +143,7 @@ const CbtTestView = () => {
 
   const { mutateAsync: updateCourseLesson, isPending: isSubmitting } =
     useUpdateCourseLesson();
+  const { mutateAsync: saveStaffSkill } = useSaveStaffSkill();
 
   const { userData } = useCurrentUser();
   const quizQuestionsData = data?.quizData;
@@ -341,6 +344,20 @@ const CbtTestView = () => {
       const res = await updateLessonRequest(calculateTotalScore);
       successToast(res?.data?.message);
       if (res) {
+        const course = data?.course || data?.courseDetail || data?.course_detail;
+        await awardSkillsOnCompletion({
+          saveStaffSkill,
+          staffIds: [userData?.data?.STAFF_ID],
+          skillIds:
+            course?.SKILLS ??
+            course?.skills ??
+            course?.SKILL_IDS ??
+            course?.skill_ids ??
+            lesson?.SKILLS ??
+            lesson?.SKILL_IDS,
+          source: "HR",
+          notes: `Awarded on completing ${course?.COURSE_TITLE || lesson?.TITLE || "course"}`,
+        });
         submissionCompletedRef.current = true;
         clearAttempt(attemptKey);
         //=======================

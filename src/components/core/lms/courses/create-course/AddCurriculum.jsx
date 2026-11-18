@@ -190,15 +190,18 @@ const AddCurriculum = (props) => {
                         </p>
                         <div className="py-2 px-3 font-outfit">
                           {curriculumValues?.[index]?.document_file?.name ||
-                            "No file choosen"}
+                            curriculumValues?.[index]?.document_url
+                              ?.split("/")
+                              ?.pop() ||
+                            "No file chosen"}
                           <p className="font-outfit text-gray-400 text-xs">
-                            pdf, doc, ppt, txt, xls, xlsx, zip, mp4
+                            Documents and video: pdf, doc, ppt, txt, xls, zip, mp4, webm, mov
                           </p>
                         </div>
                       </div>
                       <input
                         type="file"
-                        accept=".png,.jpg,.jpeg,.pdf,.doc,.docx,.ppt,.pptx,.txt,.xls,.xlsx,.zip,.mp4"
+                        accept=".png,.jpg,.jpeg,.pdf,.doc,.docx,.ppt,.pptx,.txt,.xls,.xlsx,.zip,.mp4,.webm,.m4v,.mov,video/mp4,video/webm,video/quicktime"
                         className="hidden"
                         id={`media_content_file_${index}`}
                         onChange={async (e) => {

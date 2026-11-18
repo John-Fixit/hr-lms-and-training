@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { formatNaira } from "../../../../utils/utitlities";
 import { useCallback } from "react";
 import moment from "moment";
+import { brand } from "../../../../config/brand";
 
 const SalaryVariationAdvice = ({ componentRef, variationDetail }) => {
   const allowances = variationDetail?.data?.details;
@@ -33,14 +34,14 @@ const SalaryVariationAdvice = ({ componentRef, variationDetail }) => {
           <div className="flex flex-col gap-2 items-center justify-between mb-4">
             <div className="flex">
               <img
-                src="/assets/images/NCAA.png"
-                className="w-[5.5rem] h-[5.5rem]"
-                alt="NCAA Logo"
+                src={brand.logo}
+                className="w-[5.5rem] h-[5.5rem] object-contain"
+                alt={`${brand.shortName} logo`}
               />
             </div>
             <div className="text-black  flex items-center flex-col gap-0 justify-center">
               <div className="text-[1.5rem] font-extrabold font-Judson">
-                NIGERIAN CIVIL AVIATION AUTHORITY
+                {brand.name.toUpperCase()}
               </div>
               <div className="text-[1.1rem] font-[600] font-Judson">
                 Corporate Headquarters, Abuja

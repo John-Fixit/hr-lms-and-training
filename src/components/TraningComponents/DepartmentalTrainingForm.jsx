@@ -3,6 +3,7 @@
 import { Input, Select, SelectItem } from "@nextui-org/react";
 import PropType from "prop-types";
 import { Button } from "flowbite-react";
+import { brand } from "../../config/brand";
 export default function DepartmentalTrainingForm({ role }) {
 
   return (
@@ -96,7 +97,7 @@ export default function DepartmentalTrainingForm({ role }) {
                 </Select>
               </div>
               <div className="training_type flex flex-col space-y-1">
-                <label htmlFor="">Training within NCAA Premises</label>
+                <label htmlFor="">Training within {brand.shortName} Premises</label>
                 <Select
                   variant="bordered"
                   className="w-full"

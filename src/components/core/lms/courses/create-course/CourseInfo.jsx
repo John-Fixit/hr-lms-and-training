@@ -8,6 +8,7 @@ import { PiSelectionPlusBold } from "react-icons/pi";
 import useCurrentUser from "../../../../../hooks/useCurrentUser";
 import { uploadFileData } from "../../../../../utils/uploadfile";
 import dayjs from "dayjs";
+import CourseSkillPicker from "../../../training/shared/CourseSkillPicker";
 
 const CourseInfo = (props) => {
   const { control, watch, setValue, handleNext } = props;
@@ -307,16 +308,45 @@ const CourseInfo = (props) => {
           </div>
           <div>
             <label htmlFor="" className="font-outfit">
+              Skills awarded
+            </label>
+            <p className="font-outfit text-gray-400 text-xs mb-1">
+              Learners receive these skills when they complete the course.
+            </p>
+            <Controller
+              control={control}
+              name="skills"
+              render={({ field }) => (
+                <CourseSkillPicker
+                  value={field.value}
+                  onChange={field.onChange}
+                />
+              )}
+            />
+          </div>
+          <div>
+            <label htmlFor="" className="font-outfit">
               Course thumbnail
             </label>
-
-            <label htmlFor="course_thumbnail_file" className="mt-1">
-              <div className="border rounded flex">
-                <p className="bg-gray-100 p-3 font-medium font-outfit flex items-center">
+            <label htmlFor="course_thumbnail_file" className="mt-1 block">
+              <div className="flex min-w-0 overflow-hidden rounded-lg border border-gray-200">
+                <p className="flex shrink-0 items-center bg-gray-100 px-3 py-3 font-outfit font-medium">
                   Choose File
                 </p>
-                <div className="py-2 px-3 font-outfit">
-                  {watch("course_thumbnail_file")?.name || "No file choosen"}
+                <div className="flex min-w-0 flex-1 items-center px-3 py-2">
+                  <span
+                    className="block w-full truncate font-outfit text-sm text-slate-700"
+                    title={
+                      watch("course_thumbnail_file")?.name ||
+                      watch("course_thumbnail_url") ||
+                      "No file chosen"
+                    }
+                  >
+                    {watch("course_thumbnail_file")?.name ||
+                      (watch("course_thumbnail_url")
+                        ? "Thumbnail uploaded"
+                        : "No file chosen")}
+                  </span>
                 </div>
               </div>
               <input
@@ -326,6 +356,7 @@ const CourseInfo = (props) => {
                 id="course_thumbnail_file"
                 onChange={async (e) => {
                   const file = e.target.files[0];
+                  if (!file) return;
                   setValue(`course_thumbnail_file`, file);
                   const fileRes = await handlePickThumbnail(file);
                   setValue(`course_thumbnail_url`, fileRes.file_url);

@@ -1,0 +1,52 @@
+.training-suite {
+  color: #0f172a;
+  font-family: Inter, "Segoe UI", sans-serif;
+}
+
+.training-suite .ant-btn {
+  font-family: inherit;
+  font-weight: 600;
+  box-shadow: none;
+}
+
+.training-suite .ant-input,
+.training-suite .ant-input-affix-wrapper,
+.training-suite .ant-select-selector,
+.training-suite .ant-picker,
+.training-suite .ant-input-number {
+  border-radius: 0.5rem !important;
+}
+
+.training-suite .ant-btn-primary {
+  background-color: #6366f1;
+  border-color: #6366f1;
+}
+
+.training-suite .ant-btn-primary:not(:disabled):hover {
+  background-color: #4f46e5;
+  border-color: #4f46e5;
+}
+
+.training-suite .ant-table-wrapper .ant-table-thead > tr > th {
+  background-color: #f8fafc;
+  color: #64748b;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.training-suite .ant-table-wrapper .ant-table-tbody > tr:hover > td {
+  background-color: #f5f3ff;
+}
+
+.training-suite .ant-modal .ant-modal-content,
+.training-suite .ant-drawer .ant-drawer-content {
+  border-radius: 0.75rem;
+}
+
+@media (max-width: 639px) {
+  .training-suite {
+    padding-bottom: 1.5rem;
+  }
+}

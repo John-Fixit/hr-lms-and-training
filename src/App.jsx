@@ -90,6 +90,12 @@ import TrainingDTA from "./pages/HR/Training/TrainingDTA";
 import TrainingTravelingFee from "./pages/HR/Training/TrainingTravelingFee";
 import TrainingReport from "./pages/HR/Training/TrainingReport/TrainingReport";
 import TrainingTemplates from "./pages/HR/Training/TrainingTemplates";
+import SkillsCompetency from "./pages/HR/Training/SkillsCompetency";
+import TrainingCatalogue from "./pages/HR/Training/Catalogue";
+import TrainersProviders from "./pages/HR/Training/Providers";
+import TrainingCalendar from "./pages/HR/Training/Calendar";
+import TrainingRequests from "./pages/HR/Training/Requests";
+import TrainingNeeds from "./pages/HR/Training/Needs";
 // import AdsPopup440 from "./pages/home/rightBar/components/AdsPopup440";
 
 const App = () => {
@@ -308,6 +314,30 @@ const App = () => {
           <Route
             path="/people/hr/training/templates"
             element={<TrainingTemplates />}
+          />
+          <Route
+            path="/people/hr/training/skills"
+            element={<SkillsCompetency />}
+          />
+          <Route
+            path="/people/hr/training/catalogue"
+            element={<TrainingCatalogue />}
+          />
+          <Route
+            path="/people/hr/training/providers"
+            element={<TrainersProviders />}
+          />
+          <Route
+            path="/people/hr/training/calendar"
+            element={<TrainingCalendar />}
+          />
+          <Route
+            path="/people/hr/training/requests"
+            element={<TrainingRequests />}
+          />
+          <Route
+            path="/people/hr/training/needs"
+            element={<TrainingNeeds />}
           />
           <Route path="/people/hr/promotions" element={<HRPromotions />} />
           <Route path="/people/hr/transfer" element={<Deployment />} />

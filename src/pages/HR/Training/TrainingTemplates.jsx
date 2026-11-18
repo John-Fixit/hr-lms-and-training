@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Modal } from "antd";
+import { ConfigProvider, Modal } from "antd";
 import { ExclamationCircleFilled } from "@ant-design/icons";
 import dayjs from "dayjs";
 import {
@@ -11,8 +11,9 @@ import {
   TableHeader,
   TableRow,
 } from "@nextui-org/react";
-import PageHeader from "../../../components/payroll_components/PageHeader";
-import Separator from "../../../components/payroll_components/Separator";
+import TrainingPageHeader from "../../../components/core/training/shared/TrainingPageHeader";
+import { TRAINING_THEME } from "../../../components/core/training/shared/trainingTheme";
+import "../../../components/core/training/shared/trainingDesignSystem.css";
 import ActionIcons from "../../../components/core/shared/ActionIcons";
 import TemplateFormDrawer from "../../../components/core/training/templates/TemplateFormDrawer";
 import TemplateViewDrawer from "../../../components/core/training/templates/TemplateViewDrawer";
@@ -96,8 +97,9 @@ const TrainingTemplates = () => {
   );
 
   return (
-    <main className="py-6 font-helvetica">
-      <PageHeader
+    <ConfigProvider theme={TRAINING_THEME}>
+    <main className="training-suite space-y-6 py-6">
+      <TrainingPageHeader
         header_text="Training Templates"
         breadCrumb_data={[
           { name: "HR" },
@@ -107,9 +109,7 @@ const TrainingTemplates = () => {
         buttonProp={[{ button_text: "Create Template", fn: openCreateDrawer }]}
       />
 
-      <Separator separator_text="TEMPLATE LIST" />
-
-      <section className="mt-6 bg-white rounded-xl border border-[#EAECF0] p-4 font-helvetica">
+      <section className="bg-white rounded-xl border border-slate-200 p-4">
         <Table
           aria-label="Training templates table"
           radius="sm"
@@ -178,7 +178,7 @@ const TrainingTemplates = () => {
             total={pages}
             onChange={setPage}
             classNames={{
-              cursor: "bg-[#00BCC2] text-white",
+              cursor: "bg-[#6366F1] text-white",
             }}
           />
         </div>
@@ -202,6 +202,7 @@ const TrainingTemplates = () => {
         record={viewingRecord}
       />
     </main>
+    </ConfigProvider>
   );
 };
 

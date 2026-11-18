@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import PropTypes from "prop-types";
-import { Button, Drawer, Input, Select } from "antd";
+import { Button, ConfigProvider, Drawer, Input, Select } from "antd";
 import {
   Pagination,
   Popover,
@@ -14,8 +14,9 @@ import {
   TableHeader,
   TableRow,
 } from "@nextui-org/react";
-import PageHeader from "../../../components/payroll_components/PageHeader";
-import Separator from "../../../components/payroll_components/Separator";
+import TrainingPageHeader from "../../../components/core/training/shared/TrainingPageHeader";
+import { TRAINING_THEME } from "../../../components/core/training/shared/trainingTheme";
+import "../../../components/core/training/shared/trainingDesignSystem.css";
 import {
   useAddTravelingFee,
   useGetTrainingTraveling,
@@ -209,8 +210,9 @@ const TrainingTravelingFee = () => {
   );
 
   return (
-    <main className="py-6 font-helvetica">
-      <PageHeader
+    <ConfigProvider theme={TRAINING_THEME}>
+    <main className="training-suite space-y-6 py-6">
+      <TrainingPageHeader
         header_text="Training Traveling Fee"
         breadCrumb_data={[
           { name: "HR" },
@@ -221,14 +223,12 @@ const TrainingTravelingFee = () => {
           {
             button_text: "Create Traveling Fee",
             fn: openCreateTravelingFeeDrawer,
-            button_type: "button",
           },
         ]}
       />
 
-      <Separator separator_text="TRAVELING FEE LIST" />
 
-      <section className="mt-6 bg-white rounded-xl border border-[#EAECF0] p-4 font-helvetica">
+      <section className="bg-white rounded-xl border border-slate-200 p-4">
         <Table
           aria-label="Training Traveling Fee table"
           radius="sm"
@@ -314,7 +314,7 @@ const TrainingTravelingFee = () => {
                                 <PopoverTrigger>
                                   <button
                                     type="button"
-                                    className="text-[#00BCC2] underline underline-offset-2"
+                                    className="text-[#6366F1] underline underline-offset-2"
                                     onClick={(event) => event.stopPropagation()}
                                   >
                                     +{hiddenDestinations.length} more
@@ -396,7 +396,7 @@ const TrainingTravelingFee = () => {
             total={pages}
             onChange={setPage}
             classNames={{
-              cursor: "bg-[#00BCC2] text-white",
+              cursor: "bg-[#6366F1] text-white",
             }}
           />
         </div>
@@ -514,7 +514,6 @@ const TrainingTravelingFee = () => {
             <Button
               type="primary"
               htmlType="submit"
-              className="bg-[#00BCC2]"
               size="large"
               loading={
                 editingRecord?.ID
@@ -528,6 +527,7 @@ const TrainingTravelingFee = () => {
         </form>
       </Drawer>
     </main>
+    </ConfigProvider>
   );
 };
 

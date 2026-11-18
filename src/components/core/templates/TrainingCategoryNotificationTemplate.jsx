@@ -7,6 +7,7 @@ import { useReactToPrint } from "react-to-print";
 import useCurrentUser from "../../../hooks/useCurrentUser";
 import { mergeTemplateContent } from "../../../utils/trainingTemplateTokens";
 import BookFlightDrawer from "./BookFlightDrawer";
+import { brand } from "../../../config/brand";
 
 const DOT_LINE = "";
 
@@ -29,7 +30,7 @@ function TrainingCategoryNotificationTemplate({ training, selectedTemplate }) {
   const [bookFlightOpen, setBookFlightOpen] = useState(false);
   const handlePrintToPdf = useReactToPrint({
     content: () => templateRef.current,
-    documentTitle: "NCAA Training Notification",
+    documentTitle: `${brand.shortName} Training Notification`,
     removeAfterPrint: true,
     pageStyle: `
       @page {
@@ -166,8 +167,8 @@ function TrainingCategoryNotificationTemplate({ training, selectedTemplate }) {
           className="relative overflow-hidden text-[16px] text[#111] font-serif bg-white py-16"
         >
           <img
-            src="/assets/images/NCAA.png"
-            alt="NCAA watermark"
+            src={brand.logo}
+            alt=""
             className="pointer-events-none select-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[1020px] max-w-[50%] opacity-[0.1]"
           />
 
@@ -175,20 +176,20 @@ function TrainingCategoryNotificationTemplate({ training, selectedTemplate }) {
             <header className="text-center">
               <div className="flex justify-center items-center gap-2 mb-1">
                 {/* <img
-                  src="/assets/images/NCAA.png"
-                  alt="NCAA Logo"
+                  src={brand.logo}
+                  alt={`${brand.shortName} logo`}
                   className="w-14 h-14 object-contain"
                 /> */}
                 <div className="">
                   <div className="flex items-start gap-2">
                     <img
-                      src="/assets/images/NCAA.png"
-                      alt="NCAA Logo"
+                      src={brand.logo}
+                      alt={`${brand.shortName} logo`}
                       className="w-[112px] h-[112px] object-contain -mt-8"
                     />
                     <div>
                       <p className="m-0 uppercase font-bold text-[#1a237e] text-[28px] font-serif leading-8">
-                        Nigeria Civil Aviation Authority
+                        {brand.name}
                       </p>
 
                       <p className="m-0 capitalize font-bold text-[#1a237e] text-[16px] font-serif">

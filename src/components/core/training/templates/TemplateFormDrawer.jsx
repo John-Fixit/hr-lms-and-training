@@ -179,7 +179,7 @@ const TemplateFormDrawer = ({ isOpen, onClose, editingRecord }) => {
           <Button
             type="primary"
             htmlType="submit"
-            className="bg-[#00BCC2]"
+            className="bg-[#6366F1]"
             size="large"
             loading={isCreating || isUpdating}
           >

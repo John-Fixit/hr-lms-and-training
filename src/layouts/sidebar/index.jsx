@@ -8,6 +8,7 @@ import { filePrefix } from "../../utils/filePrefix";
 import { appNavigationMenu } from "./appNavigationMenu";
 import { filterNavigationMenu } from "./filterNavigationMenu";
 import SidebarNavItem from "./SidebarNavItem";
+import { brand } from "../../config/brand";
 
 const SIDEBAR_WIDTH = 260;
 
@@ -76,19 +77,22 @@ const Sidebar = () => {
       >
         {/* Logo */}
         <div className="flex shrink-0 items-center gap-3 px-5 py-5">
-          <img
-            src="/NCAA.png"
-            alt="NCAA"
-            className="h-11 w-11 shrink-0 rounded-full border-4 border-white object-cover shadow-md"
-          />
-          <div className="leading-tight flex flex-col">
-            <span className="text-[15px] font-bold text-white">
-              Nigerian Civil
-            </span>
-            <span className="text-[15px] font-bold text-white">
-              Aviation Authority
-            </span>
+          <div
+            className={`flex h-11 shrink-0 items-center justify-center rounded-xl bg-white shadow-md ${
+              brand.showNameWithLogo ? "w-11 p-1" : "w-32 px-3 py-1.5"
+            }`}
+          >
+            <img
+              src={brand.logo}
+              alt={`${brand.shortName} logo`}
+              className="h-full w-full object-contain"
+            />
           </div>
+          {brand.showNameWithLogo && (
+            <span className="text-[15px] font-bold leading-tight text-white">
+              {brand.name}
+            </span>
+          )}
         </div>
 
         {/* Nav */}

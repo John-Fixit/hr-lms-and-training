@@ -4,6 +4,7 @@ import dayjs from "dayjs";
 import { Button } from "antd";
 import { useReactToPrint } from "react-to-print";
 import useCurrentUser from "../../../hooks/useCurrentUser";
+import { brand } from "../../../config/brand";
 
 function safeValue(value, fallback) {
   if (value == null || value === "") return fallback;
@@ -14,7 +15,7 @@ function TrainingNominationTemplate({ training }) {
   const templateRef = useRef(null);
   const handlePrintToPdf = useReactToPrint({
     content: () => templateRef.current,
-    documentTitle: "NCAA Training Nomination",
+    documentTitle: `${brand.shortName} Training Nomination`,
     removeAfterPrint: true,
   });
 
@@ -93,13 +94,13 @@ function TrainingNominationTemplate({ training }) {
         <header className="border-b border-slate-200 pb-5 mb-6">
           <div className="flex items-center justify-center gap-4">
             <img
-              src="/assets/images/NCAA.png"
-              alt="NCAA Logo"
+              src={brand.logo}
+              alt={`${brand.shortName} logo`}
               className="w-20 h-20 object-contain"
             />
             <div className="text-center">
               <p className="text-[20px] font-bold mb-0">
-                NIGERIA CIVIL AVIATION AUTHORITY
+                {brand.name.toUpperCase()}
               </p>
               <p className="text-[14px] uppercase tracking-wide mb-0">
                 Training Nomination

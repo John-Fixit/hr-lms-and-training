@@ -2,6 +2,7 @@
 import { useMemo, useRef } from "react";
 import { Loader } from "lucide-react";
 import { formatNumberWithComma } from "../../../../utils/utitlities";
+import { brand } from "../../../../config/brand";
 
 const monthNames = [
   "January",
@@ -54,7 +55,7 @@ const PayslipDrawer = ({ paySlipData }) => {
     <div
       className="flex flex-col px-6 py-3 bg-white !font-open-sans"
       style={{
-        backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("/assets/images/NCAA.png")`,
+        backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("${brand.logo}")`,
         backgroundSize: "600px",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "bottom",
@@ -63,7 +64,7 @@ const PayslipDrawer = ({ paySlipData }) => {
     >
       <div className="flex gap-2 items-center justify-between mb-10">
         <div className="flex">
-          <img src="/assets/images/NCAA.png" className="w-20 h-20" alt="" />
+          <img src={brand.logo} className="w-20 h-20 object-contain" alt={`${brand.shortName} logo`} />
         </div>
         <div className="text-4xl text-black font-open-sans font-[500]">
           Preview
